@@ -1,0 +1,22 @@
+.base-link-primary {
+  position: relative;
+  padding-top: space(2);
+  padding-bottom: space(2);
+
+  .base-link-primary--link {
+    position: relative;
+    color: color(black);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 3px;
+      right: -35px;
+      background-image: url("/svgs/icon-arrow-left--red.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 22px;
+      height: 15px;
+    }
+  }
+}

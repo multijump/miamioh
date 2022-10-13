@@ -1,0 +1,66 @@
+<?php
+
+use Symfony\Component\Yaml\Yaml;
+
+require_once '../vendor/autoload.php';
+
+(new Dotenv\Dotenv('..'))->load();
+
+$debug = getenv('APP_ENV') === 'local';
+$loader = new Twig_Loader_Filesystem('../src/views');
+$twig = new Twig_Environment($loader, [
+    'debug' => $debug,
+]);
+
+if ($debug) {
+    $twig->addExtension(new Twig_Extension_Debug());
+}
+
+$dataDir = __DIR__.'/../src/data';
+
+$options = [
+    'footer' => Yaml::parse(file_get_contents($dataDir.'/footer.yml'), true),
+    'navigation' => Yaml::parse(file_get_contents($dataDir.'/navigation.yml'), true),
+    'sidebar' => Yaml::parse(file_get_contents($dataDir.'/sidebar.yml'), true),
+];
+
+if ($debug) {
+    $options['css'] = [];
+    $options['js'] = ['http://localhost:8080/js/main.js'];
+} else {
+    $options['css'] = [<% for (var css in htmlWebpackPlugin.files.css) { %>
+        '<%= htmlWebpackPlugin.files.css[css] %>',
+    <% } %>];
+    $options['js'] = [<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+        '<%= htmlWebpackPlugin.files.chunks[chunk].entry %>',
+    <% } %>
+    ];
+}
+
+$path = trim($_SERVER['REQUEST_URI'], '/');
+$candidates = array_map(
+    function ($candidate) {
+        return trim($candidate, '/');
+    },
+    [
+        $path.'',
+        $path.'/index',
+    ]
+);
+
+foreach ($candidates as $candidate) {
+    $data = $dataDir.'/'.$candidate.'.yml';
+
+    if (is_file($data)) {
+        $options = array_merge(
+            $options,
+            Yaml::parse(file_get_contents($data), true)
+        );
+    }
+}
+
+if (array_key_exists('template', $options)) {
+  echo $twig->render("templates/{$options['template']}.twig", $options);
+} else {
+  echo $twig->render('templates/index.twig', $options);
+}

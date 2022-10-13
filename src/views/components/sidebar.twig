@@ -1,0 +1,29 @@
+<aside class="sidebar">
+	<a class="button-skip-content" href="#sidebar-main">
+		Skip to Main Content
+	</a>
+	<nav aria-label="Sidebar">
+		<ul class="sidebar-list">
+			{% for list in lists %}
+				<li class="sidebar-item">
+					<a class="sidebar-link sidebar-link--{{ list.selected }}" href="{{ list.href }}" {% if list.selected == 'active' %} aria-current="page" {% endif %}>
+						<span class="sidebar-text">{{ list.text }}</span>
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+
+		<div class="sidebar__disclosure-wrap">
+            <div class="sidebar__disclosure">
+                <disclosure-button disclosure-id="sidebar" class="sidebar__disclosure-button">
+                    Menu
+                </disclosure-button>
+                <disclosure-content disclosure-id="sidebar" class="sidebar__disclosure-content">
+                    {% for list in lists %}
+                        <a href="{{ list.href }}" class="sidebar__content-link sidebar__content-link--{{ list.selected }}">{{ list.text }}</a>
+                    {% endfor %}
+                </disclosure-content>
+            </div>
+		</div>
+	</nav>
+</aside>

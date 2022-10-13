@@ -1,0 +1,16 @@
+{% extends 'layouts/default.twig' %}
+
+{% block main %}
+<div class="sidebar-layout">
+    <div class="sidebar-layout__sidebar">
+        {% include "components/sidebar.twig" with sidebar only %}
+    </div>
+    <div id="sidebar-main" class="sidebar-layout__components">
+        <div class="sidebar-layout__components-inner">
+            {% for component in components %}
+            {% include 'components/' ~ component.name ~ '.twig' with component only %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

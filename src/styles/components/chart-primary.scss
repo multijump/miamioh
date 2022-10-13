@@ -1,0 +1,147 @@
+.chart-primary {
+  padding-top: space(10);
+  padding-bottom: space(10);
+  background-color: color(white-warm);
+
+  @include breakpoint(medium) {
+    padding-top: space(15);
+    padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    padding-top: space(10);
+    padding-bottom: space(10);
+  }
+}
+
+.chart-primary__container {
+  @include create-row;
+  background-color: color(white);
+  border: 1px solid color(gold);
+}
+
+.chart-primary__inner {
+  position: relative;
+  width: 100%;
+  background-color: color(white);
+  border: 1px solid color(gold);
+  padding-top: space(8);
+  padding-bottom: space(8);
+  padding-left: space(5);
+  padding-right: space(5);
+  top: -5px;
+  left: -5px;
+  display: block;
+  flex-direction: initial;
+
+  @include breakpoint(large) {
+    display: flex;
+    flex-direction: row;
+    padding-top: space(15);
+    padding-bottom: space(15);
+    padding-left: space(10);
+    padding-right: space(10);
+  }
+}
+
+.chart-primary__text-container {
+  @include flex-grid-column(12);
+
+  @include breakpoint(medium) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  @include breakpoint(large) {
+    @include flex-grid-size(6);
+    display: block;
+  }
+
+  .chart-primary__header-heading {
+    @include text-heading-3;
+    color: color(red);
+    margin-bottom: space(9);
+
+    @include breakpoint(medium) {
+      width: 50%;
+      padding-right: space(10);
+    }
+    @include breakpoint(large) {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: space(5);
+    }
+  }
+
+  .chart-primary__description-list {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    @include breakpoint(medium) {
+      width: 50%;
+    }
+    @include breakpoint(large) {
+      width: 100%;
+    }
+  }
+
+  .chart-primary__description-list-item {
+    margin-bottom: space(3);
+    width: 100%;
+
+    .chart-primary__color-indicator {
+      width: 20px;
+      height: 20px;
+      border: 1px solid color(gold);
+      margin-right: 20px;
+      display: inline-block;
+      vertical-align: middle;
+
+      .chart-primary__color-indicator-red {
+        width: 14px;
+        height: 14px;
+        margin: 2px;
+        background-color: color(red);
+      }
+
+      .chart-primary__color-indicator-gold {
+        width: 14px;
+        height: 14px;
+        margin: 2px;
+        background-color: color(gold);
+      }
+
+      .chart-primary__color-indicator-red-accent {
+        width: 14px;
+        height: 14px;
+        margin: 2px;
+        background-color: color(red-accent);
+      }
+
+      .chart-primary__color-indicator-grey {
+        width: 14px;
+        height: 14px;
+        margin: 2px;
+        background-color: color(grey);
+      }
+    }
+
+    .chart-primary__description-text {
+      @include text-body-large;
+      display: inline-block;
+      vertical-align: middle;
+      width: calc(100% - 46px);
+    }
+  }
+}
+
+.chart-primary__chart-container {
+  @include flex-grid-column(12);
+  margin: 0 auto;
+
+  @include breakpoint(medium) {
+    @include flex-grid-size(6);
+  }
+}

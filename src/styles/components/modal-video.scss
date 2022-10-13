@@ -1,0 +1,103 @@
+.dependency-video__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 102;
+  .ModalContainer__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .ModalContainerDialog {
+    width: 100%;
+    background: color(black);
+    position: relative;
+    @include breakpoint(large) {
+      //max-width: 1024px;
+      //max-width: 55%;
+    }
+    @include breakpoint(xlarge) {
+      //max-width: 1200px;
+      //max-width: 60%;
+    }
+    @include breakpoint(xxlarge) {
+      //max-width: 1280px;
+      //max-width: 60%;
+    }
+    .video-modal__video-wrapper {
+      //position: absolute;
+      //top: 0;
+      //left: 0;
+      //right: 0;
+      //display: block;
+      //width: 100%;
+      //background: color(black);
+      //height: 0;
+      //padding-bottom: 56.25%;
+      //transform: translateY(-50%);
+
+      width: 100%;
+      height: 56.25vw; /* height:width ratio = 9/16 = .5625  */
+      max-height: 100vh;
+      max-width: 177.78vh; /* 16/9 = 1.778 */
+      margin: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0; /* vertical center */
+      left: 0;
+      right: 0; /* horizontal center */
+
+      @include breakpoint(large) {
+        //padding-bottom: 36.25%;
+      }
+      @include breakpoint(xlarge) {
+        //padding-bottom: 46.25%;
+      }
+      @include breakpoint(xxlarge) {
+        //padding-bottom: 56.25%;
+      }
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  .ModalButton--close {
+    position: absolute;
+    z-index: 6;
+    top: 0;
+    right: 0;
+    height: 70px;
+    width: 70px;
+    color: color(white);
+    background: url("/svgs/icon-menu-white-close.svg") no-repeat scroll center
+      color(red-accent);
+    cursor: pointer;
+    text-indent: -9999px;
+    &:focus,
+    &:hover {
+      background: url("/svgs/icon-red-close.svg") no-repeat scroll center
+        color(white);
+    }
+    // .video-modal__button {
+    //height: 100px;
+    //color: color(white);
+    //background-color: #228c22;
+    //font-size: 50px;
+    //cursor: pointer;
+    // }
+  }
+}

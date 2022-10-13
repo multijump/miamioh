@@ -1,0 +1,22 @@
+<section class="collection-figures-4up collection-figures-4up--{{ backgroundcolor|default('red') }}">
+	<div class="collection-figures-4up__container">
+		<div class="collection-figures-4up__heading-container">
+			<h{{heading.level|default('2')}} class="collection-figures-4up__heading">{{ heading.text }}</h{{heading.level|default('2')}}>
+		</div>
+		<div class="collection-figures-4up__subheading-container">
+			<p class="collection-figures-4up__subheading" {% if subheading.id %} id="{{ subheading.id }}" {% endif %}>{{ subheading.text }}</p>
+			<div class="collection-figures-4up__cta-container">
+				{% include 'components/base-cta-text.twig' with subheading.cta %}
+			</div>
+		</div>
+		{% for card in cardlist.cards %}
+			<article class="collection-figures-4up__card">
+				<div>
+					{# <number-precision class="collection-figures-4up__card-headline" :value="{{ card.headline.text }}"></number-precision> #}
+					<p class="collection-figures-4up__card-headline">{{ card.headline.text }}</p>
+					<p class="collection-figures-4up__card-copy">{{ card.copy }}</p>
+				</div>
+			</article>
+		{% endfor %}
+	</div>
+</section>

@@ -1,0 +1,78 @@
+.feature-image-2up {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
+}
+
+.feature-image-2up__card {
+  position: relative;
+  padding: space(8.75) space(6.25);
+  // height: 475px;
+
+  @include breakpoint(large) {
+    height: 600px;
+    width: 100%;
+    padding: space(11);
+  }
+}
+
+.feature-image-2up__image {
+  @include adhere;
+  object-fit: cover;
+}
+
+.feature-image-2up__overlay {
+  @include adhere;
+  background-color: color(black-overlay-light);
+}
+
+.feature-image-2up__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  border: solid 1px color(gold-accent);
+  padding: space(6);
+
+  @include breakpoint(large) {
+    padding: space(13);
+  }
+}
+
+.feature-image-2up__heading {
+  @include text-heading-3;
+  color: color(white);
+  padding-bottom: space(3.75);
+  @include breakpoint(large) {
+    padding-bottom: space(4);
+  }
+}
+
+.feature-image-2up__copy {
+  @include text-body-regular;
+  color: color(white);
+  padding-bottom: space(3);
+
+  @include breakpoint(medium) {
+    padding-bottom: space(10);
+  }
+
+  @include breakpoint(large) {
+    padding-bottom: space(10);
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  // IE10+ CSS here
+  .hero-landing__header-icon-line {
+    transform: translate(0, 0);
+  }
+  .hero-landing__header-icon-container {
+    position: static;
+  }
+}

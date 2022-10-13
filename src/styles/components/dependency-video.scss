@@ -1,0 +1,244 @@
+$background: to right, color(white-warm) 60%, color(white) 60%;
+
+.dependency-video {
+  padding-top: space(20);
+  padding-bottom: space(7.5);
+  background: -webkit-linear-gradient($background);
+  background: -o-linear-gradient($background);
+  background: -moz-linear-gradient($background);
+  background: linear-gradient($background);
+
+  @include breakpoint(large) {
+    padding-bottom: space(20);
+  }
+}
+
+.dependency-video__container {
+  @include create-row;
+  position: relative;
+  z-index: 1;
+
+  @include breakpoint(large) {
+    padding-left: space(20);
+    padding-right: space(20);
+  }
+}
+
+.dependency-video__inner {
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(large) {
+    @include flex-grid-column(12);
+  }
+}
+
+.dependency-video__background {
+  position: relative;
+  width: 100%;
+  height: 270px;
+
+  @include breakpoint(medium) {
+    height: 370px;
+  }
+
+  @include breakpoint(large) {
+    position: absolute;
+    height: 550px;
+  }
+}
+
+.dependency-video__header-container {
+  @include create-row;
+  align-items: center;
+  z-index: 1;
+  padding-top: space(10);
+
+  @include breakpoint(large) {
+    padding-top: 0;
+    height: 550px;
+  }
+}
+
+.dependency-video__background-image {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+
+  @include breakpoint(large) {
+    height: 550px;
+  }
+}
+
+.dependency-video__video {
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+
+  &::before {
+    background: linear-gradient(
+      to bottom,
+      color(transparent) 0%,
+      color(black-overlay-light) 100%
+    );
+    height: calc(100% - 75px);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    content: "";
+    // z-index: 1;
+
+    @include breakpoint(large) {
+      height: calc(100% - 125px);
+    }
+  }
+  &::after {
+    background-color: color(black-overlay-light);
+    width: 100%;
+    height: 75px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // z-index: 1;
+
+    @include breakpoint(large) {
+      height: 125px;
+    }
+  }
+
+  &:focus {
+    outline: 2px dotted #c41230;
+    outline-offset: 4px;
+  }
+}
+
+.dependency-video__heading-inner {
+  @include flex-grid-column(12);
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(large) {
+    @include flex-grid-size(7);
+  }
+}
+
+.dependency-video__header-icon-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 30px;
+  height: 100%;
+  overflow: hidden;
+  transform: translate(-50px);
+  display: none;
+
+  @include breakpoint(large) {
+    display: block;
+    width: 40px;
+    transform: translate(-77px);
+  }
+}
+
+.dependency-video__header-icon-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.dependency-video__header-icon {
+  position: relative;
+  align-items: center;
+  background-color: color(white-warm);
+  margin-bottom: space(5);
+  width: 40px;
+  height: 40px;
+}
+
+.dependency-video__content-icon {
+  background-color: color(white-warm);
+}
+
+.dependency-video__header-icon-line {
+  position: relative;
+  width: 1px;
+  height: 100%;
+  background-color: color(red);
+  transform: translate(0, 0);
+}
+
+.dependency-video__heading {
+  @include text-heading-2;
+  color: color(red);
+  position: relative;
+
+  @include breakpoint(large) {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: space(10);
+    color: color(white);
+    z-index: 100;
+  }
+}
+
+.dependency-video__modal {
+  z-index: 100;
+}
+
+.dependency-video__video-button {
+  position: absolute;
+  right: calc(50% - 40px);
+  bottom: calc(50% - 40px);
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  padding: space(0.5);
+  border: 2px solid color(white);
+  border-radius: 50%;
+  background-color: rgba(color(black), 0.5);
+  fill: color(white);
+
+  @include breakpoint(large) {
+    right: 50px;
+    bottom: 50px;
+    width: 100px;
+    height: 100px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid color(transparent);
+    border-radius: 50%;
+    @include transition(border-color);
+    content: "";
+  }
+
+  &:hover::before {
+    border-color: color(white);
+  }
+
+  &:focus {
+    @include focus-white;
+  }
+}
+
+.dependency-video__video-button-icon--play {
+  width: 100%;
+  display: block;
+}

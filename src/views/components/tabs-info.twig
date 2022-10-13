@@ -1,0 +1,25 @@
+<section class="tabs-info">
+	<switch-tabinfo class="tabs-info-switch" filter-title="{{ filterTitle }}" active-item="{{ activeItem }}" heading="{{ heading }}">
+		{% for campus in campuses.campusList %}
+			<toggle-campus-panel panel-title="{{ campus.name }}" class="tabs-info__panel">
+				<div class="tabs-info__image-container">
+					<img src="{{ campus.image.src }}" alt="{{campus.image.alt}}" class="tabs-info__image"/>
+				</div>
+				<div class="tabs-info__content-container">
+					<p class="tabs-info__content-copy" {% if campus.copy.id %} id="{{ campus.copy.id }}" {% endif %}>{{ campus.copy.text }}</p>
+					<h{{campus.heading.level|default('2')}} class="tabs-info__links-header" {% if campus.heading.id %} id="{{ campus.heading.id }}" {% endif %}>{{ campus.heading.text }}</h{{campus.heading.level|default('2')}}>
+					<div class="tabs-info__links-inner">
+						{% for link in campus.links %}
+							{% include 'components/base-link-primary.twig' with link %}
+						{% endfor %}
+					</div>
+					<div class="tabs-info__ctas-inner">
+						{% for cta in campus.ctas %}
+							{% include 'components/base-cta-primary.twig' with cta %}
+						{% endfor %}
+					</div>
+				</div>
+			</toggle-campus-panel>
+		{% endfor %}
+	</switch-tabinfo>
+</section>

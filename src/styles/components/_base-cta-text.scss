@@ -1,0 +1,68 @@
+.base-cta-text {
+  @include text-cta-default;
+  position: relative;
+  display: inline-block;
+  padding: space(3) space(4) space(3) 0;
+  margin-top: space(5);
+  color: color(black);
+
+  &:focus {
+    @include focus-red;
+  }
+
+  &.base-cta-text--light {
+    color: color(white);
+
+    &:focus {
+      @include focus-white;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: space(2.25);
+    height: space(2.25);
+    background-color: transparent;
+    content: "";
+    border-top: 2px solid color(red);
+    border-right: 2px solid color(red);
+    transform: translateY(-50%) rotate(45deg);
+    transition: all .2s ease;
+  }
+
+  // &.base-cta-text--light::before {
+  //   //background-color: color(white);
+  // }
+  &:hover {
+    &::before {
+      transform: translate(5px, -50%) rotate(45deg) scale(1);
+    }
+  }
+}
+
+// .base-cta-text__arrow {
+// position: absolute;
+// top: 50%;
+// right: 0;
+// display: block;
+// width: space(2.25);
+// height: space(2.25);
+// background-color: transparent;
+// content: "";
+// border-top: 2px solid color(red);
+// border-right: 2px solid color(red);
+// transform: translateY(-50%) rotate(45deg);
+// transition: all .4s linear;
+
+// .base-cta-text--light & {
+//   // border-color: color(white);
+// }
+
+// .base-cta-text:hover &,
+// .base-cta-text:focus & {
+//   // transform: translate(5px, -50%) rotate(45deg) scale(1);
+// }
+// }

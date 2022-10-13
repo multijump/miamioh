@@ -1,0 +1,14 @@
+<a
+    class="base-cta-text base-cta-text--{{ mode|default('dark') }}"
+    href="{{ url }}"
+    target="{{ target|default('_self')}}"
+    {% if ariaLabel %}
+        aria-label="{{ ariaLabel }}"
+    {% endif %}
+    {% if ariaLabelledby %}
+        aria-labelledby="{{ ariaLabelledby }}"
+    {% endif %}
+    {% if ariaDescribedby %}
+        aria-describedby="{{ ariaDescribedby }}"
+    {% endif %}
+>{{ text }}</a>

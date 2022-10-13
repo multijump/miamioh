@@ -1,0 +1,36 @@
+<carousel-container class="carousel-secondary" tag="section" id="carousel-secondary">
+	{% set item = carousel %}
+	<div class="carousel-secondary__item-content">
+		<img src="/svgs/icon-est-1809.svg" alt="Quote Icon" class="carousel-secondary__item-icon"/>
+		<div class="carousel-secondary__item-inner">
+			<h{{item.heading.level|default('3')}} class="carousel-secondary__content-heading" {% if item.heading.id %} id="{{ item.heading.id }}" {% endif %}>{{ item.heading.text }}</h{{item.heading.level|default('3')}}>
+			<p class="carousel-secondary__content-text" {% if item.copy.id %} id="{{ item.copy.id }}" {% endif %}>{{ item.copy.text }}</p>
+			{% include 'components/base-cta-primary.twig' with item.cta %}
+		</div>
+	</div>
+
+
+
+	<div class="carousel-secondary__list-wrapper">
+		<carousel-container-list class="carousel-secondary__list">
+			{% for image in item.images %}
+				{# pass in mobile and desktop scale sizes #}
+				<carousel-container-list-item :scale-desktop="{ first: { width: 600, height: 600 } , second: { width: 550, height: 550 } }" :scale-mobile="{ first: { width: 325, height: 325 }, second: { width: 300, height: 300 } }" class="carousel-secondary__list-item" key="carousel-secondary-list-item--{{ loop.index }}">
+					<div class="carousel-secondary__item-image-container">
+						<img src="{{ image.src }}" alt="{{ image.alt }}" class="carousel-secondary__item-image"/>
+						<div class="carousel-secondary__item-image-overlay"></div>
+						<div class="carousel-secondary__item-image-text-inner">
+							<h{{item.subheading.level|default('4')}} class="carousel-secondary__item-image-heading">{{ item.subheading.text }}</h{{item.subheading.level|default('5')}}>
+							<p class="carousel-secondary__item-image-text">{{ item.subheading.copy }}</p>
+						</div>
+					</div>
+				</carousel-container-list-item>
+			{% endfor %}
+		</carousel-container-list>
+    </div>
+    <div class="carousel-secondary__wrap">
+		<div class="carousel-secondary__inner-wrap">
+			<carousel-container-slider-secondary class="carousel-secondary__slider" aria-controls="carousel-secondary"></carousel-container-slider-secondary>
+		</div>
+	</div>
+</carousel-container>

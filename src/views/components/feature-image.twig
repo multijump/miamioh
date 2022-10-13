@@ -1,0 +1,15 @@
+<section class="feature-image">
+    <div class="feature-image__container">
+        <div class="feature-image__inner">
+            <div class="feature-image__gradient-wrapper">
+                <img class="feature-image__image" alt="{{ image.alt }}" src="{{ image.src }}">
+                <div class="feature-image__text-container">
+                    <div class="feature-image__text-inner">
+                        <h{{heading.level|default('2')}} class="feature-image__heading">{{ heading.text }}</h{{heading.level|default('2')}}>
+                        <p class="feature-image__copy">{{ copy }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

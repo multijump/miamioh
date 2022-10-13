@@ -1,0 +1,7 @@
+<section class="alerts-base" hidden>
+    {% for alert in alerts %}
+        <div class="alerts-base__container">
+            <alerts heading="{{alert.heading.text}}" copy="{{ alert.heading.copy }}" mode="{{ alert.mode }}" class="alerts alerts--{{ mode|default('light') }}" />
+        </div>
+    {% endfor %}
+</section>

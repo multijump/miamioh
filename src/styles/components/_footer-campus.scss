@@ -1,0 +1,89 @@
+.footer-campus {
+  margin-top: space(10);
+  margin-bottom: space(8);
+
+  @include breakpoint(xlarge) {
+    margin-bottom: 0;
+  }
+
+  .toggle-campus__select-wrap {
+    position: relative;
+    fill: color(white);
+    @include transition((background-color, fill));
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      right: space(5);
+      display: block;
+      width: space(2.5);
+      height: space(2.5);
+      border-right: 2px solid color(white);
+      border-bottom: 2px solid color(white);
+      transform: translateY(-70%) rotate(45deg);
+      content: "";
+    }
+
+    &:hover {
+      background-color: color(white);
+
+      &::after {
+        border-right: 2px solid color(red);
+        border-bottom: 2px solid color(red);
+      }
+
+      .toggle-campus__select {
+        // background-color: color(white);
+        color: color(red);
+      }
+    }
+  }
+
+  .toggle-campus__select {
+    @include text-footer-navigation;
+    @include transition((background-color, fill));
+    display: block;
+    width: 100%;
+    padding: space(4) space(12) space(4) space(5);
+    color: color(white);
+    font-size: rem(16);
+    border: 2px solid color(white);
+    border-radius: 0;
+    background-color: color(transparent);
+    appearance: none;
+
+    @include breakpoint(large) {
+      font-size: rem(12);
+    }
+
+    option {
+      color: color(black);
+      background: color(white);
+    }
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+}
+
+.footer-campus__panel {
+  @include text-footer-legal;
+  font-size: rem(14);
+  margin-top: space(6);
+  line-height: rem(19);
+}
+
+.footer-campus__list {
+  &.footer-campus__list--secondary {
+    margin-top: space(4);
+  }
+}
+
+.footer-campus__link {
+  text-decoration: underline;
+
+  &:focus {
+    @include focus-white;
+  }
+}

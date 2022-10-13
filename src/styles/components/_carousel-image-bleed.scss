@@ -1,0 +1,130 @@
+.carousel-image-bleed {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+
+  @include breakpoint(large) {
+    height: 620px;
+  }
+}
+
+.carousel-image-bleed__inner {
+  @include create-row;
+  flex-direction: column;
+}
+
+.carousel-image-bleed__image {
+  @include adhere;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.carousel-image-bleed__segment-wrap {
+  display: none;
+
+  @include breakpoint(large) {
+    @include flex-grid-column(3);
+    display: block;
+    position: relative;
+    height: 110px;
+    min-height: 110px;
+  }
+}
+
+.carousel-image-bleed__segment {
+  width: 100%;
+  height: 110px;
+  min-height: 110px;
+  border-right: 2px solid color(red);
+}
+
+.carousel-image-bleed__list-wrap {
+  @include flex-grid-column(12);
+  $_color: color(white);
+  $_border: 2px solid color(red);
+  position: relative;
+  margin-top: space(5);
+  background-color: $_color;
+  border: $_border;
+  min-height: 415px;
+
+  &::before {
+    display: none;
+  }
+
+  @include breakpoint(medium) {
+    $_position: 10px;
+
+    &::before {
+      position: absolute;
+      display: block;
+      right: $_position;
+      bottom: $_position;
+      width: 100%;
+      height: 100%;
+      background-color: $_color;
+      border: $_border;
+      content: "";
+    }
+  }
+
+  @include breakpoint(large) {
+    @include flex-grid-size(6);
+    margin-top: 0;
+  }
+}
+
+.carousel-image-bleed__list {
+  padding: 50px 35px;
+}
+
+.carousel-image-bleed__item-content-wrap {
+  .carousel-image-bleed-item__content-heading {
+    @include text-heading-3;
+    margin-bottom: space(8.5);
+    color: color(red);
+
+    @include breakpoint(large) {
+      width: calc(100% - 80px);
+    }
+  }
+
+  .carousel-image-bleed-item__content-copy {
+    @include text-body-regular;
+  }
+}
+
+.carousel-image-bleed__item-icon-wrap {
+  position: absolute;
+  right: 0;
+  top: 0;
+  $_size: space(15);
+  margin-left: auto;
+  width: $_size;
+  height: $_size;
+  display: none;
+
+  @include breakpoint(large) {
+    display: block;
+  }
+}
+
+.carousel-image-bleed__item-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-image-bleed__controls {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  padding: space(10);
+  transform: translateX(-50%);
+
+  @include breakpoint(medium) {
+    right: 0;
+    left: auto;
+    transform: translateX(0);
+  }
+}

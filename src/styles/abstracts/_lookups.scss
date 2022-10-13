@@ -1,0 +1,61 @@
+// Colors
+$colors: (
+  transparent: rgba(0, 0, 0, 0),
+  black-overlay: rgba(0, 0, 0, 0.8),
+  black-overlay-light: rgba(0, 0, 0, 0.6),
+  black-gradient: rgba(0, 0, 0, 0.01),
+  black: #231f20,
+  black-00: #000,
+  white: #fff,
+  white-warm: #faf9f7,
+  gray: #d1d0d0,
+  red: #c41230,
+  red-accent: #ad102a,
+  gold: #edece2,
+  gold-accent: #ccc9b8,
+  dark-gray: #7e6d53,
+);
+
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+// Fonts
+$fonts: (
+  freight-display: (
+    freight-display-pro,
+    serif,
+  ),
+  freight-text: (
+    freight-text-pro,
+    serif,
+  ),
+  proxima-nova: (
+    proxima-nova,
+    sans-serif,
+  ),
+);
+
+@function font($key) {
+  @return map-get($fonts, $key...);
+}
+
+// Easing (material defaults)
+$eases: (
+  default: cubic-bezier(0.4, 0, 0.2, 1),
+  accelerate: cubic-bezier(0.4, 0, 1, 1),
+  decelerate: cubic-bezier(0, 0, 0.2, 1),
+);
+
+@function ease($key: default) {
+  @return map-get($eases, $key);
+}
+
+// Time
+$time: (
+  default: 300ms,
+);
+
+@function time($key: default) {
+  @return map-get($time, $key);
+}

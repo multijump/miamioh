@@ -1,0 +1,313 @@
+.hero-landing__container {
+  position: relative;
+}
+
+.hero-landing__background {
+  position: absolute;
+  width: 100%;
+  height: 370px;
+
+  &::after {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: rgba(color(black), 0.7);
+  }
+
+  @include breakpoint(large) {
+    height: 550px;
+  }
+}
+
+.hero-landing__background-image {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 370px;
+  object-fit: cover;
+
+  @include breakpoint(large) {
+    height: 550px;
+  }
+}
+
+.hero-landing__header-container {
+  @include create-row;
+  align-items: center;
+  z-index: 1;
+  height: 370px;
+  overflow: hidden;
+
+  @include breakpoint(large) {
+    height: 550px;
+  }
+}
+
+.hero-landing__heading-inner {
+  @include flex-grid-column(10);
+  @include grid-column-offset(2);
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint(large) {
+    @include flex-grid-size(7);
+    @include grid-column-offset(1);
+  }
+}
+
+.hero-landing__header-icon-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //width: 30px;
+  width: 100%;
+  height: 100%;
+  //overflow: hidden;
+  transform: translate(-43px);
+
+  @include breakpoint(large) {
+    //width: 40px;
+    width: 100%;
+    transform: translate(-58px);
+  }
+
+  .hero-landing__header-icon-align {
+    width: 100%;
+    display: flex;
+  }
+}
+
+.hero-landing__header-icon-inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-landing__header-icon {
+  position: relative;
+  width: 36px;
+  height: 50px;
+  align-items: center;
+  margin-left: -17px;
+
+  @include breakpoint(large) {
+    margin-left: -18px;
+  }
+}
+
+.hero-landing__header-icon-line {
+  position: absolute;
+  width: 1px;
+  height: 300px;
+  background-color: color(red);
+  transform: translate(0, space(17.5));
+
+}
+
+
+.hero-landing__heading {
+  @include text-heading-1;
+  color: color(white);
+  padding-left: space(7.75);
+  margin-top: space(-2.75);
+
+  @include breakpoint(large) {
+    margin-top: space(-5.5);
+  }
+}
+
+.hero-landing__content-container {
+  @include create-row;
+  background-color: color(white);
+}
+
+.hero-landing__content-inner {
+  @include flex-grid-column(10);
+  @include grid-column-offset(2);
+  padding-top: space(10);
+  padding-bottom: space(10);
+  //transform: translate(0, -25px);
+
+  @include breakpoint(medium) {
+    padding-top: space(17);
+    padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    @include flex-grid-size(7);
+    @include grid-column-offset(1);
+    padding-top: space(17);
+    padding-bottom: space(17);
+  }
+}
+
+.hero-landing__content-wrapper {
+  position: relative;
+}
+
+.hero-landing__content-icon-container {
+  position: absolute;
+  //width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  bottom: 0px;
+  height: 100%;
+  transform: translate(-50px);
+
+  @include breakpoint(large) {
+    //width: 40px;
+    transform: translate(-65px);
+  }
+}
+
+.hero-landing__content-icon-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-landing__content-icon-line {
+  position: absolute;
+  bottom: 15px;
+  width: 1px;
+  height: calc(100% + 53px);
+  background-color: color(red);
+}
+
+.hero-landing__content-icon {
+  position: relative;
+  height: 15px;
+  order: 1;
+}
+
+.hero-landing__copy {
+  //@include text-body-regular;
+  @include text-body-large;
+  padding-bottom: space(7.5);
+
+  @include breakpoint(large) {
+    padding-bottom: space(10);
+  }
+}
+
+.hero-landing__cta {
+  .base-cta-primary {
+    margin-top: 0;
+  }
+}
+
+.hero-landing__quicklinks {
+  @include flex-grid-column(12);
+  transform: translate(0, -25px);
+  order: -1;
+
+  @include breakpoint(large) {
+    order: 1;
+    @include flex-grid-size(3);
+    @include grid-column-offset(1);
+    transform: translate(0, -40px);
+  }
+}
+
+.hero-landing__quicklinks-inner {
+  background-color: color(gold);
+  padding: 30px;
+}
+
+.hero-landing__quicklinks-header {
+  @include text-heading-7;
+  color: color(red);
+  text-transform: uppercase;
+  padding-bottom: space(5);
+}
+
+.hero-landing__quicklink-text {
+  @include text-body-small;
+  font-weight: bold;
+  padding-bottom: space(4);
+}
+
+.hero-landing__video-button {
+  position: absolute;
+  right: 35px;
+  bottom: 35px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  padding: space(0.5);
+  border: 2px solid color(white);
+  border-radius: 50%;
+  background-color: rgba(color(black), 0.4);
+  fill: color(white);
+
+  @include breakpoint(large) {
+    right: 50px;
+    bottom: 50px;
+    width: 36px;
+    height: 36px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid color(transparent);
+    border-radius: 50%;
+    @include transition(border-color);
+    content: "";
+  }
+
+  &:hover::before {
+    border-color: color(white);
+  }
+
+  &:focus {
+    @include focus-white;
+  }
+}
+
+.hero-landing__video-button-icon--pause {
+  width: 100%;
+  display: none;
+
+  .hero-landing__video-button.isPlaying & {
+    display: block;
+  }
+}
+
+.hero-landing__video-button-icon--play {
+  width: 100%;
+  display: block;
+
+  .hero-landing__video-button.isPlaying & {
+    display: none;
+  }
+}
+
+.hero-primary__video {
+  position: absolute;
+}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+
+  // IE10+ CSS here
+  .hero-landing__header-icon-line {
+    position: absolute;
+    left: 0
+  }
+
+  .hero-landing__header-icon-container {
+    position: static;
+  }
+}

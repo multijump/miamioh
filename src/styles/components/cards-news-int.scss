@@ -1,0 +1,115 @@
+.cards-news-int {
+  width: 100%;
+  margin-top: space(15);
+  margin-bottom: space(15);
+}
+
+.cards-news-int__cards-container {
+  @include create-row;
+  flex-direction: column;
+
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
+}
+
+.cards-news-int__heading-container {
+  @include flex-grid-column(12);
+  padding-bottom: space(10);
+
+  @include breakpoint(large) {
+    @include flex-grid-size(8);
+    align-self: center;
+    justify-self: center;
+    padding-bottom: space(15);
+  }
+}
+
+.cards-news-int__cta-container {
+  @include flex-grid-column(12);
+  padding-bottom: space(5);
+  order: 1;
+  // margin-top: space(-5);
+
+  @include breakpoint(large) {
+    @include flex-grid-size(4);
+    order: 0;
+    padding-bottom: space(15);
+    align-self: center;
+  }
+}
+
+.cards-news-int__card {
+  position: relative;
+  @include flex-grid-column(12);
+
+  @include breakpoint(large) {
+    @include flex-grid-size(6);
+  }
+
+  .cards-news-int__card-inner {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 0;
+      background-color: transparent;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      transition: height 0.2s ease-out;
+    }
+
+    &:hover {
+      cursor: grab;
+      .cards-news-int__headline {
+        border-bottom-color: color(black);
+      }
+    }
+  }
+}
+
+.cards-news-int__image {
+  min-height: 200px;
+  max-height: 220px;
+  width: 100%;
+  object-fit: cover;
+  padding-bottom: space(3);
+
+  @include breakpoint(large) {
+    height: 220px;
+    width: 100%;
+  }
+}
+
+.cards-news-int__category {
+  @include text-body-small;
+  color: color(red);
+  font-style: italic;
+  padding-bottom: space(1);
+}
+
+.cards-news-int__headline {
+  @include text-heading-6;
+  color: color(black);
+  font-weight: 600;
+  display: inline;
+  line-height: 1.5;
+  padding-bottom: 2px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0);
+  transition-property: border-bottom-color;
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cards-news-int__divider {
+  border-bottom: 1px solid color(gold-accent);
+  margin-top: space(7);
+  margin-bottom: space(10);
+
+  @include breakpoint(large) {
+    margin-top: space(5);
+  }
+}

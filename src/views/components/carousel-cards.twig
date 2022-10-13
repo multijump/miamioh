@@ -1,0 +1,64 @@
+<carousel-container class="carousel-cards" tag="section" id="carousel-cards">
+	<div class="carousel-cards__wrap carousel-cards__wrap--heading">
+		<h2 class="carousel-cards__heading">{{ heading }}</h2>
+	</div>
+	<div class="button-skip-content__wrap">
+		<a href="#end-carousel-cards" class="button-skip-content">
+			Skip carousel content
+		</a>
+	</div>
+	<div class="carousel-cards__inner">
+		<carousel-container-list-secondary class="carousel-cards__list">
+			{% for item in items %}
+				{# pass in mobile and desktop scale sizes #}
+				<carousel-container-list-item :scale-desktop="{ first: { width: 530, height: 600 } , second: { width: 530, height: 500 } }" :scale-mobile="{ first: { width: 325, height: 360 }, second: { width: 325, height: 285 } }" class="carousel-cards__list-item" key="carousel-container-list-item--{{ loop.index }}">
+					<div class="carousel-container__item-overlay"></div>
+					<div class="carousel-container__item-content">
+						{% set content = item.content %}
+						{# <h3 class="carousel-container__content-heading" tabindex="0">{{ content.heading }}</h3> #}
+						<carousel-item-title
+							tag="h3"
+							class="carousel-container__content-heading"
+							tabindex="1"
+							index="{{ loop.index0 }}"
+						>
+							{{ content.heading }}
+						</carousel-item-title>
+						<carousel-item-description
+							tag="p"
+							class="carousel-container__content-text"
+							tabindex="2"
+							index="{{ loop.index0 }}"
+						>
+							{{ content.text }}
+						</carousel-item-description>
+						{# <span class="carousel-container__content-text" tabindex="0">{{ content.text }}</span> #}
+					</div>
+					{% set image = item.image %}
+					<img src="{{ image.src }}" alt="{{ image.alt }}" class="carousel-cards__item-image"/>
+				</carousel-container-list-item>
+			{% endfor %}
+		</carousel-container-list-secondary>
+	</div>
+	<div class="carousel-cards__wrap carousel-cards__wrap--slider" aria-controls="carousel-cards">
+		<div class="carousel-cards__wrap-inner">
+			<div class="carousel-cards__inner-wrap">
+				<div class="carouse-cards__slider-indicator-wrap">
+					<div class="carousel-cards__slider-indicator-rail"></div>
+					{% for item in items %}
+						<div class="carouse-cards__slider-indicator" style="left: {{ 100 / (items|length - 1) * loop.index0 }}%"></div>
+					{% endfor %}
+				</div>
+				<carousel-container-slider class="carousel-cards__slider"></carousel-container-slider>
+			</div>
+		</div>
+	</div>
+
+    <div class="carousel-cards__wrap-mobile">
+		<div class="carousel-cards__inner-wrap-mobile">
+			<carousel-container-slider-secondary class="carousel-cards__slider-mobile" aria-controls="carousel-cards"></carousel-container-slider-secondary>
+		</div>
+	</div>
+
+	<div id="end-carousel-cards" class="button-skip-content" aria-hidden="true"></div>
+</carousel-container>

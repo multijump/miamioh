@@ -1,0 +1,20 @@
+// Configured for our standard grid – should not be changed
+$breakpoints: (
+  xsmall: 0,
+  small: 360px,
+  medium: 640px,
+  small-desktop: 992px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+
+// Configured for our standard grid – should not be changed
+$grid-column-gutter: (
+  xsmall: 15px,
+  small: 15px,
+  medium: 25px,
+  large: 25px,
+  xlarge: 30px,
+  xxlarge: 30px,
+);

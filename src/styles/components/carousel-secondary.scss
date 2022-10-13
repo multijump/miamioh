@@ -1,0 +1,322 @@
+.carousel-secondary {
+  background-color: color(gold);
+  position: relative;
+
+  @include breakpoint(large) {
+    padding: 0;
+    display: flex;
+    height: 600px;
+  }
+}
+
+.carousel-secondary__item-content {
+  width: 100%;
+  padding: space(8.75) space(6.25) space(7.5) space(6.25);
+
+  @include breakpoint(medium) {
+    padding-top: space(15);
+  }
+
+  @include breakpoint(large) {
+    width: calc(100vw - 660px);
+    padding: space(12.5) space(10) space(10);
+  }
+
+  @include breakpoint(xxlarge) {
+    width: 780px;
+  }
+
+  .carousel-secondary__item-icon {
+    width: 80px;
+  }
+}
+
+.carousel-secondary__list-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 325px;
+
+  @include breakpoint(medium) {
+    height: 600px;
+  }
+
+  @include breakpoint(large) {
+    width: 660px;
+  }
+
+  @include breakpoint(xxlarge) {
+    width: calc(100vw - 780px);
+  }
+}
+
+.carousel-secondary__list {
+  width: 100%;
+  min-width: 10000px;
+  display: flex;
+  align-items: flex-end;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.carousel-secondary__list-item {
+  width: 325px;
+  padding-left: space(0);
+  padding-right: 25px;
+
+  @include breakpoint(medium) {
+    width: 575px;
+    padding-right: 25px;
+  }
+
+  .CarouselContainerListItem {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+      flex-direction: row-reverse;
+    }
+
+    .carousel-secondary__list-item--isActive & {
+      flex-direction: column;
+      margin-bottom: 30px;
+
+      @include breakpoint(large) {
+        flex-direction: row;
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.carousel-secondary__list-item--isActive {
+  width: 350px;
+
+  @include breakpoint(medium) {
+    width: 625px;
+  }
+}
+
+.CarouselContainerListItem {
+  .carousel-secondary__list-item--isActive & {
+    flex-direction: column;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+}
+
+.carousel-secondary__item-inner {
+  padding-left: space(0);
+  padding-right: space(0);
+  padding-top: space(5);
+
+  @include breakpoint(large) {
+    padding-left: space(10);
+    padding-right: space(10);
+    padding-top: space(3);
+  }
+
+  @include breakpoint(xlarge) {
+    padding-left: space(20);
+    padding-right: space(20);
+    padding-top: space(5);
+  }
+
+  .carousel-secondary__content-heading {
+    @include text-heading-3;
+    color: color(red);
+    margin-bottom: space(3.75);
+
+    @include breakpoint(large) {
+      @include text-heading-4;
+      margin-bottom: space(3);
+    }
+
+    @include breakpoint(xlarge) {
+      @include text-heading-4;
+      margin-bottom: space(5);
+    }
+
+    @include breakpoint(xxlarge) {
+      @include text-heading-3;
+      margin-bottom: space(5);
+    }
+  }
+
+  .carousel-secondary__content-text {
+    @include text-body-regular;
+    margin-bottom: space(5);
+  }
+  .base-cta-primary {
+    margin-top: space(2.5);
+    @include breakpoint(large) {
+      margin-top: space(5);
+    }
+  }
+}
+
+.carousel-secondary__item-image-container {
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(large) {
+    width: 100%;
+  }
+
+  .carousel-secondary__item-image-overlay {
+    &::before {
+      background: linear-gradient(to bottom, color(transparent) 0%, color(black-overlay-light) 100%);
+      height: calc(100% - 75px);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: auto;
+      content: '';
+      // z-index: 1;
+  
+      @include breakpoint(large) {
+        height: calc(100% - 125px);
+      }
+    }
+    &::after {
+      background-color: color(black-overlay-light);
+      width: 100%;
+      height: 75px;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      // z-index: 1;
+  
+      @include breakpoint(large) {
+        height: 125px;
+      }
+    }
+  }
+
+  .carousel-secondary__item-image-text-inner {
+    position: absolute;
+    bottom: space(5);
+    padding-left: space(5);
+    padding-right: space(5);
+    display: none;
+    @include breakpoint(large) {
+      bottom: space(10);
+      padding-left: space(12);
+      padding-right: space(12);
+    }
+
+    .carousel-secondary__list-item--isActive & {
+      display: block;
+    }
+
+    .carousel-secondary__item-image-heading {
+      @include text-heading-5;
+      color: color(white);
+      margin-bottom: space(5);
+    }
+
+    .carousel-secondary__item-image-text {
+      @include text-body-small;
+      font-weight: 300;
+      color: color(white);
+    }
+  }
+}
+
+.carousel-secondary__wrap {
+  position: relative;
+  padding-top: space(7.5);
+  padding-bottom: space(7.5);
+
+  @include breakpoint(medium) {
+    position: relative;
+    bottom: space(3);
+    padding-bottom: 0;
+    padding-top: space(10);
+  }
+
+  @include breakpoint(large) {
+    position: absolute;
+    bottom: space(10);
+    left: space(20);
+  }
+
+  @include breakpoint(xlarge) {
+    left: space(30);
+  }
+}
+
+.carousel-secondary__inner-wrap {
+  width: 100%;
+  background-color: color(transparent);
+  appearance: none;
+  outline: none;
+  text-align: center;
+
+  @include breakpoint(large) {
+    text-align: left;
+  }
+}
+
+.carousel-secondary__slider {
+  width: 100%;
+  background-color: color(transparent);
+  appearance: none;
+  outline: none;
+  text-align: center;
+
+  @include breakpoint(large) {
+    text-align: left;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    margin-right: 5px;
+    background-color: color(red);
+    background-repeat: no-repeat;
+    background-size: auto;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    &:first-child {
+      background-image: url("/svgs/icon-arrow-left--white.svg");
+    }
+
+    &:last-child {
+      background-image: url("/svgs/icon-arrow-right--white.svg");
+    }
+
+    &:disabled {
+      background-color: rgba(color(red-accent), 0.5);
+    }
+
+    &:focus {
+      @include focus-red;
+    }
+
+    &:hover {
+      background-color: color(red-accent);
+    }
+    background-position: center;
+  }
+}

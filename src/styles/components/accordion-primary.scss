@@ -1,0 +1,105 @@
+.accordion-primary {
+  width: 100%;
+  margin-top: space(15);
+  margin-bottom: space(15);
+}
+
+.accordion-primary__container {
+  @include create-row;
+}
+
+.accordion-primary__inner {
+  @include flex-grid-column(12);
+}
+
+.accordion-primary__column {
+  flex-basis: auto;
+  position: relative;
+  padding-top: space(3.5);
+  padding-bottom: space(3.5);
+  border-top: 1px solid color(gold);
+
+  &:last-child {
+    border-bottom: 1px solid color(gold);
+  }
+
+  &.accordion-primary__column--resources {
+    margin-top: space(8);
+
+    @include breakpoint(medium) {
+      margin-top: 0;
+      order: 2;
+    }
+  }
+
+  .accordion-primary__accordion {
+    .accordion-primary__heading {
+      @include text-heading-4;
+      margin-bottom: 0;
+
+      .accordion-primary__button {
+        // outline: none;
+        width: 100%;
+        text-align: left;
+
+        &::after {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 1px;
+          border: 1px solid color(dark-gray);
+          top: 50%;
+          right: 0;
+          transform: rotate(0deg);
+          transition: all 0.3s;
+          cursor: pointer;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 20px;
+          height: 1px;
+          border: 1px solid color(dark-gray);
+          top: 50%;
+          right: 0;
+          transform: rotate(90deg);
+          transition: all 0.3s;
+          cursor: pointer;
+        }
+
+        &:hover {
+          &::after {
+            border: 1px solid color(red);
+          }
+
+          &::before {
+            border: 1px solid color(red);
+          }
+        }
+
+        &[aria-expanded="true"] {
+          &::after {
+            border: 1px solid color(red);
+            transform: rotate(225deg);
+          }
+
+          &::before {
+            border: 1px solid color(red);
+            transform: rotate(315deg);
+          }
+        }
+
+        &-label {
+          display: block;
+          max-width: calc(100% - 30px);
+        }
+      }
+    }
+  }
+}
+
+.accordion-primary--body {
+  padding-top: space(10);
+  padding-bottom: space(10);
+}

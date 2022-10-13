@@ -1,0 +1,16 @@
+<section class="collection-list collection-list--{{ backgroundcolor|default('white') }}">
+    <div class="collection-list__header-container">
+        <div class="collection-list__header-inner">
+            <h{{heading.level|default('2')}} class="collection-list__header-heading">{{ heading.text }}</h{{heading.level|default('2')}}>
+            <p class="collection-list__header-subheading">{{ subheading }}</p>
+        </div>
+    </div>
+
+    <div class="collection-list__list-container">
+        <ul class="collection-list__list-innder">
+            {% for list in lists %}
+                {% include 'components/base-list-text.twig' with list %}
+            {% endfor %}
+        </ul>
+    </div>
+</section>

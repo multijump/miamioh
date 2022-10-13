@@ -1,0 +1,71 @@
+.hero-secondary {
+  background: {
+    color: color(red);
+    image: url("/images/illustration-duotone-red.png");
+    repeat: no-repeat;
+    position: center top;
+    size: cover;
+  }
+  @include breakpoint(small) {
+    padding-top: space(15);
+    padding-bottom: space(15);
+  }
+  @include breakpoint(large) {
+    padding-top: space(30);
+    padding-bottom: space(30);
+  }
+  .hero-secondary__inner {
+    @include create-row;
+
+    .base-lockup__heading {
+      color: color(white);
+    }
+  }
+}
+
+.hero-secondary__breadcrumbs {
+  z-index: 1;
+  transform: translate(0px, space(15));
+
+  // top: 500px;
+  // width: 100%;
+  @include breakpoint(medium) {
+    width: auto;
+  }
+
+  @include breakpoint(large) {
+    position: relative;
+    // width: 100%;
+    @include create-row;
+    transform: translate(0px, space(30));
+  }
+
+  @include breakpoint(xlarge) {
+    width: 100%;
+  }
+
+  .breadcrumbs {
+    background-color: color(golden);
+    height: 41px;
+    justify-content: flex-start;
+    width: auto;
+
+    @include breakpoint(large) {
+      position: absolute;
+      top: -20px;
+      left: 2vw;
+      width: auto;
+    }
+  }
+
+  @include breakpoint(large) {
+    // position: absolute;
+    // top: 380px;
+
+    // left: 4.1vw;
+  }
+
+  @include breakpoint(xxlarge) {
+    // left: 2vw;
+  }
+}

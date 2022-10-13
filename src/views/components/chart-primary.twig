@@ -1,0 +1,25 @@
+<section class="chart-primary">
+    <div class="chart-primary__container">
+        <div class="chart-primary__inner">
+            <div class="chart-primary__text-container">
+                <h{{heading.level|default('3')}} class="chart-primary__header-heading">{{ heading.text }}
+                </h{{heading.level|default('3')}}>
+                <ul class="chart-primary__description-list">
+                    {% for item in options %}
+                    <li class="chart-primary__description-list-item">
+                        <div class="chart-primary__color-indicator">
+                            <div class="chart-primary__color-indicator-{{ item.option.alias }}"></div>
+                        </div>
+                        <p class="chart-primary__description-text">{{ item.option.percentage }}% -
+                            {{ item.option.text }}</p>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="chart-primary__chart-container">
+                {% set encodedJson = options|json_encode %}
+                <pie-chart series="{{ encodedJson }}" />
+            </div>
+        </div>
+    </div>
+</section>

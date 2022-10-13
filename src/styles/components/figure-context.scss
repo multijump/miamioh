@@ -1,0 +1,262 @@
+.figure-context {
+  padding: space(10) space(0);
+
+  @include breakpoint(medium) {
+    padding-top: space(15);
+    padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    padding-top: space(10);
+    padding-bottom: space(10);
+  }
+
+  @include breakpoint(xlarge) {
+    padding: space(20) space(10);
+  }
+
+  .figure-context__container {
+    @include create-row;
+    flex-direction: column;
+    border: 1px solid color(gold);
+    background-color: color(white);
+
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+
+    .figure-context__inner {
+      @include create-row;
+      flex-direction: column;
+      border: 1px solid color(gold);
+      position: relative;
+      top: rem(-6);
+      left: rem(-6);
+      margin: 0 !important;
+
+      @include breakpoint(medium) {
+        top: rem(-10);
+        left: rem(-10);
+      }
+
+      @include breakpoint(large) {
+        flex-direction: row;
+      }
+
+      .figure-context__cards-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        align-content: flex-start;
+        background-color: color(red);
+        padding: space(3.5) 0 space(2.5) 0;
+        @include flex-grid-column(12);
+
+        @include breakpoint(medium) {
+          padding-top: space(6.25);
+        }
+
+        @include breakpoint(large) {
+          padding: space(10);
+          @include flex-grid-size(5.5);
+        }
+
+        .figure-context__card {
+          margin: auto 0;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: space(3.75) space(5) space(3.75) space(5);
+          width: 100%;
+
+          @include breakpoint(large) {
+            padding-top: space(5);
+            padding-bottom: space(5);
+          }
+
+          .figure-context_card-inner {
+            margin-left: space(3.75);
+
+            @include breakpoint(large) {
+              margin-left: space(8);
+            }
+
+            .figure-context__card-headline {
+              @include text-heading-3;
+              font-family: font(freight-text);
+              color: color(white);
+              line-height: rem(30);
+              margin-bottom: space(1.25);
+              font-size: rem(24);
+
+              @include breakpoint(large) {
+                font-size: rem(44);
+                line-height: rem(48);
+                margin-bottom: space(5);
+              }
+            }
+
+            .figure-context__card-copy {
+              @include text-body-small;
+              color: color(white);
+              font-style: italic;
+              font-weight: 700;
+            }
+          }
+        }
+
+        .figure-context__card-image-container {
+          position: relative;
+
+          img {
+            max-width: 118px;
+            width: 83px;
+
+            @include breakpoint(large) {
+              width: 118px;
+            }
+          }
+
+          .figure-context__image-text {
+            @include figure-context-image-text;
+            color: color(white);
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 10px;
+            padding: 0 space(4);
+            text-align: center;
+            font-weight: 300;
+
+            &.figure-context__image-type-oval {
+              @include vertical-align(absolute, 56%);
+            }
+
+            &.figure-context__image-type-circle {
+              @include vertical-align(absolute, 49%);
+            }
+          }
+        }
+      }
+
+      .figure-context__text-container {
+        padding: space(10);
+        @include flex-grid-column(12);
+
+        @include breakpoint(medium) {
+          padding-bottom: space(15);
+        }
+
+        @include breakpoint(large) {
+          @include flex-grid-size(6.5);
+        }
+
+        @include breakpoint(xlarge) {
+          padding: space(20) space(25);
+        }
+
+        .figure-context__text-inner {
+          padding-left: space(0);
+          padding-right: space(0);
+
+          @include breakpoint(small) {
+            padding-left: space(5);
+            padding-right: space(5);
+          }
+
+          @include breakpoint(large) {
+            padding-left: space(10);
+            padding-right: space(10);
+          }
+
+          .figure-context__text-heading {
+            @include text-heading-4;
+            color: color(red);
+            margin-bottom: space(3.75);
+            @include breakpoint(large) {
+              margin-bottom: space(5);
+            }
+          }
+
+          .figure-context__text-subheading {
+            @include text-body-regular;
+            color: color(black);
+            margin-bottom: space(5);
+          }
+
+          .figure-context__text-copy {
+            @include text-body-regular;
+            color: color(black);
+            margin-bottom: space(5);
+          }
+        }
+      }
+    }
+  }
+
+  &.figure-context--white {
+    background-color: color(white-warm);
+
+    .figure-context__text-container {
+      background-color: color(white);
+    }
+  }
+
+  &.figure-context--gold {
+    background-color: color(gold);
+
+    .figure-context__text-container {
+      background-color: color(white);
+    }
+  }
+
+  &.figure-context--red {
+    background-color: color(red);
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .figure-context__container {
+      border: none;
+      background-color: transparent;
+
+      .figure-context__inner {
+        border: none;
+        top: 0;
+        left: 0;
+
+        .figure-context__cards-container {
+          padding-bottom: 0;
+
+          @include breakpoint(medium) {
+            padding-top: space(11);
+            padding-bottom: space(6.25);
+          }
+        }
+
+        .figure-context__text-container {
+          @include breakpoint(medium) {
+            padding-top: 0;
+          }
+
+          @include breakpoint(large) {
+            padding: space(20) space(20);
+          }
+
+          .figure-context__text-inner {
+            .figure-context__text-heading {
+              color: color(white);
+            }
+
+            .figure-context__text-subheading {
+              color: color(white);
+            }
+
+            .figure-context__text-copy {
+              color: color(white);
+            }
+          }
+        }
+      }
+    }
+  }
+}

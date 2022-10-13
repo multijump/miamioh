@@ -1,0 +1,15 @@
+<section class="collection-links-int">
+    <div class="collection-links-int__container">
+        <div class="collection-links-int__heading-container">
+            {% include "components/base-lockup.twig" with lockup %}
+        </div>
+        {% for link in links %}
+            <div class="collection-links-int__link">
+                {% if cta.type == 'small' %}
+                    {% set link = link|merge({ type: 'small' }) %}
+                {% endif %}
+                {% include 'components/base-cta-mega.twig' with link %}
+            </div>
+        {% endfor %}
+    </div>
+</section>

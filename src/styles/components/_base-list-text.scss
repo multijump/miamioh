@@ -1,0 +1,22 @@
+.base-list-text {
+  @include text-body-regular;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  align-content: flex-start;
+  color: color(black);
+
+  &.base-list-text--light {
+    color: color(white);
+  }
+
+  .base-list-text__content {
+    margin-left: space(5);
+    padding-bottom: space(3);
+  }
+
+  .base-list-text__list-style {
+    min-height: 10px;
+  }
+}

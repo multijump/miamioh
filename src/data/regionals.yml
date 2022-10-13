@@ -1,0 +1,197 @@
+title: Regionals Page
+components:
+  - name: hero-sublanding
+    heading:
+      text: Miami University Regionals
+    image:
+      src: /images/reg-hero.jpg
+      alt: Alt text
+    icon:
+      src: /svgs/icon-target--red.svg
+      alt:
+    copy:
+      id: hero-sublanding-description
+      text: Small class sizes, hands-on learning, and flexible scheduling—there are so many benefits to attend Miami Regionals. Explore the programs and opportunities available in Hamilton, Middletown, and West Chester.
+    cta:
+      href: /
+      text: Regional Programs
+      ariaDescribedby: hero-sublanding-description
+    breadcrumbs:
+      - href: /
+        text: Academics
+      - href: /regionals
+        text: Regionals
+  - name: cards-image
+    type: white-warm
+    lockup:
+      heading:
+        text: Our Regional Reach
+      copy:
+        text: Find the perfect match that propels you on the path to success. Explore our three different locations and programs available.
+        size: large
+    cards:
+      - headline:
+          id: cards-image-3up-first
+          text: Hamilton Campus
+        copy:
+          id: cards-image-3up-description-first
+          text: A compact, friendly commuter campus, Miami University Hamilton offers bachelor’s degrees, associate degrees, and beginning coursework for most four-year degrees.
+        image:
+          src: /images/reg-reach-hamilton.jpg
+          alt: Alt text
+        cta:
+          href: /
+          text: See Details
+          ariaDescribedby: cards-image-3up-description-first
+      - headline:
+          id: cards-image-3up-second
+          text: Middletown Campus
+        copy:
+          id: cards-image-3up-description-second
+          text: Nestled on 141 acres near I-75, Miami University Middletown offers bachelor’s degrees, associate degrees, and beginning coursework for most four-year degrees.
+        image:
+          src: /images/reg-reach-middletown.jpg
+          alt: Alt text
+        cta:
+          href: /
+          text: See Details
+          ariaDescribedby: cards-image-3up-description-second
+      - headline:
+          id: cards-image-3up-third
+          text: West Chester Learning Center
+        copy:
+          id: cards-image-3up-description-third
+          text: Home of Miami’s MBA program, the Voice of America Learning Center also offers undergraduate and graduate courses and programs drawn from Miami’s Regional and Oxford campuses.
+        image:
+          src: /images/reg-reach-westchester.jpg
+          alt: Alt text
+        cta:
+          href: /
+          text: See Details
+          ariaDescribedby: cards-image-3up-description-third
+  - name: collection-figures-3up
+    background: gold
+    icon: /svgs/icon-flag--red.svg
+    alt: flag
+    heading:
+      text: Our Results Speak for Themselves
+      level: 2
+    subheading:
+      id: collection-figures-3up-description-first
+      text: Where will you go after college? With a degree from Miami University, the answer is wherever you want.
+      cta:
+        href: /
+        text: Student Outcomes
+        ariaDescribedby: collection-figures-3up-description-first
+    cardlist:
+      cards:
+        - headline:
+            text: '#3'
+            level: 1
+          copy: Undergraduate Teaching Among Public Universities
+          subcopy: '*According to the 2019 Ranking in U.S. News & World Report'
+        - headline:
+            text: '96%'
+            level: 1
+          copy: Graduates Employed or Furthering Education
+        - headline:
+            text: '100%'
+            level: 1
+          copy: Nursing Employed or Furthering Education 2017
+  - name: context-image
+    icon: /svgs/icon-est-1809.svg
+    lockup:
+      # mode: (light, dark) default: dark
+      # label: Sample
+      heading: # optional
+        text: Miami University Regionals Work+
+        # level: (1 - 6) default: 2
+        # size: (1 – 4) default: 3
+      copy:
+        id: context-image-description-id
+        text: Work+ is a program designed for Miami University Regionals students to earn a college degree debt-free through part-time work.
+        # size: (small, regular, large) default: regular
+      ctas:
+        - href: /
+          text: Career Services
+          # mode: (light, dark) default: dark
+          # target: (_blank, _self) default: _self
+    image:
+      src: /images/reg-work-plus.jpg
+      alt: Alt text
+  - name: cards-image
+    type: white-warm
+    lockup:
+      heading:
+        text:
+      copy:
+        text:
+        size: large
+    cards:
+      - headline:
+          id: cards-image-3up-first
+          text: Visit Hamilton
+        copy:
+          id: cards-image-3up-description-first
+          text: Hamilton is just over a 20 minute drive from our main campus. Find our recommended directions, parking and local transportation to make your visit quick and easy.
+        image:
+          src: /images/reg-visit-hamilton.jpg
+          alt: Alt text
+        cta:
+          href: /
+          text: See Details
+          ariaDescribedby: cards-image-3up-description-first
+      - headline:
+          id: cards-image-3up-second
+          text: Visit Middletown
+        copy:
+          id: cards-image-3up-description-second
+          text: Just a half-hour drive from Oxford and conveniently located between Dayton and Cincinnati. Find our recommended directions and  parking to make your visit quick and easy.
+        image:
+          src: /images/reg-visit-middletown.jpg
+          alt: Alt text
+        cta:
+          href: /
+          text: See Details
+          ariaDescribedby: cards-image-3up-description-second
+      - headline:
+          id: cards-image-3up-third
+          text: Visit West Chester
+        copy:
+          id: cards-image-3up-description-third
+          text: West Chester is the closest learning center to Cincinnati and I-75. Find our recommended directions, parking and local transportation to make your visit quick and easy.
+        image:
+          src: /images/reg-visit-westchester.jpg
+          alt: Alt text
+        cta:
+          href: /
+          text: See Details
+          ariaDescribedby: cards-image-3up-description-third
+  - name: feature-image-2up
+    cards:
+      - heading:
+          id: feature-image-2up-title-first
+          text: Visit
+        copy:
+          id: feature-image-2up-description-first
+          text: Explore what it means to be a college student at Miami University. Find the campus and career path that’s right for you.
+        image:
+          src: /images/reg-visit.jpg
+          alt: Alt text
+        cta:
+          href: /
+          text: Request Info
+          ariaDescribedby: feature-image-2up-description-first
+      - heading:
+          id: feature-image-2up-title-second
+          text: Apply
+        copy:
+          id: feature-image-2up-description-second
+          text: With affordable tuition and flexible class schedule, Miami Regionals offers a world-renowned education with state-of-the-art applied learning.
+        image:
+          src: /images/reg-apply.jpg
+          alt: Alt text
+        cta:
+          href: /
+          text: Apply Now
+          ariaDescribedby: feature-image-2up-description-second

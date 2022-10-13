@@ -1,0 +1,60 @@
+{% set icon_color = 'red' %}
+{% set mode = 'dark' %}
+{% set article_headline_color = 'black' %}
+
+{% if type == 'red' %}
+    {% set mode = 'light' %}
+    {% set icon_color = 'white' %}
+    {% set article_headline_color = 'white' %}
+{% endif %}
+
+{% if type == 'image' %}
+    {% set article_headline_color = 'red' %}
+{% endif %}
+
+{% if layout == 'vertical' %}
+    {% set article_headline_color = 'red' %}
+{% endif %}
+
+<section class="context-list context-list--{{ type }} context-list--{{ layout|default('horizontal') }}">
+    <div class="context-list__inner">
+        <div class="context-list__lockup-container">
+            {% set lockup = lockup|merge({'mode': mode}) %}
+            {% include "components/base-lockup.twig" with lockup %}
+        </div>
+        {% if layout != 'horizontal' %}
+            <div class="context-list__articles">
+            {% endif %}
+            {% for article in articles %}
+                <article class="context-list__article context-list__article--{{ articles|length }}">
+                    <div class="context-list__article-icon-container">
+                    {% if article.image %}
+                        <img class="context-list__article-image" alt="{{ article.image.alt }}" src="{{ article.image.src }}">
+                    {% endif %}
+                    {% if article.icon %}
+                        <img class="context-list__article-icon" alt="{{ article.icon.alt }}" src="/svgs/icon-{{ article.icon.icon }}--{{ icon_color }}.svg">
+                    {% endif %}
+                    </div>
+                    <div class="context-list__article-inner">
+                        <h{{article.headline.level|default('3')}} class="context-list__article-headline context-list__article-headline--{{ article_headline_color }}"
+                        {% if article.headline.id %}
+                            id="{{ article.headline.id }}"
+                        {% endif %}>{{ article.headline.text }}</h{{article.headline.level|default('5')}}>
+                        <p class="context-list__article-copy"
+                        {% if article.copy.id %}
+                            id="{{ article.copy.id }}"
+                        {% endif %}>{{ article.copy.text }}</p>
+                        {% if article.cta %}
+                            {% set cta = article.cta|merge({'mode': mode}) %}
+                            <div class="context-list__article-cta">
+                                {% include 'components/base-cta-text.twig' with cta %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </article>
+            {% endfor %}
+            {% if layout != 'horizontal' %}
+            </div>
+        {% endif %}
+    </div>
+</section>

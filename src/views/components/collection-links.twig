@@ -1,0 +1,22 @@
+{% set mode = 'dark' %}
+
+{% if type == 'red' %}
+    {% set mode = 'light' %}
+{% endif %}
+
+<section class="collection-links collection-links--{{ type|default('white') }}">
+    <div class="collection-links__container">
+        <div class="collection-links__heading-container">
+
+            {% set lockup = lockup|merge({ 'mode': mode }) %}
+
+            {% include "components/base-lockup.twig" with lockup %}
+        </div>
+        {% for link in links %}
+            <div class="collection-links__link">
+                {% set link = link|merge({ 'mode': mode }) %}
+                {% include 'components/base-cta-link.twig' with link %}
+            </div>
+        {% endfor %}
+    </div>
+</section>

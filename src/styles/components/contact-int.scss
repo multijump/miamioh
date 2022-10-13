@@ -1,0 +1,129 @@
+.contact-int {
+  width: 100%;
+  margin-top: space(15);
+  margin-bottom: space(15);
+  background-color: color(gold);
+
+  @include breakpoint(large) {
+    background-color: transparent;
+    padding-bottom: space(15);
+  }
+}
+
+.contact-int__container {
+  @include create-row;
+  padding-top: space(10);
+  padding-bottom: space(10);
+  align-items: center;
+  background-color: color(gold);
+  @include breakpoint(large) {
+    .sidebar-layout__components & {
+      padding-bottom: space(15);
+    }
+  }
+}
+
+.contact-int__image-container {
+  width: 100%;
+  padding-left: 0.46875rem;
+  padding-right: 0.46875rem;
+
+  @include breakpoint(841px) {
+    display: flex;
+    width: auto;
+    padding-top: space(15);
+    padding-left: space(15);
+    padding-right: space(15);
+    padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    .sidebar-layout__components & {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.contact-int__image {
+  width: auto;
+  height: 100%;
+  max-height: 270px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint(841px) {
+    width: 270px;
+    height: 270px;
+  }
+}
+
+.contact-int__text {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include breakpoint(841px) {
+    margin-left: 0;
+  }
+
+  @include breakpoint(large) {
+    .sidebar-layout__components & {
+      margin-left: auto;
+      padding-bottom: space(5);
+    }
+  }
+}
+
+.contact-int__label {
+  @include text-heading-7;
+  text-transform: uppercase;
+  color: color(red);
+  padding-top: 8px;
+  margin-bottom: 15px;
+}
+
+.contact-int__text-inner {
+  position: relative;
+
+  @include breakpoint(841px) {
+    padding-right: 40px;
+  }
+}
+
+.contact-int__heading {
+  @include text-heading-2;
+  font-weight: 100;
+
+  @include breakpoint(841px) {
+    font-size: rem(45);
+  }
+}
+
+.contact-int__address {
+  @include text-body-regular;
+  padding-top: 15px;
+}
+
+.contact-int__email {
+  @include text-body-regular;
+  display: block;
+  padding-top: 15px;
+}
+
+.contact-int__phone {
+  @include text-body-regular;
+  display: block;
+}
+
+.contact-int__icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 33px;
+
+  @include breakpoint(841px) {
+    top: space(5);
+    right: space(5);
+  }
+}

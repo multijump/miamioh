@@ -1,0 +1,33 @@
+<carousel-container class="carousel-image-bleed" tag="section" id="carousel-image-bleed">
+	{% for item in items %}
+		{% set image = item.image %}
+		<carousel-container-image class="carousel-image-bleed__image" tag="img" key="{{ loop.index0 }}" src="{{ image.src }}" alt="{{ image.alt }}"></carousel-container-image>
+	{% endfor %}
+	<div class="carousel-image-bleed__inner">
+		<div class="carousel-image-bleed__segment-wrap">
+			<div class="carousel-image-bleed__segment"></div>
+		</div>
+		<div class="carousel-image-bleed__list-wrap">
+			<ul class="carousel-image-bleed__list">
+				{% for item in items %}
+					<carousel-container-item class="carousel-image-bleed__list-item" key="carousel-container-item--{{ loop.index }}">
+						<div class="carousel-image-bleed__item-content-wrap">
+							<h2 class="carousel-image-bleed-item__content-heading" {% if item.heading.id %} id="{{ item.heading.id }}" {% endif %}>{{ item.heading.id }}</h2>
+							<p class="carousel-image-bleed-item__content-copy" {% if item.copy.id %} id="{{ item.copy.id }}" {% endif %}>{{ item.copy.text }}</p>
+						</div>
+						<div class="carousel-image-bleed__item-icon-wrap">
+							<img class="carousel-image-bleed__item-icon" aria-hidden="true" src="{{ item.icon }}" alt="">
+						</div>
+						{% include 'components/base-lockup.twig' with item.lockup %}
+					</carousel-container-item>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="carousel-image-bleed__segment-wrap">
+			<div class="carousel-image-bleed__segment"></div>
+		</div>
+		<div class="carousel-image-bleed__controls" aria-controls="carousel-image-bleed">
+			{% include 'components/base-carousel-controls.twig' %}
+		</div>
+	</div>
+</carousel-container>

@@ -1,0 +1,16 @@
+<section class="contact-int">
+    <div class="contact-int__container">
+        <div class="contact-int__image-container">
+            <img class="contact-int__image" alt="{{ image.src }}" src="{{ image.src }}">
+        </div>
+        <div class="contact-int__text">
+            <div class="contact-int__text-inner">
+                <div class="contact-int__label">{{ label }}</div>
+                <h{{heading.level|default('2')}} class="contact-int__heading">{{ heading.text }}</h{{heading.level|default('2')}}>
+                <address class="contact-int__address">{{ address|raw }}</address>
+                <a class="contact-int__email" href="mailto:{{ email }}">{{ email }}</a>
+                <a class="contact-int__phone" href="tel:{{ phone }}">{{ phone }}</a>
+            </div>
+        </div>
+    </div>
+</section>

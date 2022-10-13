@@ -1,0 +1,32 @@
+<section class="hero-sublanding">
+    <div class="hero-sublanding__container">
+        <div class="hero-sublanding__header">
+            <div class="hero-sublanding__inner">
+                <img class="hero-sublanding__image" alt="{{ image.alt }}" src="{{ image.src }}">
+                <div class="hero-sublanding__heading-container">
+                    <h{{heading.level|default('1')}} class="hero-sublanding__heading">{{ heading.text }}</h{{heading.level|default('1')}}>
+                </div>
+            </div>
+        </div>
+        <div class="hero-sublanding__breadcrumbs">
+            {% include 'components/breadcrumbs.twig' with breadcrumbs %}
+        </div>
+        <div class="hero-sublanding__content-container">
+            <div class="hero-sublanding__content-outer">
+                <div class="hero-sublanding__content-inner">
+                    <div class="hero-sublanding__icon-container">
+                        <img class="hero-sublanding__icon" alt="{{ icon.alt }}" src="{{ icon.src }}">
+                        <div class="hero-sublanding__icon-line"></div>
+                    </div>
+                    <p class="hero-sublanding__copy"
+                    {% if copy.id %}
+						id="{{ copy.id }}"
+					{% endif %}>{{ copy.text }}</p>
+                    <div class="hero-sublanding__cta">
+                        {% include 'components/base-cta-primary.twig' with cta %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

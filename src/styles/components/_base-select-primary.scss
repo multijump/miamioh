@@ -1,0 +1,33 @@
+.base-select-primary {
+  border: 1px solid color(grey);
+  position: relative;
+  min-width: 150px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12.5px;
+    right: rem(8);
+    width: 15px;
+    height: 15px;
+    background-image: url("/svgs/icon-arrow-down--red.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .base-select-primary--select {
+    @include text-body-regular;
+    width: 100%;
+    height: rem(38);
+    border: 0px;
+    padding-top: space(2);
+    padding-bottom: space(2);
+    padding-left: space(4);
+    padding-right: space(7);
+    outline: 0;
+    line-height: rem(20);
+    color: color(red);
+    text-transform: uppercase;
+    -webkit-appearance: none;
+  }
+}

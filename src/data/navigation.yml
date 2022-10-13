@@ -1,0 +1,263 @@
+logo:
+  src_mobile: /static/images/miami-university-logo-162x34.png
+  #  src_desktop: /static/images/miami-university-logo-204x42.png
+  src_desktop: /svgs/logo.svg
+  text: Miami University
+first_main_menu_item_id: item-about
+utility_menu:
+  heading: Quick Links
+  links:
+    - href: /apply
+      text: Apply
+      id: utility-apply
+    - href: /visit
+      text: Visit
+      id: utility-visit
+    - href: /give
+      text: Give
+      id: utility-give
+    - href: /programs
+      text: Programs
+      id: utility-programs
+      child_links:
+        - href: /current-students
+          text: Current Students
+        - href: /alumni
+          text: Alumni
+        - href: /faculty-staff
+          text: Faculty & Staff
+        - href: /parents
+          text: Parents
+        - href: /jobs
+          text: Jobs & Careers
+main_menu:
+  heading: Main Menu
+  links:
+    - href: /about
+      text: About
+      ariaLabel: Label156
+      id: item-about
+      child_links:
+        - href: /about#1
+          text: 'Test About Link #1'
+        - href: /about#2
+          text: 'Test About Link #2'
+        - href: /about#3
+          text: 'Test About Link #3'
+        - href: /about#4
+          text: 'Test About Link #4'
+        - href: /about#5
+          text: 'Test About Link #5'
+        - href: /about#6
+          text: 'Test About Link #6'
+        - href: /about#7
+          text: 'Test About Link #7'
+        - href: /about#8
+          text: 'Test About Link #8'
+        - href: /about#9
+          text: 'Test About Link #9'
+        - href: /about#10
+          text: 'Test About Link #10'
+        - href: /about#11
+          text: 'Test About Link #11'
+        - href: /about#12
+          text: 'Test About Link #12'
+    - href: /academics
+      text: Academics
+      id: item-academics
+      child_links:
+        - href: /academics#1
+          text: 'Test Academics Link #1'
+        - href: /academics#2
+          text: 'Test Academics Link #2'
+        - href: /academics#3
+          text: 'Test Academics Link #3'
+        - href: /academics#4
+          text: 'Test Academics Link #4'
+        - href: /academics#5
+          text: 'Test Academics Link #5'
+        - href: /academics#6
+          text: 'Test Academics Link #6'
+        - href: /academics#7
+          text: 'Test Academics Link #7'
+        - href: /academics#8
+          text: 'Test Academics Link #8'
+        - href: /academics#9
+          text: 'Test Academics Link #9'
+        - href: /academics#10
+          text: 'Test Academics Link #10'
+        - href: /academics#11
+          text: 'Test Academics Link #11'
+        - href: /academics#12
+          text: 'Test Academics Link #12'
+    - href: /outcomes
+      text: Outcomes
+      id: item-outcomes
+      child_links:
+        - href: /outcomes#1
+          text: 'Test Outcomes Link #1'
+        - href: /outcomes#2
+          text: 'Test Outcomes Link #2'
+        - href: /outcomes#3
+          text: 'Test Outcomes Link #3'
+        - href: /outcomes#4
+          text: 'Test Outcomes Link #4'
+        - href: /outcomes#5
+          text: 'Test Outcomes Link #5'
+        - href: /outcomes#6
+          text: 'Test Outcomes Link #6'
+        - href: /outcomes#7
+          text: 'Test Outcomes Link #7'
+        - href: /outcomes#8
+          text: 'Test Outcomes Link #8'
+        - href: /outcomes#9
+          text: 'Test Outcomes Link #9'
+        - href: /outcomes#10
+          text: 'Test Outcomes Link #10'
+        - href: /outcomes#11
+          text: 'Test Outcomes Link #11'
+        - href: /outcomes#12
+          text: 'Test Outcomes Link #12'
+    - href: /admissions
+      text: Admissions & Aid
+      id: item-admissions
+      child_links:
+        - href: /admissions#1
+          text: 'Test Admissions Link #1'
+        - href: /admissions#2
+          text: 'Test Admissions Link #2'
+        - href: /admissions#3
+          text: 'Test Admissions Link #3'
+        - href: /admissions#4
+          text: 'Test Admissions Link #4'
+        - href: /admissions#5
+          text: 'Test Admissions Link #5'
+        - href: /admissions#6
+          text: 'Test Admissions Link #6'
+        - href: /admissions#7
+          text: 'Test Admissions Link #7'
+        - href: /admissions#8
+          text: 'Test Admissions Link #8'
+        - href: /admissions#9
+          text: 'Test Admissions Link #9'
+        - href: /admissions#10
+          text: 'Test Admissions Link #10'
+        - href: /admissions#11
+          text: 'Test Admissions Link #11'
+        - href: /admissions#12
+          text: 'Test Admissions Link #12'
+    - href: /life
+      text: Life at Miami
+      id: item-life
+      child_links:
+        - href: /life#1
+          text: 'Test Life Link #1'
+        - href: /life#2
+          text: 'Test Life Link #2'
+        - href: /life#3
+          text: 'Test Life Link #3'
+        - href: /life#4
+          text: 'Test Life Link #4'
+        - href: /life#5
+          text: 'Test Life Link #5'
+        - href: /life#6
+          text: 'Test Life Link #6'
+        - href: /life#7
+          text: 'Test Life Link #7'
+        - href: /life#8
+          text: 'Test Life Link #8'
+        - href: /life#9
+          text: 'Test Life Link #9'
+        - href: /life#10
+          text: 'Test Life Link #10'
+        - href: /life#11
+          text: 'Test Life Link #11'
+        - href: /life#12
+          text: 'Test Life Link #12'
+    - href: /research
+      text: Research
+      id: item-research
+      child_links:
+        - href: /research#1
+          text: 'Test Research Link #1'
+        - href: /research#2
+          text: 'Test Research Link #2'
+        - href: /research#3
+          text: 'Test Research Link #3'
+        - href: /research#4
+          text: 'Test Research Link #4'
+        - href: /research#5
+          text: 'Test Research Link #5'
+        - href: /research#6
+          text: 'Test Research Link #6'
+        - href: /research#7
+          text: 'Test Research Link #7'
+        - href: /research#8
+          text: 'Test Research Link #8'
+        - href: /research#9
+          text: 'Test Research Link #9'
+        - href: /research#10
+          text: 'Test Research Link #10'
+        - href: /research#11
+          text: 'Test Research Link #11'
+        - href: /research#12
+          text: 'Test Research Link #12'
+    - href: /athletics
+      text: Athletics
+      id: item-athletics
+      child_links:
+        - href: /athletics#1
+          text: 'Test Athletics Link #1'
+        - href: /athletics#2
+          text: 'Test Athletics Link #2'
+        - href: /athletics#3
+          text: 'Test Athletics Link #3'
+        - href: /athletics#4
+          text: 'Test Athletics Link #4'
+        - href: /athletics#5
+          text: 'Test Athletics Link #5'
+        - href: /athletics#6
+          text: 'Test Athletics Link #6'
+        - href: /athletics#7
+          text: 'Test Athletics Link #7'
+        - href: /athletics#8
+          text: 'Test Athletics Link #8'
+        - href: /athletics#9
+          text: 'Test Athletics Link #9'
+        - href: /athletics#10
+          text: 'Test Athletics Link #10'
+        - href: /athletics#11
+          text: 'Test Athletics Link #11'
+        - href: /athletics#12
+          text: 'Test Athletics Link #12'
+secondary_menu:
+  heading: Information for
+  links:
+    - href: /current-students
+      text: Current Students
+    - href: /alumni
+      text: Alumni
+    - href: /faculty-staff
+      text: Faculty & Staff
+    - href: /parents
+      text: Parents
+    - href: /jobs
+      text: Jobs at Miami
+social_menu:
+  heading: Connect
+  socialLinks:
+    - href: https://google.com/
+      property: facebook
+      last: false
+    - href: https://google.com/
+      property: instagram
+      last: false
+    - href: https://google.com/
+      property: youtube
+      last: false
+    - href: https://google.com/
+      property: twitter
+      last: false
+    - href: https://google.com/
+      property: linkedin
+      last: true

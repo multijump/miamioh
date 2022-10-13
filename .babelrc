@@ -1,0 +1,19 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "targets": {
+        "browsers": ["iOS >= 10",
+          "Edge >= 15",
+          "Chrome >= 62",
+          "Safari >= 10",
+          "Firefox >= 56",
+          "ChromeAndroid >= 61",
+          "IE 11"
+        ]
+      }
+    }],
+    "stage-2"
+  ],
+  "plugins": ["transform-vue-jsx", "transform-runtime"]
+}

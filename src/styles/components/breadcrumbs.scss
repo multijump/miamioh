@@ -1,0 +1,35 @@
+.breadcrumbs {
+  background-color: color(gold);
+  border-bottom: 1px solid color(gold-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: space(5);
+  padding-right: space(5);
+  width: 100%;
+  height: 50px;
+
+  @include breakpoint(large) {
+    height: 41px;
+  }
+}
+
+.breadcrumbs__selected-link {
+  @include text-footer-navigation;
+  font-weight: 800;
+}
+.breadcrumbs__link {
+  @include text-footer-navigation;
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.breadcrumbs__divider {
+  width: 10px;
+  height: 1px;
+  border: 1px solid color(red);
+  margin-left: space(2);
+  margin-right: space(2);
+}

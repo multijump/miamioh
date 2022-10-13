@@ -1,0 +1,239 @@
+.form-section {
+  padding-top: space(10);
+  padding-bottom: space(10);
+
+  @include breakpoint(medium) {
+    padding-top: space(15);
+    padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    padding-top: space(20);
+    padding-bottom: space(15);
+  }
+
+  &.form-section--red {
+    background-color: color(red);
+  }
+
+  &.form-section--white {
+    background-color: color(white);
+  }
+
+  &.form-section--gold {
+    background-color: color(gold);
+  }
+}
+
+.form-container {
+  @include create-row;
+  position: relative;
+  align-items: flex-start;
+}
+
+.form__heading-container {
+  @include flex-grid-column(12);
+  align-self: flex-start;
+  justify-self: flex-start;
+  padding-bottom: space(3);
+
+  @include breakpoint(large) {
+    padding-bottom: space(5);
+  }
+
+  .form__heading {
+    @include text-heading-2;
+  }
+}
+
+.form-elements-container {
+  @include flex-grid-size(12);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include breakpoint(medium) {
+    flex-direction: row;
+  }
+
+  .form-warning-indication {
+    font-family: font(proxima-nova);
+    font-weight: 400;
+    font-size: 12px;
+    color: color(dark-gray);
+  }
+}
+
+.form-element {
+  padding-top: space(5);
+  position: relative;
+
+  &.form-element--layout-1 {
+    @include flex-grid-column(12);
+    padding-top: space(10);
+  }
+
+  &.form-element--layout-2 {
+    @include flex-grid-column(12);
+
+    @include breakpoint(medium) {
+      @include flex-grid-column(6);
+    }
+  }
+
+  &.form-element--layout-3 {
+    @include flex-grid-column(12);
+
+    @include breakpoint(medium) {
+      @include flex-grid-column(4);
+    }
+  }
+
+  &.form-element--layout-4 {
+    @include flex-grid-column(12);
+
+    @include breakpoint(medium) {
+      @include flex-grid-column(3);
+    }
+  }
+
+  .m_form-input {
+    position: relative;
+  }
+
+  .m_form-input::before,
+  .m_form-input::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1px;
+    background-color: #d1d0d0;
+    z-index: 1;
+  }
+
+  .m_form-input::after {
+    width: 0%;
+    background-color: #7e6d53;
+    transition: all 0.2s;
+  }
+
+  .m_form-input.focus::after {
+    width: 100%;
+  }
+
+  label {
+    font-family: font(proxima-nova);
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: block;
+    line-height: 20px;
+    position: relative;
+    top: 20px;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.2s;
+  }
+
+  label.focus {
+    color: #c41230;
+  }
+
+  label.no-empty,
+  label.focus {
+    top: 0px;
+    opacity: 1;
+  }
+
+  input,
+  select {
+    position: relative;
+    width: 100%;
+    font-size: 16px;
+    padding: 4px 0;
+    border: none;
+    font-size: 24px;
+    font-family: freight-text-pro;
+    outline: none;
+  }
+
+  select {
+    background: none;
+    color: #777;
+    -webkit-appearance: none;
+  }
+
+  select.focus {
+    color: color(black);
+  }
+
+  .caret-down {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid color(grey);
+
+    &.focus {
+      border-top: 5px solid color(black);
+    }
+  }
+
+  .caret-up {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid color(grey);
+  }
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border: 1px solid color(gray);
+    font-size: 24px;
+    font-family: font(freight-text);
+  }
+
+  textarea:focus {
+    outline: none;
+    border: 1px solid #7e6d53;
+  }
+
+  p {
+    height: space(4);
+    color: color(red);
+    font-family: font(proxima-nova);
+    font-size: 12px;
+    font-weight: 400;
+    margin-top: space(1);
+    position: absolute;
+    bottom: space(-4.5);
+    left: space(2);
+
+    @include breakpoint(medium) {
+      bottom: space(-6);
+      left: space(3.75);
+    }
+  }
+}
+
+.form-element-inner {
+  width: 100%;
+}
+
+.form-warning-indicator {
+  @include flex-grid-column(12);
+}

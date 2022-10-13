@@ -1,0 +1,28 @@
+<section class="collection-figures-3up collection-figures-3up--{{ background|default('white') }}">
+	<div class="collection-figures-3up__container">
+		<div class="collection-figures-3up__badge">
+			<img alt="{{ alt }}" aria-hidden="true" src="{{ icon }}">
+		</div>
+		<div class="collection-figures-3up__heading-container">
+			<h{{heading.level|default('2')}} class="collection-figures-3up__heading">{{ heading.text|raw }}</h{{heading.level|default('2')}}>
+		</div>
+		<div class="collection-figures-3up__subheading-container">
+			<p class="collection-figures-3up__subheading" {% if subheading.id %} id="{{ subheading.id }}" {% endif %}>{{ subheading.text }}</p>
+			<div class="collection-figures-3up__cta-container">
+				{% include 'components/base-cta-text.twig' with subheading.cta %}
+			</div>
+		</div>
+		<div class="collection-figures-3up__cards-container">
+			{% for card in cardlist.cards %}
+				<article class="collection-figures-3up__card">
+					<div class="collection-figures-3up__card-inner">
+						<p class="collection-figures-3up__card-headline">{{ card.headline.text }}</p>
+						{# <number-precision class="collection-figures-3up__card-headline" value="{{ card.headline.text }}"></number-precision> #}
+						<p class="collection-figures-3up__card-copy">{{ card.copy }}</p>
+						<p class="collection-figures-3up__card-subcopy">{{ card.subcopy }}</p>
+					</div>
+				</article>
+			{% endfor %}
+		</div>
+	</div>
+</section>

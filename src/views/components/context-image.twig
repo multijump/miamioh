@@ -1,0 +1,23 @@
+<section class="context-image">
+	{% if icon %}
+		<div class="context-image__badge">
+			<img alt="{{ icon_alt }}" src="{{ icon }}">
+		</div>
+	{% endif %}
+	<div class="context-image__inner">
+		<div class="context-image__context">
+			{% include 'components/base-lockup.twig' with lockup %}
+		</div>
+	</div>
+	<figure class="context-image__figure">
+		<img class="context-image__image" src="{{ image.src }}" alt="{{ image.alt }}">
+		<figcaption class="context-image__caption">
+			{% if image.caption.heading %}
+				<h3 class="context-image__caption-heading">{{ image.caption.heading }}</h3>
+			{% endif %}
+			{% if image.caption.copy %}
+				<p class="context-image__caption-copy">{{ image.caption.copy }}</p>
+			{% endif %}
+		</figcaption>
+	</figure>
+</section>

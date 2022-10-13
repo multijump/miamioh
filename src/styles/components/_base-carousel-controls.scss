@@ -1,0 +1,28 @@
+.base-carousel-controls__button {
+  @include transition(background-color);
+  $_size: space(8);
+  position: relative;
+  width: $_size;
+  height: $_size;
+  background-color: color(red);
+
+  .base-cta-primary__arrow {
+    right: 50%;
+    transform: translate(50%, -50%) rotate(45deg);
+  }
+
+  &:focus {
+    @include focus-white;
+  }
+
+  &:hover {
+    background-color: color(red-accent);
+  }
+}
+
+.base-carousel-controls__button--next {
+  margin-right: space(2.5);
+  .base-cta-primary__arrow {
+    transform: translate(50%, -50%) rotate(-135deg);
+  }
+}

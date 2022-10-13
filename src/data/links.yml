@@ -1,0 +1,23 @@
+title: Links Page
+components:
+  - name: collection-links
+    lockup:
+      heading:
+        text: Staging Links
+    links:
+      - href: /
+        text: Homepage
+      - href: /admissions
+        text: Admissions
+      - href: /visit
+        text: Visit
+      - href: /regionals
+        text: Regionals
+      - href: /components
+        text: Components
+      - href: /components-sidebar
+        text: Components Sidebar
+  - name: pre-footer
+    # src: https://picsum.photos/id/237/1600/300
+    src: /images/illustration-pre-footer.png
+    alt: Alt text

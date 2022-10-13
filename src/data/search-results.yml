@@ -1,0 +1,6 @@
+title: Search Results Page
+components:
+  - name: search-results
+    heading:
+      text: Search-Results
+      level: 2

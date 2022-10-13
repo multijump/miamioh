@@ -1,0 +1,132 @@
+.collection-figures-4up {
+  padding-top: space(20);
+  padding-bottom: space(20);
+  color: color(white);
+
+  @include breakpoint(medium) {
+    padding-top: space(15);
+    padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    padding-top: space(25);
+    padding-bottom: space(15);
+  }
+
+  &.collection-figures-4up--red {
+    background-color: color(red);
+  }
+  &.collection-figures-4up--white {
+    background-color: color(white);
+  }
+  &.collection-figures-4up--gold {
+    background-color: color(gold);
+  }
+}
+
+.collection-figures-4up__container {
+  @include create-row;
+  position: relative;
+  align-items: flex-start;
+  //padding-right: space(12);
+}
+
+.collection-figures-4up__heading-container {
+  @include flex-grid-size(12);
+  align-self: flex-start;
+  justify-self: center;
+  padding-bottom: space(3.75);
+
+  @include breakpoint(large) {
+    @include flex-grid-size(6);
+    padding-bottom: space(25);
+  }
+}
+
+.collection-figures-4up__subheading-container {
+  @include flex-grid-size(12);
+  align-self: flex-start;
+  justify-self: center;
+  padding-bottom: space(15);
+  padding-top: space(2);
+
+  @include breakpoint(large) {
+    @include flex-grid-size(3);
+    @include grid-column-offset(1);
+    padding-bottom: space(25);
+  }
+}
+
+.collection-figures-4up__heading {
+  @include text-heading-2;
+  color: color(white);
+}
+
+.collection-figures-4up__subheading {
+  @include text-body-regular;
+  color: color(white);
+}
+
+.collection-figures-4up__cta-container {
+  .base-cta-text {
+    &:before {
+      border-top: 2px solid color(white);
+      border-right: 2px solid color(white);
+    }
+  }
+}
+
+.collection-figures-4up__card-inner {
+  position: relative;
+  padding-top: space(5);
+  padding-left: space(5);
+  padding-right: space(7.5);
+  border-left: 4px solid color(gold);
+
+  &::before {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // display: block;
+    // width: 4px;
+    // height: 100%;
+    // content: "";
+    // background-color: color(gold);
+  }
+}
+
+.collection-figures-4up__card {
+  @include flex-grid-size(12);
+  align-self: center;
+  justify-self: center;
+  padding-bottom: space(12);
+
+  &:last-of-type {
+    padding-bottom: space(0);
+    @include breakpoint(large) {
+      padding-bottom: space(15);
+    }
+  }
+
+  @include breakpoint(large) {
+    @include flex-grid-size(3);
+    padding-bottom: space(15);
+  }
+}
+
+.collection-figures-4up__card-headline {
+  @include text-heading-2;
+  color: color(gold);
+  padding-bottom: space(0.5);
+  margin-top: -34px;
+  font-variant: lining-nums;
+  @include breakpoint(large) {
+    margin-top: -38px;
+  }
+}
+
+.collection-figures-4up__card-copy {
+  @include text-body-small;
+  font-weight: 300;
+  color: color(white);
+}

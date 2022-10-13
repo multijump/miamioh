@@ -1,0 +1,30 @@
+@include breakpoint(large) {
+  .sidebar-layout {
+    @include flex-grid-row;
+  }
+
+  .sidebar-layout__sidebar {
+    display: block;
+    @include flex-grid-column(12);
+
+    @include breakpoint(large) {
+      @include flex-grid-column(3);
+    }
+  }
+
+  .sidebar-layout__components {
+    @include flex-grid-column(12);
+
+    @include breakpoint(large) {
+      @include flex-grid-size(8);
+    }
+
+    @include breakpoint(xlarge) {
+      @include grid-column-offset(1);
+    }
+  }
+
+  .sidebar-layout__components-inner {
+    @include flex-grid-row("nest");
+  }
+}

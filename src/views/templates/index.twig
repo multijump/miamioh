@@ -1,0 +1,10 @@
+{% extends 'layouts/default.twig' %}
+
+{% block title %}
+    <title>Miami University {{ title }}</title>
+{% endblock %}
+{% block main %}
+    {% for component in components %}
+        {% include 'components/' ~ component.name ~ '.twig' with component only %}
+    {% endfor %}
+{% endblock %}

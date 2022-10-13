@@ -1,0 +1,41 @@
+<carousel-container class="carousel-primary" tag="section" id="carousel-primary">
+	<div class="carousel-primary-text-container" id="carousel-primary">
+		<div class="carousel-primary__list-wrap">
+			<ul class="carousel-primary__list">
+				{% for item in carousels %}
+					<carousel-container-item class="carousel-primary__list-item" key="carousel-container-item--{{ loop.index }}">
+						<div class="carousel-primary__item-content">
+							<div class="carousel-primary__item-content-inner">
+								<h{{item.heading.level|default('3')}} class="carousel-primary__content-heading"  {% if item.heading.id %} id="{{ item.heading.id }}" {% endif %}>{{ item.heading.text }}</h{{item.heading.level|default('3')}}>
+								<p class="carousel-primary__content-text"  {% if item.copy.id %} id="{{ item.copy.id }}" {% endif %}>{{ item.copy.text }}</p>
+								{% include 'components/base-cta-primary.twig' with item.cta %}
+							</div>
+						</div>
+					</carousel-container-item>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="carousel-primary-image-container">
+		{% for item in carousels %}
+			{% set image = item.image %}
+			<carousel-container-image class="carousel-primary__image" tag="img" key="{{ loop.index - 1 }}" src="{{ image.src }}" alt="{{ image.alt }}"></carousel-container-image>
+		{% endfor %}
+	</div>
+	<div class="carousel-primary__wrap carousel-primary__wrap--slider">
+		<div class="carousel-primary__wrap-inner">
+			<div class="carousel-primary__inner-wrap">
+				<div class="carouse-primary__slider-indicator-wrap">
+					<div class="carousel-primary__slider-indicator-rail"></div>
+				</div>
+				<carousel-container-slider-secondary
+                    class="carousel-primary__slider"
+                    aria-controls="carousel-primary"
+                ></carousel-container-slider-secondary>
+				<div class="carousel-primary__item-image-container">
+					<p class="carousel-primary__image-desc" aria-hidden="true">{{ school.text }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</carousel-container>

@@ -1,0 +1,112 @@
+<base-window-width class="footer" tag="footer">
+	<template slot-scope="window">
+		<div class="footer-primary">
+			<div class="footer-primary__inner">
+				<div class="footer-primary__content">
+					<div class="footer-primary__column footer-primary__column--logo">
+						<a class="footer-primary__logo-link" href="{{ footer.column1.logo.href }}" aria-label="{{ footer.column1.logo.ariaLabel }}">
+							<img alt="{{ footer.column1.logo.alt }}" src="{{ footer.column1.logo.src }}">
+						</a>
+						{% include 'components/footer-campus.twig' with footer.campuses %}
+					</div>
+
+					<div class="footer-primary__column footer-primary__column--social footer-primary__column--mobile">
+						<h2 class="footer-primary__social-heading">{{ footer.column4.heading }}</h2>
+						<ul class="footer-primary__social-menu">
+							{% for link in footer.column4.socialLinks %}
+								<li class="footer-primary__social-menu-item">
+									{% include 'components/base-cta-social.twig' with link %}
+								</li>
+							{% endfor %}
+						</ul>
+						<ul class="footer-primary__cta-menu">
+							{% for cta in footer.column4.ctas %}
+								<li class="footer-primary__cta-menu-item">
+									{% include 'components/base-cta-primary.twig' with cta %}
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+
+					<accordion-container :collapse="window.small" class="footer-primary__column footer-primary__column--resources">
+						<div class="footer-accordion">
+							<h2 class="footer-primary__heading">
+								<accordion-container-header-button :controls="'footer-accordion-resources'" :disabled="!(window.small)" :id="'footer-accordion-resources-button'" class="footer-accordion__button" value="{{ footer.column2.heading }}">
+									{{ footer.column2.heading }}
+								</accordion-container-header-button>
+							</h2>
+							<accordion-container-panel :id="'footer-accordion-resources'" :initially-expanded="!(window.small)">
+								<div>
+									<ul class="footer-primary__menu">
+										{% for link in footer.column2.links %}
+											<li class="footer-primary__menu-item">
+												<a href="{{ link.href }}" class="footer-primary__menu-link">{{ link.text }}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</div>
+							</accordion-container-panel>
+						</div>
+					</accordion-container>
+
+					<accordion-container :collapse="window.small" class="footer-primary__column footer-primary__column--visit">
+						<div class="footer-accordion">
+							<h2 class="footer-primary__heading">
+								<accordion-container-header-button :controls="'footer-accordion-visit'" :disabled="!(window.small)" :id="'footer-accordion-visit-button'" class="footer-accordion__button" value="{{ footer.column3.heading }}">
+									{{ footer.column3.heading }}
+								</accordion-container-header-button>
+							</h2>
+							<accordion-container-panel :id="'footer-accordion-visit'" :initially-expanded="!(window.small)">
+								<div>
+									<ul class="footer-primary__menu">
+										{% for link in footer.column3.links %}
+											<li class="footer-primary__menu-item">
+												<a href="{{ link.href }}" class="footer-primary__menu-link">{{ link.text }}</a>
+											</li>
+										{% endfor %}
+									</ul>
+								</div>
+							</accordion-container-panel>
+						</div>
+					</accordion-container>
+
+					<div class="footer-primary__column footer-primary__column--social footer-primary__column--desktop">
+						<h2 class="footer-primary__social-heading">{{ footer.column4.heading }}</h2>
+						<ul class="footer-primary__social-menu">
+							{% for link in footer.column4.socialLinks %}
+								<li class="footer-primary__social-menu-item">
+									{% include 'components/base-cta-social.twig' with link %}
+								</li>
+							{% endfor %}
+						</ul>
+						<ul class="footer-primary__cta-menu">
+							{% for cta in footer.column4.ctas %}
+								<li class="footer-primary__cta-menu-item">
+									{% include 'components/base-cta-primary.twig' with cta %}
+								</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer-secondary">
+			<div class="footer-secondary__inner">
+				<ul class="footer-secondary__legal-list">
+					{% for item in footer.legal %}
+						<li class="footer-secondary__legal-item">
+							<a class="footer-secondary__legal-link" href="{{ item.url }}">{{ item.text }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="footer__copyright">
+			<div class="footer__copyright-inner">
+				<div class="footer__copyright-content">
+					{{ footer.copyright }}
+				</div>
+			</div>
+		</div>
+	</template>
+</footer>

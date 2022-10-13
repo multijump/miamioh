@@ -1,0 +1,99 @@
+<section class="content-grid">
+    <div class="content-grid__inner">
+        <div class="content-grid__background-container">
+            <div class="content-grid__inner-container">
+                <div class="content-grid__header-container">
+                    <img class="content-grid__header-icon" src="{{ heading.icon.src }}" alt="{{ heading.icon.alt }}" />
+                    <h{{heading.headline.level|default('3')}} class="content-grid__heading"
+                    {% if heading.headline.id %}
+                        id="{{ heading.headline.id }}"
+                    {% endif %}>{{ heading.headline.text }}</h{{heading.headline.level|default('3')}}>
+                </div>
+                <div class="content-grid__copy-container">
+                    <p class="content-grid__copy"
+                    {% if heading.copy.id %}
+                        id="{{ heading.copy.id }}"
+                    {% endif %}>{{ heading.copy.text }}</p>
+                    <div class="content-grid__header-cta">
+                        {% include 'components/base-cta-primary.twig' with heading.cta|merge({ mode: "light" }) %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-grid__content-container">
+            {% for content in specials %}
+            <div class="content-grid__content-wrapper">
+                <div class="content-grid__content-special">
+                    <img class="content-grid__content-image" src="{{ content.image.src }}" alt="{{ content.image.alt }}" />
+                    <div class="content-grid__content-text">
+                        <h{{ content.headline.level|default('3') }} class="content-grid__content-text-headline"
+                        {% if content.headline.id %}
+                            id="{{ content.headline.id }}"
+                        {% endif %}>{{ content.headline.text }}</h{{ content.headline.level|default('3') }}>
+                        <p class="content-grid__content-text-copy"
+                        {% if content.copy.id %}
+                            id="{{ content.copy.id }}"
+                        {% endif %}>{{ content.copy.text }}</p>
+                        {% include 'components/base-link-text.twig' with content.link|merge({ mode: "light" }) %}
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="content-grid__content-wrapper content-grid__normal-content-wrapper">
+                {% for index, content in contents %}
+                    <div class="content-grid__content-normal">
+                        {% if content.type == 'bordered-image' %}
+                            <div class="content-grid__content-normal-bordered-image">
+                                <img class="content-grid__content-normal-image" src="{{ content.image.src }}" alt="{{ content.image.alt }}" />
+                                <div class="content-grid__content-normal-inner">
+                                    <h{{ content.headline.level|default('3') }} class="content-grid__content-text-headline"
+                                    {% if content.headline.id %}
+                                        id="{{ content.headline.id }}"
+                                    {% endif %}>{{ content.headline.text }}</h{{ content.headline.level|default('3') }}>
+                                    {% if content.copy %}
+                                    <p class="content-grid__content-text-copy"
+                                    {% if content.copy.id %}
+                                        id="{{ content.copy.id }}"
+                                    {% endif %}>{{ content.copy.text }}</p>
+                                    {% endif %}
+                                    {% include 'components/base-cta-text.twig' with content.cta|merge({ mode: "light" }) %}
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if content.type == 'normal-text' %}
+                            <div class="content-grid__content-normal-normal-text">
+                                <div class="content-grid__content-normal-inner">
+                                    <h{{ content.headline.level|default('3') }} class="content-grid__content-text-headline"
+                                    {% if content.headline.id %}
+                                        id="{{ content.headline.id }}"
+                                    {% endif %}>{{ content.headline.text }}</h{{ content.headline.level|default('3') }}>
+                                    <p class="content-grid__content-text-copy"
+                                    {% if content.copy.id %}
+                                        id="{{ content.copy.id }}"
+                                    {% endif %}>{{ content.copy.text }}</p>
+                                    {% include 'components/base-link-text.twig' with content.cta %}
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if content.type == 'normal-image' %}
+                            <div class="content-grid__content-normal-normal-image">
+                                <img class="content-grid__content-normal-image" src="{{ content.image.src }}" alt="{{ content.image.alt }}" />
+                                <div class="content-grid__content-normal-inner">
+                                    <h{{ content.headline.level|default('3') }} class="content-grid__content-text-headline"
+                                    {% if content.headline.id %}
+                                        id="{{ content.headline.id }}"
+                                    {% endif %}>{{ content.headline.text }}</h{{ content.headline.level|default('3') }}>
+                                    <p class="content-grid__content-text-copy"
+                                    {% if content.copy.id %}
+                                        id="{{ content.copy.id }}"
+                                    {% endif %}>{{ content.copy.text }}</p>
+                                    {% include 'components/base-cta-text.twig' with content.cta|merge({ mode: "light" }) %}
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

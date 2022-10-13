@@ -1,0 +1,7 @@
+<div class="base-select-primary">
+    <select class="base-select-primary--select">
+        {% for option in options %}
+            <option value="{{ option.value }}">{{ option.disp }}</option>
+        {% endfor %}
+    </select>
+</div>

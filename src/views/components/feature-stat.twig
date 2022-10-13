@@ -1,0 +1,24 @@
+<section class="feature-stat">
+    <div class="feature-stat__inner">
+        <div class="feature-stat__wrapper">
+            <div class="feature-stat__text-container">
+                <h{{heading.level|default('3')}} class="feature-stat__text-heading"
+                {% if heading.id %}
+                    id="{{ heading.id }}"
+                {% endif %}>{{ heading.text }}</h{{heading.level|default('3')}}>
+                <div class="feature-stat__text-copy"
+                {% if copy.id %}
+                    id="{{ copy.id }}"
+                {% endif %}>{{ copy.text|raw }}</div>
+                {% include 'components/base-cta-primary.twig' with cta %}
+            </div>
+            <div class="feature-stat__image-container">
+                <div class="feature-stat__image-outer">
+                    <div class="feature-stat__image-inner">
+                        <img class="feature-stat__image" src="{{ icon.src }}" alt="{{ icon.alt }}" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

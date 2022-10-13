@@ -1,0 +1,30 @@
+<section class="hero-primary">
+	<div class="hero-primary__background-wrap">
+		{% if image %}
+			<img alt="{{ image.alt }}" class="hero-primary__image" src="{{ image.src }}">
+		{% endif %}
+		{% if video %}
+			<background-video class="hero-primary__video" :video-id="{{ video.id }}" video-src="{{ video.src }}"></background-video>
+			<background-video-button class="hero-primary__video-button" :video-id="{{ video.id }}">
+				<svg alt="" class="hero-primary__video-button-icon hero-primary__video-button-icon--play" viewbox="0 0 20 20" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+					<use xlink:href="/svgs/icon-play.svg#icon"/>
+				</svg>
+				<svg alt="" class="hero-primary__video-button-icon hero-primary__video-button-icon--pause" viewbox="0 0 20 20" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+					<use xlink:href="/svgs/icon-pause.svg#icon"/>
+				</svg>
+			</background-video-button>
+		{% endif %}
+	</div>
+	<div class="hero-primary__inner">
+		<div class="hero-primary__content">
+			{% if icon %}
+				<div class="hero-primary__badge">
+					<img alt="" src="{{ icon }}" alt="">
+				</div>
+			{% endif %}
+			<div class="hero-primary__text">
+				{% include 'components/base-lockup.twig' with lockup %}
+			</div>
+		</div>
+	</div>
+</section>

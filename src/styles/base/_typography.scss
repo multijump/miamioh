@@ -1,0 +1,164 @@
+@mixin text-heading-1 {
+  font-family: font(freight-display);
+  font-size: rem(52);
+  font-weight: 300;
+  line-height: rem(58);
+  letter-spacing: rem-calc(0.25);
+
+  @include breakpoint(large) {
+    font-size: rem(84);
+    line-height: rem(96);
+    letter-spacing: rem-calc(0.9);
+  }
+}
+
+@mixin text-heading-2 {
+  font-family: font(freight-display);
+  font-size: rem(46);
+  font-weight: 400;
+  line-height: rem(57);
+
+  @include breakpoint(large) {
+    font-size: rem(58);
+    font-weight: 300;
+    line-height: rem(71);
+  }
+}
+
+@mixin text-heading-3 {
+  font-family: font(freight-display);
+  font-size: rem(36);
+  font-weight: 300;
+  line-height: rem(44);
+
+  @include breakpoint(large) {
+    font-size: rem(48);
+    line-height: rem(58);
+  }
+}
+
+@mixin text-heading-4 {
+  font-family: font(proxima-nova);
+  font-size: rem(24);
+  font-weight: 600;
+  line-height: rem(30);
+}
+
+@mixin text-heading-5 {
+  font-family: font(proxima-nova);
+  font-size: rem(20);
+  font-weight: 600;
+  line-height: rem(26);
+}
+
+@mixin text-heading-6 {
+  font-family: font(proxima-nova);
+  font-size: rem(16);
+  font-weight: 700;
+  line-height: rem(22);
+}
+
+@mixin text-heading-7 {
+  font-family: font(proxima-nova);
+  font-size: rem(12);
+  font-weight: 700;
+  line-height: rem(20);
+  letter-spacing: rem-calc(1.5);
+}
+
+@mixin text-body-large {
+  font-family: font(freight-display);
+  font-size: rem(19);
+  font-weight: 300;
+  line-height: rem(30);
+  letter-spacing: rem-calc(0.25);
+
+  @include breakpoint(large) {
+    font-size: rem(24);
+    line-height: rem(36);
+  }
+}
+
+@mixin text-body-regular {
+  font-family: font(freight-text);
+  font-size: rem(19);
+  font-weight: 400;
+  line-height: rem(25);
+  letter-spacing: rem-calc(0.25);
+}
+
+@mixin text-body-small {
+  font-family: font(proxima-nova);
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: rem(22);
+  letter-spacing: rem-calc(0.7);
+}
+
+@mixin text-body-exact {
+  font-family: font(proxima-nova);
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: rem(20);
+}
+
+@mixin text-caption {
+  font-family: font(proxima-nova);
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: rem(18);
+  letter-spacing: rem-calc(0.23);
+}
+
+@mixin text-cta-default {
+  font-family: font(proxima-nova);
+  font-size: rem(12);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: rem-calc(2);
+  text-transform: uppercase;
+}
+
+@mixin text-footer-navigation {
+  font-family: font(proxima-nova);
+  font-size: rem(12);
+  font-weight: 700;
+  line-height: rem(15);
+  letter-spacing: rem-calc(1.85);
+  text-transform: uppercase;
+}
+
+@mixin text-footer-legal {
+  font-family: font(proxima-nova);
+  font-size: rem(12);
+  font-weight: 400;
+  line-height: rem(15);
+}
+
+@mixin figures-numbers-h2 {
+  font-family: font(freight-display);
+  font-size: rem(54);
+  font-weight: 400;
+  line-height: rem(40);
+  font-variant: lining-nums;
+}
+
+@mixin figures-card-copy {
+  font-family: font(freight-text);
+  font-size: rem(30);
+  font-weight: 300;
+  line-height: rem(34);
+}
+
+@mixin figure-context-image-text {
+  font-family: font(freight-text);
+  font-size: rem(26);
+  letter-spacing: -0.65px;
+  line-height: 1.08;
+
+  @include breakpoint(large) {
+    font-size: rem(40);
+    letter-spacing: -1px;
+    line-height: 1.22;
+  }
+}

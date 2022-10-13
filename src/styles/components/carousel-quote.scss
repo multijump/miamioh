@@ -1,0 +1,205 @@
+.carousel-quote {
+  padding-top: space(15);
+  padding-bottom: space(10);
+  overflow: hidden;
+  position: relative;
+  background-color: color(white-warm);
+
+  @include breakpoint(large) {
+    padding-bottom: space(15);
+    background-color: color(white);
+  }
+}
+
+.carousel-quote__container {
+  position: relative;
+  background-color: color(white-warm);
+  width: 100%;
+  height: auto;
+  padding: 0 space(5);
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(large) {
+    @include create-row;
+    flex-direction: row;
+    padding: space(10);
+  }
+}
+
+.carousel-quote__list {
+  width: 100%;
+}
+
+.carousel-quote__list-item {
+  width: 100%;
+  padding-left: space(0);
+
+  @include breakpoint(large) {
+    padding: space(5);
+  }
+}
+
+.carousel-quote__item-image-container {
+  position: relative;
+  width: 100%;
+  //top: space(-12);
+  top: 0;
+
+  @include breakpoint(large) {
+    width: 38%;
+    left: space(-22);
+    top: inherit;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("/svgs/icon-quote--white-warm.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: space(-10);
+    left: space(-5);
+    width: 80px;
+    height: 80px;
+
+    @include breakpoint(large) {
+      top: space(21);
+      right: space(-12);
+      left: auto;
+    }
+  }
+
+  .carousel-quote__image {
+    width: 100%;
+  }
+}
+
+.carousel-quote__item-content {
+  position: relative;
+  width: 100%;
+
+  @include breakpoint(large) {
+    width: calc(62% - 20px);
+    display: flex;
+    align-items: center;
+    padding-bottom: space(10);
+  }
+
+  .carousel-quote__list-item--isActive {
+    display: block;
+    padding-top: space(0);
+    padding-bottom: space(0);
+
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .carousel-quote__content-heading {
+      font-family: font(freight-display);
+      font-size: rem(30);
+      font-weight: 300;
+      line-height: normal;
+      color: color(red);
+      padding-top: space(14);
+      margin-bottom: space(3.75);
+
+      @include breakpoint(large) {
+        padding-top: 0;
+        font-size: rem(36);
+        margin-bottom: space(8.5);
+      }
+    }
+
+    .carousel-quote__content-text {
+      font-family: font(proxima-nova);
+      font-size: rem(14);
+      font-weight: 600;
+      line-height: rem(22);
+      color: color(black);
+      margin-bottom: space(2);
+    }
+
+    .carousel-quote__content-subject {
+      font-family: font(proxima-nova);
+      font-size: rem(14);
+      font-weight: 500;
+      line-height: rem(24);
+      color: color(black);
+    }
+  }
+}
+
+.carousel-quote__inner-wrap {
+  position: relative;
+  margin-top: space(5);
+  display: flex;
+  justify-content: center;
+
+  @include breakpoint(large) {
+    position: absolute;
+    bottom: 0px;
+    left: space(5);
+  }
+}
+
+.carousel-quote__slider {
+  width: 70px;
+  background-color: color(transparent);
+  appearance: none;
+  outline: none;
+  text-align: center;
+
+  @include breakpoint(large) {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    appearance: none;
+    margin-right: 5px;
+    background-color: color(red);
+    background-repeat: no-repeat;
+    background-size: auto;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0);
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+    &:first-child {
+      background-image: url("/svgs/icon-arrow-left--white.svg");
+
+      &:disabled {
+        background-color: #e9bac2;
+        opacity: 1;
+      }
+    }
+
+    &:last-child {
+      background-image: url("/svgs/icon-arrow-right--white.svg");
+
+      &:disabled {
+        background-color: #e9bac2;
+        opacity: 1;
+      }
+    }
+
+    &:focus {
+      @include focus-red;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    background-position: center;
+  }
+}

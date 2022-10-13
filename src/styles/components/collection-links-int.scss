@@ -1,0 +1,21 @@
+.collection-links-int {
+  width: 100%;
+  margin-top: space(15);
+  margin-bottom: space(15);
+}
+
+.collection-links-int__container {
+  @include create-row;
+}
+
+.collection-links-int__heading-container {
+  @include flex-grid-column(12);
+}
+
+.collection-links-int__link {
+  @include flex-grid-column(12);
+
+  @include breakpoint(large) {
+    @include flex-grid-size(6);
+  }
+}

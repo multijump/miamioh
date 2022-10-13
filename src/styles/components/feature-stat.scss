@@ -1,0 +1,71 @@
+.feature-stat {
+  padding-top: space(18);
+  padding-bottom: space(18);
+  background-color: color(red);
+  background-image: url("/images/illustration-duotone-red.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.feature-stat__inner {
+  @include create-row;
+}
+
+.feature-stat__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(large) {
+    flex-direction: row;
+  }
+}
+
+.feature-stat__text-container {
+  .feature-stat__text-heading {
+    font-family: font(freight-display);
+    font-size: rem(58);
+    font-weight: 300;
+    line-height: rem(68);
+    color: color(white);
+    margin-bottom: 15px;
+  }
+
+  .feature-stat__text-copy {
+    @include text-body-regular;
+    color: color(white);
+    margin-bottom: 30px;
+  }
+}
+
+.feature-stat__image-container {
+  padding-top: space(10);
+
+  @include breakpoint(large) {
+    padding-top: space(0);
+    margin-left: 130px;
+  }
+
+  .feature-stat__image-outer {
+    border: 1px solid color(gold-accent);
+    background-color: color(red);
+
+    .feature-stat__image-inner {
+      width: 100%;
+      height: 380px;
+      background-color: color(gold-accent);
+      transform: translate(-5px, -5px);
+      display: flex;
+      align-items: center;
+
+      @include breakpoint(large) {
+        width: 380px;
+      }
+
+      .feature-stat__image {
+        width: 235px;
+        margin: auto;
+        vertical-align: middle;
+      }
+    }
+  }
+}

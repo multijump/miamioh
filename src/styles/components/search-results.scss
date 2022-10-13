@@ -1,0 +1,226 @@
+.search-result {
+  padding-top: space(5);
+  padding-bottom: space(5);
+}
+
+.search-result__container {
+  @include create-row;
+
+  & > div:last-child {
+    width: 100%;
+
+    // .gsc-above-wrapper-area {}
+
+    .gsc-wrapper {
+      .gsc-webResult {
+        width: 100%;
+
+        .gsc-result {
+          padding-top: space(1);
+          padding-bottom: space(1);
+
+          + .gsc-result {
+            margin-top: space(3.75);
+          }
+
+          .gs-result {
+            padding-top: space(5);
+            padding-bottom: space(5);
+            padding-left: space(8);
+            padding-right: space(8);
+          }
+        }
+      }
+
+      .gsc-expansionArea {
+        margin-top: space(5);
+      }
+
+      .gcsc-find-more-on-google {
+        svg {
+          display: inline;
+          fill: color(red);
+          // width: space(4);
+          // height: space(4);
+        }
+      }
+
+      .gsc-cursor-box {
+        margin: space(8) 0px;
+
+        .gsc-cursor {
+          .gsc-cursor-page {
+            padding: space(2);
+            margin-right: space(1);
+            background-color: color(gold);
+          }
+
+          .gsc-cursor-current-page {
+            color: color(white);
+            background-color: color(red);
+          }
+        }
+      }
+    }
+  }
+}
+
+.search-result__header {
+  @include flex-grid-column(12);
+  margin-bottom: space(10);
+
+  .search-result__heading {
+    @include text-heading-2;
+    color: color(red);
+  }
+}
+
+.search-result__input-inner {
+  @include flex-grid-column(12);
+
+  & > div:last-child {
+    .gsc-search-box-tools {
+      margin: 0;
+      padding: 0;
+
+      .gsc-search-box {
+        margin: 0 !important;
+
+        .gsc-input {
+          padding-top: 0;
+          padding-left: 0;
+          padding-right: 0;
+          padding-bottom: 0;
+          height: 46px;
+
+          table {
+            margin-bottom: 0;
+          }
+
+          .gsc-input-box {
+            height: 46px;
+            border-radius: 0;
+            padding: 0;
+
+            .gsib_a {
+              padding-top: 10px;
+              padding-bottom: 10px;
+              padding-left: 10px;
+            }
+
+            .gsib_b {
+              padding: 0 space(2.5);
+
+              .gsst_a {
+                padding: 0;
+
+                .gscb_a {
+                  color: color(dark-gray);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gsc-search-button {
+    padding: 0 !important;
+
+    .gsc-search-button-v2 {
+      position: relative;
+      border-radius: 0px;
+      border: 1px solid color(red);
+      background: color(red);
+      padding: space(3) space(5);
+      margin-left: space(2.5);
+      height: 46px;
+      width: 46px;
+
+      @include breakpoint(large) {
+        margin-left: space(5);
+      }
+
+      svg {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-image: url(/svgs/icon-magnifier--white.svg);
+        width: 15px;
+        height: 15px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: 14px;
+        left: 15px;
+      }
+    }
+  }
+
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .gsc-search-button-v2 {
+      padding: space(3) space(3.5);
+    }
+  }
+
+  @supports (-ms-ime-align: auto) {
+    .gsc-search-button-v2 {
+      padding: space(3) space(3.5);
+    }
+  }
+
+  table {
+    border: none;
+  }
+}
+
+.gsc-control-cse {
+  .gsc-selected-option-container {
+    transition-property: background-color, fill;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: font(proxima-nova);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    letter-spacing: 0.11563rem;
+    text-transform: uppercase;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 48px 10px 14px;
+    color: color(red);
+    border: 2px solid color(gold-accent);
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+    appearance: none;
+    height: auto;
+
+    .gsc-option-selector {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      display: block;
+      width: 10px;
+      height: 12px;
+      border-right: 2px solid color(red);
+      border-bottom: 2px solid color(red);
+      -webkit-transform: translateY(-70%) rotate(45deg);
+      transform: translateY(-70%) rotate(45deg);
+      margin-top: 0;
+      background: none;
+    }
+
+    &:hover {
+      background-color: color(gold-accent);
+      color: color(white);
+
+      .gsc-option-selector {
+        border-color: color(white);
+      }
+    }
+  }
+}

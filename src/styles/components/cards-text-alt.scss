@@ -1,0 +1,121 @@
+.cards-text-alt {
+  padding-top: space(10);
+  padding-bottom: space(10);
+  background-color: color(white-warm);
+
+  @include breakpoint(medium) {
+    padding-top: space(15);
+    padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    padding-top: space(25);
+    padding-bottom: space(25);
+  }
+
+  .cards-text-alt__header-container {
+    @include create-row;
+
+    .cards-text-alt__header-inner {
+      @include flex-grid-column(12);
+      align-self: center;
+      justify-self: center;
+      padding-bottom: space(10);
+
+      @include breakpoint(large) {
+        padding-bottom: space(15);
+      }
+
+      .cards-text-alt__header-heading {
+        @include text-heading-3;
+        padding-bottom: space(3.75);
+        color: color(red);
+        @include breakpoint(large) {
+          padding-bottom: space(5);
+        }
+      }
+
+      .cards-text-alt__header-subheading {
+        @include breakpoint(large) {
+          @include flex-grid-column(8);
+        }
+        @include text-body-large;
+        padding-left: 0 !important;
+      }
+    }
+  }
+
+  .cards-text-alt__cards-container {
+    @include create-row;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+
+    .cards-text-alt__card {
+      padding-bottom: space(10);
+
+      .cards-text-alt__card-outlone {
+        background-color: color(red);
+
+        .cards-text-alt__card-inner {
+          position: relative;
+          z-index: 1;
+          display: block;
+          padding: space(10);
+          color: color(white);
+          background-color: color(white-warm);
+          border: 1px solid color(red);
+          transform: translate(-10px, -10px);
+          //@include transition(transform);
+
+          .cards-text-alt__card-headline {
+            @include text-heading-4;
+            color: color(black);
+            padding-bottom: space(5);
+          }
+
+          .cards-text-alt__card-copy {
+            @include text-body-regular;
+            color: color(black);
+          }
+
+          &:hover,
+          &:focus {
+            //transform: translate(0px, 0px);
+          }
+        }
+      }
+    }
+  }
+
+  &.cards-text-alt--2 {
+    .cards-text-alt__card {
+      margin-left: 1.06rem;
+      @include breakpoint(large) {
+        @include flex-grid-column(6);
+        padding-right: 1.87rem !important;
+        padding-left: 1.87rem !important;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.cards-text-alt--3 {
+    .cards-text-alt__card {
+      @include breakpoint(large) {
+        @include flex-grid-column(4);
+      }
+    }
+  }
+
+  &.cards-text-alt--4 {
+    .cards-text-alt__card {
+      @include breakpoint(large) {
+        @include flex-grid-column(3);
+      }
+    }
+  }
+}
+

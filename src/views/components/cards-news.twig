@@ -1,0 +1,36 @@
+<section class="cards-news">
+    <div class="cards-news__cards-container">
+        <div class="cards-news__heading-container">
+            {% include "components/base-lockup.twig" with lockup %}
+        </div>
+        <div class="cards-news__cta-container">
+            {% include 'components/base-cta-primary.twig' with cta %}
+        </div>
+        {% for card in cards %}
+            <article class="cards-news__card">
+                <a
+                    class="cards-news__card-link"
+                    href="{{ card.link.href }}"
+                    {% if card.link.ariaLabel %}
+                        aria-label="{{ card.link.ariaLabel }}"
+                    {% endif %}
+                    {% if card.link.target %}
+                        target="{{ card.link.target }}"
+                    {% endif %}
+                >
+                    <div class="cards-news__image-container">
+                        <img class="cards-news__image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
+                    </div>
+                    <div class="cards-news__card-inner">
+                        <div class="cards-news__category">{{ card.category }}</div>
+                        <p class="cards-news__headline">{{ card.headline.text }}</p>
+                    </div>
+                </a>
+                {# {% include 'components/base-link-cover.twig' with card.link %} #}
+            </article>
+        {% endfor %}
+        <div class="cards-news__cta-container-footer">
+            {% include 'components/base-cta-primary.twig' with cta %}
+        </div>
+    </div>
+</section>

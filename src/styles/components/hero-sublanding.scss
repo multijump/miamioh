@@ -1,0 +1,218 @@
+.hero-sublanding__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(large) {
+  }
+}
+
+.hero-sublanding__header {
+  position: relative;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: center;
+  //align-items: center;
+  overflow-x: hidden;
+
+  background: {
+    color: color(red);
+    image: url("/images/illustration-duotone-red.png");
+    repeat: no-repeat;
+    position: center top;
+    size: cover;
+  }
+
+  @include breakpoint(large) {
+    flex-direction: row;
+    height: 400px;
+  }
+
+  .hero-sublanding__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include breakpoint(large) {
+      @include create-row;
+    }
+  }
+}
+
+.hero-sublanding__image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  order: 1;
+
+  @include breakpoint(large) {
+    height: 400px;
+    width: 38vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.hero-sublanding__heading-container {
+  //@include create-row;
+  // position: absolute;
+  // top: 0px;
+  // left: 0px;
+  // @include flex-grid-column(9);
+  padding-left: 16px;
+
+  @include breakpoint(medium) {
+    padding-left: 38px;
+  }
+
+  @include breakpoint(large) {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    padding-left: 0;
+    max-width: none;
+    align-items: center;
+  }
+}
+
+.hero-sublanding__heading {
+  //@include flex-grid-column(12);
+  @include text-heading-1;
+  // @include grid-column-offset(1);
+  margin-top: space(8.75);
+  margin-bottom: space(5);
+  color: color(white);
+
+  @include breakpoint(large) {
+    //@include create-row;
+    //padding-right: calc(100% - 65vw);
+    @include flex-grid-size(6.5);
+    //@include grid-column-offset(1);
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+.hero-sublanding__breadcrumbs {
+  z-index: 1;
+
+  // top: 500px;
+  // width: 100%;
+  @include breakpoint(medium) {
+    width: auto;
+  }
+
+  @include breakpoint(large) {
+    position: relative;
+    // width: 100%;
+    @include create-row;
+  }
+
+  @include breakpoint(xlarge) {
+    width: 100%;
+  }
+
+  .breadcrumbs {
+    background-color: color(golden);
+    height: 41px;
+    justify-content: flex-start;
+    width: auto;
+
+    @include breakpoint(large) {
+      position: absolute;
+      top: -20px;
+      left: 2vw;
+      width: auto;
+    }
+  }
+
+  @include breakpoint(large) {
+    // position: absolute;
+    // top: 380px;
+
+    // left: 4.1vw;
+  }
+
+  @include breakpoint(xxlarge) {
+    // left: 2vw;
+  }
+}
+
+.hero-sublanding__content-container {
+  background-color: color(white);
+  overflow: hidden;
+}
+
+.hero-sublanding__content-outer {
+  @include create-row;
+  position: relative;
+  background-color: color(white);
+  padding-top: space(7.5);
+  padding-bottom: space(7.5);
+
+  @include breakpoint(medium) {
+    // padding-top: space(15);
+    // padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    padding-top: space(17.5);
+    padding-bottom: space(17.5);
+  }
+}
+
+.hero-sublanding__content-inner {
+  position: relative;
+  @include flex-grid-column(11);
+  @include grid-column-offset(1);
+
+  @include breakpoint(large) {
+    @include flex-grid-column(8);
+    @include grid-column-offset(1);
+  }
+}
+
+.hero-sublanding__icon-container {
+  bottom: 0px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 33px;
+  transform: translate(-40px, -1px);
+  height: calc(100% + 200px);
+  align-items: center;
+  overflow: visible;
+
+  @include breakpoint(large) {
+    transform: translate(-60px, -1px);
+  }
+}
+
+.hero-sublanding__icon {
+  width: 15px;
+  height: 15px;
+  order: 1;
+}
+
+.hero-sublanding__icon-line {
+  width: 1px;
+  height: 100%;
+  background-color: color(red);
+}
+
+.hero-sublanding__copy {
+  @include text-body-regular;
+  padding-bottom: space(5);
+  font-size: rem(18);
+  line-height: 1.67;
+  font-weight: 300;
+
+  @include breakpoint(large) {
+    font-size: rem(22);
+    line-height: 1.64;
+    padding-bottom: space(7.5);
+  }
+}

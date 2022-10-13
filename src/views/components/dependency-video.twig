@@ -1,0 +1,27 @@
+<section class="dependency-video">
+	<div class="dependency-video__container">
+		<div class="dependency-video__inner">
+			<div class="dependency-video__header-icon-container">
+				<div class="dependency-video__header-icon-inner">
+					<img class="dependency-video__header-icon" alt="{{ header_icon.alt }}" src="{{ header_icon.src }}">
+					<div class="dependency-video__header-icon-line"></div>
+					<img class="dependency-video__content-icon" alt="{{ content_icon.alt }}" src="{{ content_icon.src }}">
+				</div>
+			</div>
+			<div class="dependency-video__background">
+				<background-image class="dependency-video__video" :video-id="{{ video.id }}" video-src="{{ video.src }}" label="Play video {{ heading.text }}"></background-image>
+				<modal-play-button class="dependency-video__video-button" :video-id="{{ video.id }}">
+					<svg alt="" aria-hidden="true" class="dependency-video__video-button-icon dependency-video__video-button-icon--play" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+						<use xlink:href="/svgs/icon-play-large.svg#icon"/>
+					</svg>
+				</modal-play-button>
+			</div>
+			<div class="dependency-video__header-container">
+				<div class="dependency-video__heading-inner">
+					<h{{heading.level|default('1')}} class="dependency-video__heading">{{ heading.text }}</h{{heading.level|default('1')}}>
+				</div>
+			</div>
+		</div>
+	</div>
+	<video-modal class="dependency-video__modal" id="{{ video.id }}" url="{{ video.src }}"></video-modal>
+</section>

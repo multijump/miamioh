@@ -1,0 +1,60 @@
+// Adhere
+@mixin adhere {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// Aspect Ratio
+@mixin aspect-ratio($x, $y) {
+  padding-top: unquote(($y / $x) * 100 + "%");
+}
+
+// Transition
+@mixin transition($property, $duration: time(), $timing-function: ease()) {
+  transition: {
+    property: $property;
+    duration: $duration;
+    timing-function: $timing-function;
+  }
+}
+
+// Focus
+@mixin focus-red {
+  outline: 2px dotted color(red);
+  outline-offset: 4px;
+}
+
+@mixin focus-red-ie {
+  border: 4px solid transparent;
+  outline: 2px dashed red;
+  padding: 2px;
+}
+
+@mixin focus-white {
+  outline: 2px dotted color(white);
+  outline-offset: 4px;
+}
+
+// Background gradient
+@mixin gradient-black {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(to top, color(black-00) 0%, color(black-gradient) 50%);
+  pointer-events: none;
+  left: 0;
+  right: 0;
+}
+
+
+// Vertical align element
+@mixin vertical-align($position: relative, $percentage: 50%) {
+  position: $position;
+  top: $percentage;
+  transform: translateY(-$percentage);
+}

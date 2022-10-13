@@ -1,0 +1,24 @@
+.base-btn-primary {
+  position: relative;
+  display: inline-block;
+  min-width: 205px;
+  padding: 10px 11px;
+  text-transform: capitalize;
+  color: color(white);
+  background-color: color(red);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    background-color: color(red-accent);
+  }
+
+  &.base-btn-primary--light:focus {
+    background-color: color(red-accent);
+  }
+
+  @include breakpoint(xlarge) {
+    min-width: 220px;
+  }
+}
+  

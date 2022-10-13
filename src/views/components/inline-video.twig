@@ -1,0 +1,34 @@
+<section class="inline-video">
+    <div class="inline-video__container">
+        <div class="inline-video__inner">
+            <div class="inline-video__header-icon-container">
+                <div class="inline-video__header-icon-inner">
+                    <img class="inline-video__header-icon" alt="{{ header_icon.alt }}" src="{{ header_icon.src }}">
+                    <div class="inline-video__header-icon-line"></div>
+                    <img class="inline-video__content-icon" alt="{{ content_icon.alt }}" src="{{ content_icon.src }}">
+                </div>
+            </div>
+            <div class="inline-video__background">
+                {% if video %}
+                    <background-video class="inline-video__video" :video-id="{{ video.id }}" video-src="{{ video.src }}"></background-video>
+                    <background-video-button class="inline-video__video-button" :video-id="{{ video.id }}">
+                        <svg alt="" aria-hidden="true" class="inline-video__video-button-icon inline-video__video-button-icon--play" viewbox="0 0 20 20" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="/svgs/icon-play.svg#icon"/>
+                        </svg>
+                        <svg alt="" aria-hidden="true" class="inline-video__video-button-icon inline-video__video-button-icon--pause" viewbox="0 0 20 20" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="/svgs/icon-pause.svg#icon"/>
+                        </svg>
+                    </background-video-button>
+
+                {% else %}
+                    <img class="inline-video__background-image" alt="{{ image.alt }}" src="{{ image.src }}">
+                {% endif %}
+            </div>
+            <div class="inline-video__header-container">
+                <div class="inline-video__heading-inner">
+                    <h{{heading.level|default('1')}} class="inline-video__heading">{{ heading.text }}</h{{heading.level|default('1')}}>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

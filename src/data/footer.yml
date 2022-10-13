@@ -1,0 +1,117 @@
+footer:
+  column1:
+    logo:
+      src: /svgs/logo.svg
+      alt: Miami University
+      href: /
+      ariaLabel: Miami University
+  column2:
+    heading: Resources
+    links:
+      - href: https://google.com/
+        text: Parents
+      - href: https://google.com/
+        text: Faculty & Staff
+      - href: https://google.com/
+        text: Jobs
+      - href: https://google.com/
+        text: Alumni
+      - href: https://google.com/
+        text: Current Students
+  column3:
+    heading: Visit
+    links:
+      - href: https://google.com/
+        text: Tours
+      - href: https://google.com/
+        text: Events
+      - href: https://google.com/
+        text: Directions
+      - href: https://google.com/
+        text: Accomodation
+      - href: https://google.com/
+        text: Campus Map
+  column4:
+    heading: Follow Us
+    socialLinks:
+      - href: https://google.com/
+        property: facebook
+      - href: https://google.com/
+        property: instagram
+      - href: https://google.com/
+        property: youtube
+      - href: https://google.com/
+        property: twitter
+      - href: https://google.com/
+        property: linkedin
+    ctas:
+      - href: https://google.com/
+        text: Apply
+        mode: light
+      - href: https://google.com/
+        text: Give
+        mode: light
+  copyright: © 2019 Miami University All Rights Reserved
+  legal:
+    - href: https://google.com/
+      text: Equal Opportunity
+    - href: https://google.com/
+      text: Family Consumer Information
+    - href: https://google.com/
+      text: Report an Accessibility Issue
+    - href: https://google.com/
+      text: Annual Security & Fire Safety Report
+    - href: https://google.com/
+      text: Report a Problem With This Website
+    - href: https://google.com/
+      text: Privacy Statement
+    - href: https://google.com/
+      text: A to Z Listing
+  campuses:
+    campusList:
+      - name: Oxford
+        address: 501 E. High Street<br>Oxford, OH 45056
+        linksPrimary:
+          - href: https://google.com/
+            text: Printable Campus Map
+          - href: https://google.com/
+            text: Direction
+          - href: https://google.com/
+            preText: 'Online:'
+            text: eLearning
+        linksSecondary:
+          - href: https://google.com/
+            preText: 'Main Operator:'
+            text: 123-456-0789
+          - href: https://google.com/
+            preText: 'Office of Admissions:'
+            text: 123-456-0789
+          - href: https://google.com/
+            preText: 'Vine Hotline:'
+            text: 123-456-0789
+          - href: https://google.com/
+            preText: 'Emergency Info:'
+            text: MiamiOH.edu/emergency
+      - name: Another Campus
+        address: 123 Some Street<br>Anywhere, OH 12345
+        linksPrimary:
+          - href: https://google.com/
+            text: Printable Campus Map
+          - href: https://google.com/
+            text: Direction
+          - href: https://google.com/
+            preText: 'Online:'
+            text: eLearning
+        linksSecondary:
+          - href: https://google.com/
+            preText: 'Main Operator:'
+            text: 321-456-0987
+          - href: https://google.com/
+            preText: 'Office of Admissions:'
+            text: 321-456-0988
+          - href: https://google.com/
+            preText: 'Vine Hotline:'
+            text: 321-456-0989
+          - href: https://google.com/
+            preText: 'Emergency Info:'
+            text: MiamiOH.edu/emergency

@@ -1,0 +1,15 @@
+<section class="hero-secondary">
+    <div class="hero-secondary__background-wrap">
+    <div class="hero-secondary__inner">
+        <div class="hero-secondary__content">
+            {% if heading %}
+            {% set h = ['h', heading.level|default('2')]|join %}
+                <{{h}} class="base-lockup__heading base-lockup__heading--{{ heading.size|default('3') }}">{{ heading.text }}</{{h}}>
+            {% endif %}
+            {% include 'components/base-lockup.twig' with lockup %}
+        </div>
+    </div>
+    <div class="hero-secondary__breadcrumbs">
+        {% include 'components/breadcrumbs.twig' with breadcrumbs %}
+    </div>
+</section>

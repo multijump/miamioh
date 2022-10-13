@@ -1,0 +1,204 @@
+.cards-text {
+  padding-top: space(10);
+  padding-bottom: space(10);
+  background-color: color(red);
+  color: color(white);
+
+  @include breakpoint(medium) {
+    padding-top: space(15);
+    padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    padding-top: space(25);
+    padding-bottom: space(25);
+  }
+
+  .cards-text__header-container {
+    @include create-row;
+
+    .cards-text__header-inner {
+      @include flex-grid-column(12);
+      align-self: center;
+      justify-self: center;
+      padding-bottom: space(10);
+
+      @include breakpoint(large) {
+        padding-bottom: space(16.25);
+      }
+
+      .cards-text__header-heading {
+        @include text-heading-2;
+        padding-bottom: space(3.75);
+      }
+      .cards-text__header-subheading {
+        @include text-body-large;
+        padding: 0 !important;
+
+        @include breakpoint(large) {
+          @include flex-grid-column(8);
+        }
+      }
+    }
+  }
+
+  .cards-text__cards-container {
+    @include create-row;
+    flex-direction: column;
+
+    @include breakpoint(large) {
+      flex-direction: row;
+    }
+  }
+
+  &.cards-text--2 {
+    .cards-text__card {
+      @include flex-grid-column(12);
+      @include breakpoint(large) {
+        @include flex-grid-column(6);
+      }
+    }
+  }
+
+  &.cards-text--3 {
+    .cards-text__card {
+      @include flex-grid-column(12);
+      @include breakpoint(large) {
+        @include flex-grid-column(4);
+      }
+    }
+  }
+
+  &.cards-text--4 {
+    .cards-text__card {
+      @include flex-grid-column(12);
+      @include breakpoint(large) {
+        @include flex-grid-column(3);
+      }
+    }
+  }
+
+  .cards-text__card {
+    .cards-text__card-image {
+      height: 26px;
+      object-fit: cover;
+    }
+
+    .cards-text__card-inner {
+      padding-right: space(5);
+      .cards-text__card-headline {
+        @include text-heading-5;
+        color: color(white);
+        padding-top: space(8);
+      }
+
+      .cards-text__card-copy {
+        @include text-body-regular;
+        color: color(white);
+        padding-top: space(3.5);
+      }
+
+      .cards-text__card-cta {
+        padding-bottom: space(15);
+
+        @include breakpoint(large) {
+          padding-bottom: 0;
+        }
+        a {
+          &:before {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            display: block;
+            width: space(2.25);
+            height: space(2.25);
+            background-color: transparent;
+            content: "";
+            border-top: 2px solid color(red);
+            border-right: 2px solid color(red);
+            transform: translateY(-50%) rotate(45deg);
+            transition: all .2s ease;
+          }
+          .base-cta-text__arrow {
+            display: none;
+          }
+          &:hover {
+            &::before {
+              transform: translate(5px, -50%) rotate(45deg) scale(1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.cards-text--white-warm {
+    background-color: color(white-warm);
+    color: color(black);
+
+    .cards-text__header-heading {
+      color: color(red);
+    }
+
+    .cards-text__card {
+      .cards-text__card-inner {
+        .cards-text__card-headline {
+          @include text-heading-5;
+          color: color(black);
+          padding-top: space(8);
+        }
+
+        .cards-text__card-copy {
+          @include text-body-regular;
+          color: color(black);
+          padding-top: space(3.5);
+        }
+      }
+    }
+  }
+
+  &.cards-text--white {
+    background-color: color(white);
+    color: color(black);
+
+    .cards-text__header-heading {
+      color: color(red);
+    }
+
+    .cards-text__card {
+      .cards-text__card-inner {
+        .cards-text__card-headline {
+          @include text-heading-5;
+          color: color(black);
+          padding-top: space(6);
+        }
+
+        .cards-text__card-copy {
+          @include text-body-regular;
+          color: color(black);
+          padding-top: space(3);
+        }
+      }
+    }
+  }
+  &.cards-text--red {
+    .cards-text__card {
+      .cards-text__card-inner {
+        .cards-text__card-cta {
+          a {
+            &:before {
+              border-top: 2px solid color(white);
+              border-right: 2px solid color(white);
+            }
+          }
+        }
+      }
+    }
+  }
+  .cards-text__card:last-child {
+    .cards-text__card-cta {
+      padding-bottom: 0;
+    }
+  }
+}
+

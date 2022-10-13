@@ -1,0 +1,74 @@
+.base-cta-primary {
+  position: relative;
+  display: inline-block;
+  min-width: 200px;
+  padding: 0 11px 11px 0;
+  margin-top: space(3);
+
+  &:focus {
+    @include focus-red;
+  }
+
+  &.base-cta-primary--light:focus {
+    @include focus-white;
+  }
+
+  @include breakpoint(xlarge) {
+    min-width: 200px;
+  }
+}
+
+.base-cta-primary__outline {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  bottom: 5px;
+  left: 6px;
+  border: 2px solid color(red);
+
+  .base-cta-primary--light & {
+    border-color: color(white);
+  }
+}
+
+.base-cta-primary__content {
+  @include text-cta-default;
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: space(5) space(10) space(5) space(5);
+  color: color(white);
+  background-color: color(red);
+  // font-weight: 700;
+  @include transition(transform);
+
+  @include breakpoint(large) {
+    width: 200px;
+  }
+
+  .base-cta-primary--light & {
+    color: color(red);
+    background-color: color(white);
+  }
+
+  .base-cta-primary:hover &,
+  .base-cta-primary:focus & {
+    transform: translate(6px, 6px);
+  }
+}
+
+.base-cta-primary__arrow {
+  position: absolute;
+  top: 50%;
+  right: space(5);
+  display: block;
+  width: space(2.5);
+  height: space(2.5);
+  border-top: 2px solid color(white);
+  border-right: 2px solid color(white);
+  transform: translateY(-50%) rotate(45deg);
+
+  .base-cta-primary--light & {
+    border-color: color(red);
+  }
+}

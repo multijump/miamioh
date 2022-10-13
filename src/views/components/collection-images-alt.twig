@@ -1,0 +1,48 @@
+<section class="collection-images">
+    <div class="collection-images__container">
+        <div class="collection-images__content-container">
+            <h{{heading.level|default('3')}} class="collection-images__heading">{{ heading.text }}</h{{heading.level|default('3')}}>
+            <p class="collection-images__copy">{{ copy }}</p>
+            <div class="collection-images__cta-container">
+                {% include 'components/base-cta-primary.twig' with cta %}
+            </div>
+        </div>
+        <div class="collection-images__images-container">
+            <div class="collection-images__small-container">
+                {% for image in images %}
+                    <img class="collection-images__image" alt="{{ image.image.alt }}" src="{{ image.image.src }}">
+                {% endfor %}
+            </div>
+            <div
+                class="collection-images__hero-container">
+                {# <div class="collection-images__hero-inner"> #}
+                <img
+                class="collection-images__hero-image" alt="{{ hero_image.alt }}" src="{{ hero_image.src }}">
+            {# </div> #}
+            </div>
+            {# <div class="collection-images__heading-container">
+                                                                                                                                                                                                                    {% include "components/base-lockup.twig" with lockup %}
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                <div class="collection-images__cta-container">
+                                                                                                                                                                                                                    {% include 'components/base-cta-primary.twig' with cta %}
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                {% for card in cards %}
+                                                                                                                                                                                                                    <article class="collection-images__card">
+                                                                                                                                                                                                                        <img class="collection-images__image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
+                                                                                                                                                                                                                        <div class="collection-images__category">{{ card.category }}</div>
+                                                                                                                                                                                                                        <h{{heading.level|default('6')}} class="collection-images__headline">{{ card.headline.text }}</h{{card.heading.level|default('6')}}>
+                                                                                                                                                                                                                        <hr class="collection-images__divider">
+                                                                                                                                                                                                                    </article>
+                                                                                                                                                                                                                {% endfor %}
+                                                                                                                                                                                                                <div class="collection-images__stats-container">
+                                                                                                                                                                                                                    <div class="collection-images__stats-container-inner">
+                                                                                                                                                                                                                        {% for stat in stats %}
+                                                                                                                                                                                                                            <article class="collection-images__stat">
+                                                                                                                                                                                                                                <h2 class="collection-images__number">{{ stat.number }}</h2>
+                                                                                                                                                                                                                                <p class="collection-images__copy">{{ stat.copy }}</p>
+                                                                                                                                                                                                                            </article>
+                                                                                                                                                                                                                        {% endfor %}
+                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                </div> #}
+        </div>
+    </section>

@@ -1,0 +1,88 @@
+.base-lockup__label {
+  @include text-body-small;
+  font-style: italic;
+
+  .base-lockup--dark & {
+    color: color(red);
+  }
+
+  .base-lockup--light & {
+    color: color(white);
+  }
+
+  .base-lockup--black & {
+    color: color(black);
+  }
+}
+
+.base-lockup__heading {
+  .base-lockup--dark & {
+    color: color(red);
+  }
+
+  .base-lockup--light & {
+    color: color(white);
+  }
+
+  .base-lockup--black & {
+    color: color(black);
+  }
+
+  &.base-lockup__heading--1 {
+    @include text-heading-1;
+  }
+
+  &.base-lockup__heading--2 {
+    @include text-heading-2;
+  }
+
+  &.base-lockup__heading--3 {
+    @include text-heading-3;
+  }
+
+  &.base-lockup__heading--4 {
+    @include text-heading-4;
+  }
+
+  .base-lockup__label + & {
+    margin-top: space(1);
+  }
+}
+
+.base-lockup__copy {
+  @include text-body-regular;
+
+  .base-lockup--dark & {
+    color: color(black);
+  }
+
+  .base-lockup--light & {
+    color: color(white);
+  }
+
+  .base-lockup--black & {
+    color: color(black);
+  }
+
+  &.base-lockup__copy--small {
+    @include text-body-small;
+  }
+
+  &.base-lockup__copy--large {
+    @include text-body-large;
+  }
+
+  .base-lockup__heading + & {
+    margin-top: space(6);
+  }
+}
+
+.base-lockup__ctas {
+  margin-top: space(6);
+
+  @include breakpoint(medium) {
+    .base-cta-primary:not(:last-child) {
+      margin-right: space(6);
+    }
+  }
+}

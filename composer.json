@@ -1,0 +1,13 @@
+{
+    "description": "A 160over90 project",
+    "require": {
+        "symfony/yaml": "^4.0",
+        "twig/twig": "^2.4",
+        "vlucas/phpdotenv": "^2.4"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

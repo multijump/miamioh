@@ -1,0 +1,44 @@
+.context-image-int {
+  width: 100%;
+  margin-top: space(15);
+  margin-bottom: space(15);
+}
+
+.context-image-int__container {
+  @include create-row;
+}
+
+.context-image-int__image {
+  @include flex-grid-column(12);
+  height: 335px;
+  object-fit: cover;
+
+  @include breakpoint(large) {
+    @include flex-grid-size(5);
+    order: 2;
+  }
+}
+
+.context-image-int__text {
+  @include flex-grid-column(12);
+
+  @include breakpoint(large) {
+    @include flex-grid-size(7);
+  }
+}
+
+.context-image-int__lockup-container {
+  padding-top: space(8);
+  padding-bottom: space(4);
+
+  @include breakpoint(large) {
+    padding-top: 0;
+  }
+
+  .base-lockup__copy--regular {
+    margin-top: space(3.75);
+  }
+  @include breakpoint(large) {
+    margin-top: space(6);
+  }
+}

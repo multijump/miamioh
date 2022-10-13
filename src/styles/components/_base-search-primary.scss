@@ -1,0 +1,25 @@
+.base-search-primary {
+  position: relative;
+
+  .base-search-primary--input {
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid color(grey);
+    outline: none;
+    padding: space(2) 0;
+    @include text-body-regular;
+    color: color(black);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: space(2);
+    right: 0px;
+    width: 16px;
+    height: 16px;
+    background-image: url("/svgs/icon-magnifier--red.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}

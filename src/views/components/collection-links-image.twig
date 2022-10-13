@@ -1,0 +1,15 @@
+<section class="collection-links-image">
+    <img class="collection-links-image__image" alt="{{ image.alt }}" src="{{ image.src }}">
+    <div class="collection-links-image__container">
+        <div class="collection-links-image__inner">
+            <h{{heading.level|default('4')}} class="collection-links-image__heading">{{ heading.text }}</h{{heading.level|default('4')}}>
+            <nav aria-label="{{ heading.text }}">
+                {% for link in links %}
+                    <div class="collection-links-image__link-container">
+                        {% include 'components/base-cta-mega.twig' with link %}
+                    </div>
+                {% endfor %}
+            </nav>
+        </div>
+    </div>
+</section>

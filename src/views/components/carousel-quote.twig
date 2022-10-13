@@ -1,0 +1,30 @@
+<carousel-container class="carousel-quote" tag="section" id="carousel-quote">
+	<div class="carousel-quote__container">
+		<div class="carousel-quote__item-image-container">
+			<div class="carousel-quote-image-container">
+				{% for item in carousels %}
+					{% set image = item.image %}
+					<carousel-container-image class="carousel-quote__image" tag="img" key="{{ loop.index - 1 }}" src="{{ image.src }}" alt="{{ image.alt }}"></carousel-container-image>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="carousel-quote__item-content">
+			<ul class="carousel-quote__list">
+				{% for item in carousels %}
+					<carousel-container-item class="carousel-quote__list-item" key="carousel-container-item--{{ loop.index }}">
+						<div class="carousel-quote__item">
+                            <p class="carousel-quote__content-heading">{{ item.quote.text }}</p>
+                            <p class="carousel-quote__content-text">{{ item.student.text }}</p>
+                            <p class="carousel-quote__content-subject">{{ item.subject.text }}</p>
+					</carousel-container-item>
+				{% endfor %}
+			</ul>
+			<div class="carousel-quote__inner-wrap">
+				<carousel-container-slider-secondary
+                    class="carousel-quote__slider"
+                    aria-controls="carousel-quote"
+                ></carousel-container-slider-secondary>
+			</div>
+		</div>
+	</div>
+</carousel-container>

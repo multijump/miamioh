@@ -1,0 +1,131 @@
+<remount-on-window-width tag="section" class="top-menu">
+	<div class="top-menu-wrapper">
+		<header-menu-trigger></header-menu-trigger>
+		<button class="logo" href="/" aria-label="{{ logo.text }}"><img src="{{ logo.src_desktop }}" alt="{{ logo.text }} logo"/></button>
+		<nav class="header__utility_menu" aria-labelledby="header__utility_menu__heading">
+			<h2 id="header__utility_menu__heading">{{ utility_menu.heading }}</h2>
+			<ul>
+				{% for link in utility_menu.links %}
+					<header-utility-top-menu-item
+						id="{{ link.id }}"
+						menu-text="{{ link.text }}"
+						menu-link="{{ link.href }}"
+						has-child="{{ link.child_links is defined ? 'true' : 'false' }}"
+						child-links="{{ link.child_links|json_encode }}"
+					>
+					</header-utility-top-menu-item>
+				{% endfor %}
+			</ul>
+		</nav>
+		<header-search-button></header-search-button>
+		<header-menu-trigger is-desktop="false"></header-menu-trigger>
+	</div>
+	<header-menu menu-item-id="{{ first_main_menu_item_id }}" class="big-menu-wrapper">
+		<div class="big-menu--inner">
+			<div class="menu-container">
+				<header-main-menu-container class="main-menu-inner">
+					<nav class="header__main_menu">
+						<h2 id="header__main_menu_desktop__heading">{{ main_menu.heading }}</h2>
+						<ul>
+							{% set main_links = main_menu.links %}
+							{% set length = main_links|length %}
+							{% set previous = main_links[length - 1] %}
+							{% set next = main_links[1] %}
+							{% for link in main_links %}
+								{% set child = link.child_links[0] %}
+								<header-main-menu
+									id="{{ link.id }}"
+									menu-text="{{ link.text }}"
+									menu-link="{{ link.href }}"
+									has-child="{{ link.child_links.length }}"
+									previous-id={{ previous.id }}
+									next-id="{{ next.id }}"
+									child-id="{{ child.id }}"
+									index-order="{{ loop.index0 }}"
+									menu-length={{ length }}
+								>
+								</header-main-menu>
+								{{ child.id }}
+								{% set previous = link %}
+								{% set next = length > loop.index + 1 ? main_links[loop.index + 1] : main_links[0] %}
+							{% endfor %}
+						</ul>
+					</nav>
+				</header-main-menu-container>
+				<div class="main-menu-children-inner">
+					{% set main_links = main_menu.links %}
+					{% set length = main_links|length %}
+					{% set previous = main_links[length - 1] %}
+					{% set next = main_links[1] %}
+					{% for link in main_menu.links %}
+						{% if link.child_links %}
+							<header-child-menu
+								menu-id="{{ link.id }}"
+								previous-menu-id="{{ previous.id }}"
+								next-menu-id="{{ next.id }}"
+								menu-text="{{ link.text }}"
+								links="{{ link.child_links|json_encode }}"
+							>
+							</header-child-menu>
+						{% endif %}
+						{% set previous = link %}
+						{% set next = length > loop.index + 1 ? main_links[loop.index + 1] : '' %}
+					{% endfor %}
+				</div>
+			</div>
+			<div class="other-menus-container">
+				<nav class="header__secondary_menu" aria-labelledby="header__secondary_menu__heading">
+					<h2 id="header__secondary_menu__heading">{{ secondary_menu.heading }}</h2>
+					<ul>
+						{% for link in secondary_menu.links %}
+							<header-other-menu-item index="{{ loop.index0 }}" last="{{ loop.length - 1 }}">
+								{# <button>
+									<a tabindex="-1" href="{{ link.href }}">{{ link.text }}</a>
+								</button> #}
+								<button onclick="window.open('{{ link.href }}', '_self')">{{ link.text }}</button>
+							</header-other-menu-item>
+						{% endfor %}
+					</ul>
+				</nav>
+
+				<nav class="header__social_menu" aria-labelledby="header__social_menu__heading">
+					<h2 id="header__social_menu__heading">{{ social_menu.heading }}</h2>
+					<ul class="footer-primary__social-menu">
+						{% for link in social_menu.socialLinks %}
+							<header-social-menu
+								is-last="{{ link.last }}"
+								index="{{ loop.index0 }}"
+								class="footer-primary__social-menu-item"
+							>
+								{# {% include 'components/base-cta-social.twig' with link %} #}
+								<button aria-label="Find us on {{ link.property }}" target="_blank" rel="noopener" onclick="window.open('{{ link.href }}', '_new')" class="base-cta-social base-cta-social--{{ mode|default('light') }}">
+									<svg alt="{{link.property}} icon" class="base-cta-social__icon" viewbox="0 0 65 65" xmlns="http://www.w3.org/2000/svg">
+										<use xlink:href="/svgs/social-{{ link.property }}.svg#icon"/>
+									</svg>
+								</button>
+							</header-social-menu>
+						{% endfor %}
+					</ul>
+				</nav>
+
+				<nav class="header__utility_menu" aria-labelledby="header__utility_menu__desktop__heading">
+					<h2 id="header__utility_menu__desktop__heading">{{ utility_menu.heading }}</h2>
+					<ul>
+						{% for link in utility_menu.links %}
+							<header-utility-menu-item
+								id="{{ link.id }}"
+								menu-text="{{ link.text }}"
+								menu-link="{{ link.href }}"
+								has-child="{{ link.child_links is defined ? 'true' : 'false' }}"
+								child-links="{{ link.child_links|json_encode }}"
+							>
+							</header-utility-menu-item>
+						{% endfor %}
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header-menu>
+	<header-search-menu class="search-menu"></header-search-menu>
+	<header-menu-overlay></header-menu-overlay>
+</remount-on-window-width>

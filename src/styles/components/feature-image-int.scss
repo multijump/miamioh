@@ -1,0 +1,51 @@
+.feature-image-int {
+  width: 100%;
+  margin-top: space(15);
+  margin-bottom: space(15);
+}
+
+.feature-image-int__container {
+  @include create-row;
+}
+
+.feature-image-int__image {
+  @include flex-grid-column(12);
+  height: 200px;
+  object-fit: cover;
+
+  @include breakpoint(medium) {
+    height: 470px;
+  }
+}
+
+.feature-image-int__text-container {
+  @include flex-grid-column(12);
+
+  @include breakpoint(medium) {
+    @include flex-grid-size(10.5);
+    position: relative;
+    margin-top: space(-12);
+  }
+}
+
+.feature-image-int__text-inner {
+  padding: space(6);
+  background-color: color(red);
+
+  @include breakpoint(medium) {
+    padding: space(8);
+  }
+}
+
+.feature-image-int__heading {
+  @include text-heading-7;
+  text-transform: uppercase;
+  color: color(white);
+}
+
+.feature-image-int__copy {
+  @include text-body-regular;
+  font-size: rem(16);
+  padding-top: space(2);
+  color: color(white);
+}

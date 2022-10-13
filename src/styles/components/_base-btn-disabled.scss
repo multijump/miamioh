@@ -1,0 +1,10 @@
+.base-btn-diabled {
+  .base-btn-disabled--button {
+    min-width: 100px;
+    text-transform: uppercase;
+    color: color(white);
+    background-color: color(red-accent);
+    padding-top: space(3);
+    padding-bottom: space(3);
+  }
+}

@@ -1,0 +1,16 @@
+// Need to move this variable into webpack to set true/false based on APP_ENV
+$dev-mode: true;
+
+// Assigns pixel values in development, but rem values in production
+@function rem($value) {
+  @if $dev-mode == "false" {
+    $rem: $value / 16;
+    @return #{$rem}rem;
+  } @else {
+    @return #{$value}px;
+  }
+}
+
+@function space($value) {
+  @return rem(4 * $value);
+}

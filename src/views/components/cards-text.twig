@@ -1,0 +1,29 @@
+<section class="cards-text cards-text--{{ backgroundcolor|default('red') }} cards-text--{{ layout }}">
+    <div class="cards-text__header-container">
+        <div class="cards-text__header-inner">
+            <h{{heading.level|default('2')}} class="cards-text__header-heading">{{ heading.text }}</h{{heading.level|default('2')}}>
+            <p class="cards-text__header-subheading">{{ subheading }}</p>
+        </div>
+    </div>
+
+    <div class="cards-text__cards-container">
+        {% for card in cardlist.cards %}
+            <article class="cards-text__card">
+                <img class="cards-text__card-image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
+                <div class="cards-text__card-inner">
+                    <p class="cards-text__card-headline"
+                    {% if card.headline.id %}
+                        id="{{ card.headline.id }}"
+                    {% endif %}>{{ card.headline.text }}</p>
+                    <p class="cards-text__card-copy"
+                    {% if card.copy.id %}
+                        id="{{ card.copy.id }}"
+                    {% endif %}>{{ card.copy.text }}</p>
+                    <div class="cards-text__card-cta">
+                        {% include 'components/base-cta-text.twig' with card.cta %}
+                    </div>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</section>

@@ -1,0 +1,1911 @@
+title: Component Page
+components:
+  - name: alerts
+    alerts:
+      - heading:
+          text: University Alert
+          level: 3
+          copy: Te appareat appareat eum, has et quem populo. Capiosae percipitur mea ne. Mea cu denique deleniti sit amet.
+        mode: light
+        type: success
+  - name: context-image
+    icon: /svgs/icon-est-1809.svg
+    lockup:
+      # mode: (light, dark) default: dark
+      # label: Sample
+      heading: # optional
+        text: Context-Image
+        # level: (1 - 6) default: 2
+        # size: (1 – 4) default: 3
+      copy:
+        id: context-image-description-id
+        text: Oxford is about 35 miles north of Cincinnati—meanting it's near enough for last-minute adventures in the city, but far enough away to feel like a world apart.
+        # size: (small, regular, large) default: regular
+      ctas:
+        - href: /#explore-oxford
+          text: Explore Oxford
+          # mode: (light, dark) default: dark
+          # target: (_blank, _self) default: _self
+        - href: /#campus-map
+          text: See Campus Map
+    image:
+      src: /images/context-image.png
+      alt: Alt text
+      caption:
+        heading: Lorem ipsum dolor sit amet
+        copy: Lorem, ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit.
+  - name: carousel-cards
+    heading: Carousel-cards
+    items:
+      - content:
+          heading: Ei mei ipsum omnium iuvaret
+          text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+        image:
+          alt: Alt Text Goes Here
+          src: https://source.unsplash.com/random/800x600
+      - content:
+          heading: Ei mei ipsum omnium iuvaret
+          text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+        image:
+          alt: Alt Text Goes Here
+          src: https://source.unsplash.com/random/800x600
+      - content:
+          heading: Ei mei ipsum omnium iuvaret
+          text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+        image:
+          alt: Alt Text Goes Here
+          src: https://source.unsplash.com/random/800x600
+      - content:
+          heading: Ei mei ipsum omnium iuvaret
+          text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+        image:
+          alt: Alt Text Goes Here
+          src: https://source.unsplash.com/random/800x600
+      - content:
+          heading: Ei mei ipsum omnium iuvaret
+          text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+        image:
+          alt: Alt Text Goes Here
+          src: https://source.unsplash.com/random/800x600
+  - name: carousel-image-bleed
+    items:
+      - icon: /svgs/icon-sundial.svg
+        heading:
+          id: carousel-image-bleed-title
+          text: Carousel-image-bleed
+        copy:
+          id: carousel-image-bleed-description
+          text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus molestiae nam ab nulla asperiores soluta, voluptates modi quae perferendis ipsum recusandae natus? Quos tempora,
+        lockup:
+          # mode: light
+          # label: Sample
+          # headingSize: 3
+          # copySize: large
+          ctas:
+            - href: https://google.com/
+              text: Learn More
+              ariaDescribedby: carousel-image-bleed-title
+        image:
+          src: https://picsum.photos/id/235/800/800
+          alt: Alt text
+      - icon: /svgs/icon-sundial.svg
+        heading:
+          id: carousel-image-bleed-title-second
+          text: Lorem, ipsum dolor sit amet consectetur
+        copy:
+          id: carousel-image-bleed-description-second
+          text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus molestiae nam ab nulla asperiores soluta, voluptates modi quae perferendis ipsum recusandae natus? Quos tempora, voluptates repellendus earum cupiditate alias?
+        lockup:
+          # mode: light
+          # label: Sample
+          # headingSize: 3
+          # copySize: large
+          ctas:
+            - href: https://google.com/
+              text: Learn More
+              ariaDescribedby: carousel-image-bleed-title-second
+        image:
+          src: https://picsum.photos/id/237/800/800
+          alt: Alt text
+          caption:
+            heading: Lorem ipsum dolor sit amet
+            copy: Lorem, ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit.
+  - name: achievements
+    heading:
+      id: achievements
+      text: Achievements
+    achievements:
+      - copy: Definiebas inciderint comprehensam sit cu, equidem recusabo intellegat mea at
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: Definiebas inciderint comprehensam sit cu, equidem recusabo intellegat mea at
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: Definiebas inciderint comprehensam sit cu, equidem recusabo intellegat mea at
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: Definiebas inciderint comprehensam sit cu, equidem recusabo intellegat mea at
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: Definiebas inciderint comprehensam sit cu, equidem recusabo intellegat mea at
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: Definiebas inciderint comprehensam sit cu, equidem recusabo intellegat mea at
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+    cta:
+      href: /
+      text: See all
+      ariaDescribedby: achievements
+  - name: cards-image
+    lockup:
+      heading:
+        text: Cards-image 2up
+      copy:
+        text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+        size: large
+    cards:
+      - headline:
+          id: card-image-title-first
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: card-image-description-first
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn more
+          ariaDescribedby: card-image-description-first
+      - headline:
+          id: card-image-title-second
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: card-image-description-second
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn more
+          ariaDescribedby: card-image-description-second
+  - name: cards-image
+    type: white-warm
+    lockup:
+      heading:
+        text: Cards-image 3up
+      copy:
+        text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+        size: large
+    cards:
+      - headline:
+          id: cards-image-3up-first
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: cards-image-3up-description-first
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn more
+          ariaDescribedby: cards-image-3up-description-first
+      - headline:
+          id: cards-image-3up-second
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: cards-image-3up-description-second
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn more
+          ariaDescribedby: cards-image-3up-description-second
+      - headline:
+          id: cards-image-3up-third
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: cards-image-3up-description-third
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn more
+          ariaDescribedby: cards-image-3up-description-third
+  - name: cards-image
+    lockup:
+      heading:
+        text: Cards-image 4up
+      copy:
+        text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+        size: large
+    cards:
+      - headline:
+          id: cards-image-4up-first
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: cards-image-4up-description-first
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn more
+          ariaDescribedby: cards-image-4up-description-first
+      - headline:
+          id: cards-image-4up-second
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: cards-image-4up-description-second
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn more
+          ariaDescribedby: cards-image-4up-description-second
+      - headline:
+          id: cards-image-4up-third
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: cards-image-4up-description-third
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn more
+          ariaDescribedby: cards-image-4up-description-third
+      - headline:
+          id: cards-image-4up-forth
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: cards-image-4up-description-forth
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn more
+          ariaDescribedby: cards-image-4up-description-forth
+  - name: cards-events
+    lockup:
+      heading:
+        id: cards-events-title
+        text: Cards-events
+    cards:
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+        date: October 31, 2019
+        starttime: 8:00 pm
+        endtime: 10:00 PM
+        location: Location
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        link:
+          href: /
+          target: _self
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+        date: October 31, 2019
+        starttime: 8:00 pm
+        endtime: 10:00 PM
+        location: Location
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        link:
+          href: /
+          target: _self
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+        date: October 31, 2019
+        starttime: 8:00 pm
+        endtime: 10:00 PM
+        location: Location
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        link:
+          href: /
+          target: _self
+    cta:
+      href: /
+      text: See all
+      ariaDescribedby: cards-events-title
+  - name: cards-news
+    lockup:
+      heading:
+        id: cards-news-title
+        text: Cards-news
+    cards:
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+        category: Category
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        link:
+          href: /
+          target: _self
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+        category: Category
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        link:
+          href: /
+          target: _self
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+        category: Category
+        image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+        link:
+          href: /
+          target: _self
+    cta:
+      href: /
+      text: See all
+      ariaDescribedby: cards-news-title
+  - name: cards-news-stat
+    lockup:
+      heading:
+        id: cards-news-stat-title
+        text: Cards-news-stat
+    cards:
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+        category: Category
+        image:
+          src: https://picsum.photos/id/233/600/600
+          alt: Alt text
+        link:
+          href: /
+          target: _self
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+        category: Category
+        image:
+          src: https://picsum.photos/id/232/600/600
+          alt: Alt text
+        link:
+          href: /
+          target: _self
+    stats:
+      - number: 52
+        copy: Ea utamur iisque voluptaria pri, tota aeterno vituperatoribus eu nam, no paulo molestiae cum.
+      - number: 16
+        copy: Ea utamur iisque voluptaria pri, tota aeterno vituperatoribus eu nam, no paulo molestiae cum.
+    cta:
+      href: /
+      text: See all
+      ariaDescribedby: cards-news-stat-title
+  - name: cards-text
+    backgroundcolor: red
+    layout: 2
+    heading:
+      text: Cards-text in Red
+      level: 2
+    subheading: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+    cardlist:
+      cards:
+        - headline:
+            id: cards-text-title-first
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 5
+          copy:
+            id: cards-text-description-first
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          image:
+            src: /svgs/icon-globe--white.svg
+            alt: Alt text
+          cta:
+            mode: light
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-title-first
+        - headline:
+            id: cards-text-title-second
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 5
+          copy:
+            id: cards-text-description-second
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          image:
+            src: /svgs/icon-pathway--white.svg
+            alt: Alt text
+          cta:
+            mode: light
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-title-second
+  - name: cards-text
+    backgroundcolor: white-warm
+    layout: 4
+    heading:
+      text: Cards-text in Warm White
+      level: 2
+    subheading: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+    cardlist:
+      cards:
+        - headline:
+            id: cards-text-4ups-first
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 5
+          copy:
+            id: cards-text-4ups-description-first
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          image:
+            src: /svgs/icon-globe--red.svg
+            alt: Alt text
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-4ups-first
+        - headline:
+            id: cards-text-4ups-second
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 5
+          copy:
+            id: cards-text-4ups-description-second
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          image:
+            src: /svgs/icon-pathway--red.svg
+            alt: Alt text
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-4ups-second
+        - headline:
+            id: cards-text-4ups-third
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 5
+          copy:
+            id: cards-text-4ups-description-third
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          image:
+            src: /svgs/icon-chat-bubble--red.svg
+            alt: Alt text
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-4ups-third
+        - headline:
+            id: cards-text-4ups-forth
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 5
+          copy:
+            id: cards-text-4ups-description-forth
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          image:
+            src: /svgs/icon-chat-bubble--red.svg
+            alt: Alt text
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-4ups-forth
+  - name: cards-text
+    backgroundcolor: white
+    layout: 3
+    heading:
+      text: Cards-text in White
+      level: 2
+    subheading: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+    cardlist:
+      cards:
+        - headline:
+            id: cards-text-3ups-first
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 5
+          copy:
+            id: cards-text-3ups-description-first
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          image:
+            src: /svgs/icon-globe--red.svg
+            alt: Alt text
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-3ups-first
+        - headline:
+            id: cards-text-3ups-second
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 5
+          copy:
+            id: cards-text-3ups-description-second
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          image:
+            src: /svgs/icon-pathway--red.svg
+            alt: Alt text
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-3ups-second
+        - headline:
+            id: cards-text-3ups-third
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 5
+          copy:
+            id: cards-text-3ups-description-third
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          image:
+            src: /svgs/icon-chat-bubble--red.svg
+            alt: Alt text
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-3ups-third
+  - name: cards-text-alt
+    heading:
+      text: Cards-text-alt
+      level: 3
+    subheading: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+    cardlist:
+      cards:
+        - headline:
+            id: cards-text-alt-first
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 4
+          copy:
+            id: cards-text-alt-description-first
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-alt-first
+        - headline:
+            id: cards-text-alt-second
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 4
+          copy:
+            id: cards-text-alt-description-second
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-alt-second
+        - headline:
+            id: cards-text-alt-third
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 4
+          copy:
+            id: cards-text-alt-description-third
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-alt-third
+        - headline:
+            id: cards-text-alt-forth
+            text: At apeirian senserit intellegebat est, aeque rationi
+            level: 4
+          copy:
+            id: cards-text-alt-description-forth
+            text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+          cta:
+            mode: dark
+            href: /
+            text: Learn more
+            ariaDescribedby: cards-text-alt-forth
+  - name: carousel-primary
+    school:
+      text: Oxford, Ohio
+      level: 5
+    carousels:
+      - heading:
+          id: carousel-primary-first
+          text: Carousel-Primary
+          level: 3
+        copy:
+          id: carousel-primary-description-first
+          text: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea.
+        image:
+          src: https://picsum.photos/id/237/800/600
+          alt: Alt Text
+        cta:
+          mode: light
+          text: Learn More
+          href: /
+          target: _blank
+          ariaDescribedby: carousel-primary-description-first
+        school:
+          text: Oxford, Ohio
+          level: 5
+      - heading:
+          id: carousel-primary-second
+          text: Miami University, Oxford
+          level: 3
+        copy:
+          id: carousel-primary-description-second
+          text: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea.
+        image:
+          src: https://picsum.photos/id/238/800/600
+          alt: Alt Text
+        cta:
+          mode: light
+          text: Learn More
+          href: /
+          target: _blank
+          ariaDescribedby: carousel-primary-description-second
+        school:
+          text: Oxford, Ohio
+          level: 5
+      - heading:
+          id: carousel-primary-third
+          text: Harvard University
+          level: 3
+        copy:
+          id: carousel-primary-description-third
+          text: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea.
+        image:
+          src: https://picsum.photos/id/239/800/600
+          alt: Alt Text
+        cta:
+          mode: light
+          text: Learn More
+          href: /
+          target: _blank
+          ariaDescribedby: carousel-primary-description-third
+        school:
+          text: Oxford, Ohio
+          level: 5
+  - name: carousel-secondary
+    carousel:
+      heading:
+        id: carousel-secondary-title
+        text: Carousel-Secondary
+        level: 3
+      copy:
+        id: carousel-secondary-description
+        text: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea.
+      images:
+        - src: https://picsum.photos/id/240/1000/1000
+          alt: Alt Text
+        - src: https://picsum.photos/id/241/1000/1000
+          alt: Alt Text
+        - src: https://picsum.photos/id/242/1000/1000
+          alt: Alt Text
+      subheading:
+        text: Ei mei ipsum omnium iuvaret
+        level: 4
+        copy: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea.
+      cta:
+        mode: dark
+        text: Learn More
+        href: /
+        target: _blank
+        ariaDescribedby: carousel-secondary-title
+  - name: carousel-quote
+    carousels:
+      - quote:
+          text: Carousel-Quote Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset
+        image:
+          src: https://picsum.photos/id/234/500/500
+          alt: Alt Text
+        student:
+          text: Student Name, 23
+        subject:
+          text: Aera of Study
+      - quote:
+          text: Te eos audire admodum petentium, vix lorem graecis eqicuri et, ea habeo eirmod albucius usu.Ad solum utroque elaboraret mel, nostro temporibus in eum, quaeque euismod intellegat ut pri.
+        image:
+          src: https://picsum.photos/id/235/500/500
+          alt: Alt Text
+        student:
+          text: Student Name, 23
+        subject:
+          text: Aera of Study
+      - quote:
+          text: Carousel-Quote
+        image:
+          src: https://picsum.photos/id/236/500/500
+          alt: Alt Text
+        student:
+          text: Student Name, 23
+        subject:
+          text: Aera of Study
+  - name: chart-primary
+    heading:
+      text: Chart eos an graeci euismod, ad eam adhuc reprehed
+      level: 3
+    options:
+      - option:
+          percentage: 60.0
+          text: The Best Option Obviously
+          color: "#c41230"
+          alias: "red"
+      - option:
+          percentage: 26.0
+          text: Second Option
+          color: "#d1d0d0"
+          alias: grey
+      - option:
+          percentage: 9.0
+          text: "Another Option with a Longer Name Than Usual"
+          color: "#ad102a"
+          alias: red-accent
+      - option:
+          percentage: 5.0
+          text: Definitely The Final Option Available
+          color: "#edece2"
+          alias: gold
+  - name: collection-figures-2up
+    heading:
+      text: Collection-figures-2up
+      level: 3
+      layout: 2
+    cardlist:
+      cards:
+        - headline:
+            text: 52
+            level: 2
+          copy: Ea utamur iisque voluptaria pri. tota aeterno vituperatoribus eu nam, no paulo molestiae cum.
+        - headline:
+            text: 16
+            level: 2
+          copy: Ea utamur iisque voluptaria pri. tota aeterno vituperatoribus eu nam, no paulo molestiae cum.
+  - name: collection-figures-3up
+    background: gold
+    icon: /svgs/icon-flag--red.svg
+    alt: flag
+    heading:
+      text: Collection-figures-3up in Gold
+      level: 2
+    subheading:
+      id: collection-figures-3up-description-first
+      text: Vide legimus accusan no mea, quaeue vivendo ex mei. Ad per ipsum laudam reprehendumt, vel malis solet veniam at, iisque molestiae quo ei.
+      cta:
+        href: /
+        text: Learn More
+        ariaDescribedby: collection-figures-3up-description-first
+    cardlist:
+      cards:
+        - headline:
+            text: "#3"
+            level: 1
+          copy: Lorem Dolor Sit Amet
+          subcopy: Quisus Quarterly
+        - headline:
+            text: "60%"
+            level: 1
+          copy: Lorem Dolor Sit Amet
+          subcopy: Quisus Quarterly
+        - headline:
+            text: 1300
+            level: 1
+          copy: Lorem Dolor Sit Amet
+          subcopy: Quisus Quarterly
+  - name: collection-figures-3up
+    background: white
+    icon: /svgs/icon-flag--red.svg
+    alt: flag
+    heading:
+      text: Collection-figures-3up
+      level: 2
+    subheading:
+      id: collection-figures-3up-description-second
+      text: Vide legimus accusan no mea, quaeue vivendo ex mei. Ad per ipsum laudam reprehendumt, vel malis solet veniam at, iisque molestiae quo ei.
+      cta:
+        href: /
+        text: Learn More
+        ariaDescribedby: collection-figures-3up-description-second
+    cardlist:
+      cards:
+        - headline:
+            text: 375
+            level: 1
+          copy: Lorem Dolor Sit Amet
+          subcopy: Quisus Quarterly
+        - headline:
+            text: 60
+            level: 1
+          copy: Lorem Dolor Sit Amet
+          subcopy: Quisus Quarterly
+        - headline:
+            text: 1300
+            level: 1
+          copy: Lorem Dolor Sit Amet
+          subcopy: Quisus Quarterly
+  - name: collection-figures-4up
+    backgroundcolor: red
+    heading:
+      text: Collection-figures-4up
+      level: 2
+    subheading:
+      id: collection-figures-4up-description
+      text: Vide legimus accusan no mea, quaeue vivendo ex mei. Ad per ipsum laudam reprehendumt, vel malis solet veniam at, iisque molestiae quo ei.
+      cta:
+        href: /
+        text: Learn More
+        mode: light
+        ariaDescribedby: collection-figures-4up-description
+    cardlist:
+      cards:
+        - headline:
+            text: 52
+            level: 1
+          copy: Ea utmur iisque voluptaria pri, tota aeterno vituperatoribus eu nam, no paulo molestiae cum
+        - headline:
+            text: "#16"
+            level: 1
+          copy: Ea utmur iisque voluptaria pri, tota aeterno vituperatoribus eu nam, no paulo molestiae cum
+        - headline:
+            text: 3200
+            level: 1
+          copy: Ea utmur iisque voluptaria pri, tota aeterno vituperatoribus eu nam, no paulo molestiae cum
+        - headline:
+            text: 122.2
+            level: 1
+          copy: Ea utmur iisque voluptaria pri, tota aeterno vituperatoribus eu nam, no paulo molestiae cum
+  - name: collection-images
+    lockup:
+      heading:
+        id: collection-images-title
+        text: Collection-images
+        level: 2
+    copy:
+      id: collection-images-description
+      text: Facete pericula mediocrem an icula mediocrem an icula mediocrem an icula mediocrem an icula mediocrem an icula mediocrem an icula mediocrem an icula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+    icon:
+      src: /svgs/icon-lantern--gold.svg
+      alt: Alt text
+    hero_image:
+      src: https://picsum.photos/id/234/600/600
+      alt: Alt text
+    images:
+      - image:
+          src: https://picsum.photos/id/234/600/600
+          alt: Alt text
+      - image:
+          src: https://picsum.photos/id/233/600/600
+          alt: Alt text
+    cta:
+      href: /
+      text: See all
+      ariaDescribedby: collection-images-description
+  - name: collection-links
+    type: red
+    lockup:
+      heading:
+        text: Collection-links
+    links:
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+  - name: collection-links
+    lockup:
+      heading:
+        text: Collection-links
+    links:
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+  - name: collection-links-callout
+    heading:
+      text: Collection-Links-Callout
+      level: 3
+    copy: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+    subheading:
+      text: Eos an graeci euismod, ad eam adhuc reprehend
+      level: 4
+    links:
+      - href: https://google.com/
+        text: Call to action
+        mode: light
+      - href: https://google.com/
+        text: Call to action
+        mode: light
+      - href: https://google.com/
+        text: Call to action
+        mode: light
+      - href: https://google.com/
+        text: Call to action
+        mode: light
+      - href: https://google.com/
+        text: Call to action
+        mode: light
+  - name: collection-links-image
+    heading:
+      text: Collection-links-image
+    image:
+      src: https://picsum.photos/id/234/705/705
+      alt: Alt text
+    links:
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+      - href: https://google.com/
+        text: Call to action
+  - name: collection-list
+    heading:
+      text: Collection-List
+      level: 4
+    subheading: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+    lists:
+      - list:
+        text: Ei his iuvaret similique definitionem, no melius accusate dissentiunt vim, vis id vero vidit intellegam. An eum utinam dolore ignota, cu sit nihil viderer vivendum, eu facilisi requdiare vis
+        level: 6
+      - list:
+        text: Pri habeo urbanitas intellegebat an. Vel vide ipsum commodo at, ei iriure detraxit complectitur per, ridens maiorum his ne. Sanctus scaevola qui te, ne malis persequeris has. Eos modus oporteat at, ne mei consul iisque.
+        level: 6
+      - list:
+        text: Nisl idque rationibus mea ad, in eum inani quodsi, ad dicit veniam ullam quo. Vis utamur dolorem eu. Eu solum qugue nec, vivendum petentium an vim. Vim te error tritani, ut minim laudem apeirian his, ne viris vituperatoribus vel.
+        level: 6
+      - list:
+        text: Te dico delectus eam, dictas intellegam vel in, his falli exerci nostrud an. Eam impetus oporteat insolens in, quando patrioque in vis.
+        level: 6
+  - name: content-grid
+    heading:
+      icon:
+        src: /svgs/icon-est-1809--white.svg
+        alt: Est 1809 Icon
+      headline:
+        id: content-grid-title
+        text: Miami made, Forever prepared
+        level: 3
+      copy:
+        id: content-grid-description
+        text: Your success is our top priority. That means giving you experiences inside and outside the classroom that will prepare you to take on the world.
+      cta:
+        href: /
+        text: Learn More
+        ariaDescribedby: content-grid-description
+    specials:
+      - content:
+        type: normal-image
+        image:
+          src: https://picsum.photos/id/700/800/800
+          alt: Alt Text
+        headline:
+          id: content-grid-specials-title
+          text: The Magic of a Miami Grad
+          level: 3
+        copy:
+          id: content-grid-specials-description
+          text: Will haygood Receives Chiloanna Award for "Tigerland."
+        link:
+          href: /
+          text: READ FULL STUDY
+          ariaDescribedby: content-grid-specials-title
+    contents:
+      - content:
+        type: bordered-image
+        image:
+          src: https://picsum.photos/id/701/800/800
+          alt: Alt Text
+        headline:
+          id: bordered-image-first
+          text: The Adventure Starts Here
+        cta:
+          href: /
+          text: APPLY TODAY
+          ariaDescribedby: bordered-image-first
+      - content:
+        type: normal-text
+        backgroundcolor: white-warm
+        headline:
+          id: normal-text-title
+          text: Top 50
+        copy:
+          id: normal-text-description
+          text: Natiaonal Public University
+        cta:
+          href: /
+          text: U.S. News & World Report
+          ariaDescribedby: normal-text-title
+      - content:
+        type: normal-image
+        image:
+          src: https://picsum.photos/id/702/800/800
+          alt: Alt Text
+        headline:
+          id: normal-image-title
+          text: Miami Alum, Heart of Steele
+        cta:
+          href: /
+          text: LEARN MORE
+          ariaDescribedby: normal-image-title
+      - content:
+        type: bordered-image
+        image:
+          src: https://picsum.photos/id/703/800/800
+          alt: Alt Text
+        headline:
+          id: bordered-image-second
+          text: A Campus that speaks for itself
+        cta:
+          href: /
+          text: Schedule a visit
+          ariaDescribedby: bordered-image-second
+  - name: content-hub
+    heading:
+      text: Content-Hub
+      level: 2
+    featuredHeading:
+      text: Featured News
+      level: 3
+    bigCard:
+      headline:
+        text: Category
+      copy: At apeirian senserit intellegebat est, aeque rationi
+      link:
+        href: /
+        target: _self
+        ariaLabel: At apeirian senserit intellegebat est, aeque rationi
+      image:
+        src: https://picsum.photos/id/234/600/700
+        alt: Alt Text
+    cardList:
+      cards:
+        - headline:
+            id: content-hub-card-title-first
+            text: Category
+          copy: At apeirian senserit intellegebat est, aeque rationi
+          link:
+            href: /
+            target: _self
+            ariaLabel: At apeirian senserit intellegebat est, aeque rationi
+          image:
+            src: https://picsum.photos/id/234/536/364
+            alt: Alt Text
+        - headline:
+            id: content-hub-card-title-second
+            text: Category
+          copy: At apeirian senserit intellegebat est, aeque rationi
+          link:
+            href: /
+            target: _self
+            ariaLabel: At apeirian senserit intellegebat est, aeque rationi
+          image:
+            src: https://picsum.photos/id/234/536/364
+            alt: Alt Text
+    catalog:
+      mode: dark
+      href: /
+      text: See More
+      ariaDescribedby: news-heading-title
+    newsheading:
+      id: news-heading-title
+      text: Latest News
+      level: 3
+    newsList:
+      news:
+        - heading:
+            category: Category
+          link:
+            href: /
+            target: _self
+            text: No fugit antiopam occrreret sea, mea et veri accusam accusamus
+        - heading:
+            category: Category
+          link:
+            href: /
+            target: _self
+            text: No fugit antiopam occrreret sea, mea et veri accusam accusamus
+    eventCatalog:
+      mode: dark
+      href: /
+      text: See More
+      ariaDescribedby: upcoming-heading-title
+    eventheading:
+      id: upcoming-heading-title
+      text: Upcoming Event
+      level: 3
+    eventList:
+      events:
+        - heading:
+            date: October 11, 2019
+            location: location
+          link:
+            href: /
+            target: _self
+            text: At apeirian senserit intellegebat est, aeque rationi
+        - heading:
+            location: location
+            date: October 11, 2019
+          link:
+            href: /
+            target: _self
+            text: At apeirian senserit intellegebat est, aeque rationi
+        - heading:
+            date: october 11, 2019
+            location: location
+          link:
+            href: /
+            target: _self
+            text: At apeirian senserit intellegebat est, aeque rationi
+  - name: feature-stat
+    heading:
+      id: feature-stat-title
+      text: Feature-Stat
+      level: 3
+    copy:
+      id: feature-stat-description
+      text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+    cta:
+      href: /
+      text: Learn More
+      mode: light
+      ariaDescribedby: feature-stat-description
+    icon:
+      src: /svgs/icon-promise--red.svg
+      alt: Alt Text
+  - name: context-list
+    layout: vertical
+    type: gold
+    lockup:
+      heading:
+        text: Context-list Gold Vertical
+      copy:
+        text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+        size: large
+    articles:
+      - headline:
+          id: artical-headline-title-first
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: artical-headline-description-first
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: chat-bubble
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: artical-headline-description-first
+      - headline:
+          id: artical-headline-title-second
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: artical-headline-description-second
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: globe
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: artical-headline-description-second
+  - name: context-list
+    layout: horizontal
+    type: red
+    lockup:
+      heading:
+        text: Context-list Red
+      copy:
+        text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+        size: large
+    articles:
+      - headline:
+          id: context-list-hori-title-first
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-hori-description-first
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: globe
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: context-list-hori-description-first
+      - headline:
+          id: context-list-hori-title-second
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-hori-description-second
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: pathway
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: context-list-hori-description-second
+  - name: context-list
+    layout: horizontal
+    type: white
+    lockup:
+      heading:
+        text: Context-list White
+      copy:
+        text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+        size: large
+    articles:
+      - headline:
+          id: context-list-3up-title-first
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-3up-description-first
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: globe
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: context-list-3up-description-first
+      - headline:
+          id: context-list-3up-title-second
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-3up-description-second
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: pathway
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: context-list-3up-description-second
+      - headline:
+          id: context-list-3up-title-third
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-3up-description-third
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: chat-bubble
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: context-list-3up-description-third
+  - name: context-list
+    layout: horizontal
+    type: gold
+    lockup:
+      heading:
+        text: Context-list Gold
+      copy:
+        text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+        size: large
+    articles:
+      - headline:
+          id: context-list-4up-title-first
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-4up-description-first
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: globe
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: context-list-4up-description-first
+      - headline:
+          id: context-list-4up-title-second
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-4up-description-second
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: pathway
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: context-list-4up-description-second
+      - headline:
+          id: context-list-4up-title-third
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-4up-description-third
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: chat-bubble
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: context-list-4up-description-third
+      - headline:
+          id: context-list-4up-title-forth
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-4up-description-forth
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        icon:
+          icon: chat-bubble
+          alt: Alt text
+        cta:
+          href: /
+          text: See all
+          ariaDescribedby: context-list-4up-description-forth
+  - name: context-list
+    layout: horizontal
+    lockup:
+      heading:
+        text: Context-List-Image Red
+      copy:
+        text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas est at, ne sea choro nemore virtute.
+        size: large
+    articles:
+      - headline:
+          id: context-list-image-title-first
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-image-description-first
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: /images/context-list-image-1.png
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn More
+          ariaDescribedby: context-list-image-description-first
+      - headline:
+          id: context-list-image-title-second
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-image-description-second
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: /images/context-list-image-2.png
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn More
+          ariaDescribedby: context-list-image-description-second
+      - headline:
+          id: context-list-image-title-third
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: context-list-image-description-third
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: /images/context-list-image-3.png
+          alt: Alt text
+        cta:
+          href: /
+          text: Learn More
+          ariaDescribedby: context-list-image-description-third
+  - name: dependency-video
+    video:
+      src: https://vimeo.com/77634697
+      id: 1
+    image:
+      src: https://picsum.photos/id/347/600/600
+      alt: Alt text
+    heading:
+      text: Dependency-Video with Vimeo
+      level: 3
+    header_icon:
+      src: /svgs/icon-love-honor--red.svg
+      alt: Alt text
+    content_icon:
+      src: /svgs/icon-target--red.svg
+      alt:
+  - name: dependency-video
+    video:
+      src: https://www.youtube.com/watch?v=YJsHsc6LfYA
+      id: 2
+    image:
+      src: https://picsum.photos/id/347/600/600
+      alt: Alt text
+    heading:
+      text: Dependency-Video with YouTube
+      level: 3
+    header_icon:
+      src: /svgs/icon-love-honor--red.svg
+      alt: Alt text
+    content_icon:
+      src: /svgs/icon-target--red.svg
+      alt:
+  - name: feature-image
+    heading:
+      text: Feature-image
+      level: 3
+    copy: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipsucing per. Equidem impedit qpicuri vel et. Aeterno imperdiet vel ea. An veritus adipsel pri, eu psu delenit elaboreret clahoboreat
+    image:
+      src: https://picsum.photos/id/937/600/600
+    icon:
+      src: /svgs/iocon-lantern--white.svg
+      alt: Icon
+  - name: feature-image-2up
+    cards:
+      - heading:
+          id: feature-image-2up-title-first
+          text: Feature-image-2up
+        copy:
+          id: feature-image-2up-description-first
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: images/feature-image-2up-1.png
+          alt: Alt text
+        cta:
+          href: /
+          text: Apply
+          ariaDescribedby: feature-image-2up-description-first
+      - heading:
+          id: feature-image-2up-title-second
+          text: At apeirian senserit intellegebat est, aeque rationi
+        copy:
+          id: feature-image-2up-description-second
+          text: At apeirian senserit intellegebat est, aeque rationibus vix ne. Id pro natum torquatos. Ex ius malis dissentias persequeris, vix vero solum tempor id. Impetus dolorum ut mei.
+        image:
+          src: images/feature-image-2up-2.png
+          alt: Alt text
+        cta:
+          href: /
+          text: Apply
+          ariaDescribedby: feature-image-2up-description-second
+  - name: feature-text
+    layout: 1
+    heading:
+      id: feature-text-title
+      text: Feature-text
+      level: 2
+    image:
+      src: /svgs/icon-est-1809--white.svg
+      alt: Alt Text
+    subheading:
+      id: feature-text-description
+      text: Facete pericula mediocrem an pri. Vim an labore mentitum  ullamcorper, volupta urbanitas eas at, ne sea choro nemore virtute. Vide iegium accumsan no mea, quaeque vivendo ex mmei. Ad per ipsum laudem reprehendunt, vel malis sollet veniam at, iisque molestiae quo ei.
+      copy:
+    cta:
+      href: /
+      text: Apply
+      mode: light
+      ariaDescribedby: feature-text-description
+  - name: feature-text
+    layout: 2
+    heading:
+      id: feature-text-2up-title
+      text: Feature-text-2up
+      level: 2
+    subheading:
+      id: feature-text-2up-description
+      text: Facete pericula mediocrem an pri. Vim an labore mentitum  ullamcorper, volupta urbanitas eas at, ne sea choro nemore virtute.
+      copy: Vide iegium accumsan no mea, quaeque vivendo ex mmei. Ad per ipsum laudem reprehendunt, vel malis sollet veniam at, iisque molestiae quo ei.
+    cta:
+      href: /
+      text: Apply
+      mode: light
+      ariaDescribedby: feature-text-2up-description
+  - name: figure-context
+    background: gold
+    cardlist:
+      cards:
+        - heading:
+            text: Figure-context with Gold BG
+            level: 3
+          copy: Quisus Quartely
+          image:
+            text: Top Ten
+            type: oval
+            src: /svgs/icon-topten--gold.svg
+            alt: Alt text
+    heading:
+      id: figure-context-title
+      text: Eos an graeci euismod, ad eam adhuc reprehend
+      level: 4
+    subheading:
+      id: figure-context-description
+      text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas eas at, ne sea choro nemore virtute
+    copy: Vide legimus accumsan no mea, quaeque vivendo ex mei. Ad per ipsum laudem reprehendunt vivendo ex mei. Ad per ipsum laudem reprehendunt, vel malis solet veniam, iisque molestiae quo ei.
+    cta:
+      href: /
+      text: Apply
+      mode: dark
+      ariaDescribedby: figure-context-description
+  - name: figure-context
+    background: white
+    cardlist:
+      cards:
+        - heading:
+            text: Figure-context with White BG
+            level: 3
+          copy: Quisus Quartely
+          image:
+            text: Top Ten
+            type: oval
+            src: /svgs/icon-topten--gold.svg
+            alt: Alt text
+    heading:
+      id: figure-context-white-title
+      text: Eos an graeci euismod, ad eam adhuc reprehend
+      level: 4
+    subheading:
+      id: figure-context-white-description
+      text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas eas at, ne sea choro nemore virtute
+    copy: Vide legimus accumsan no mea, quaeque vivendo ex mei. Ad per ipsum laudem reprehendunt vivendo ex mei. Ad per ipsum laudem reprehendunt, vel malis solet veniam, iisque molestiae quo ei.
+    cta:
+      href: /
+      text: Apply
+      mode: dark
+      ariaDescribedby: figure-context-white-description
+  - name: figure-context
+    background: red
+    cardlist:
+      cards:
+        - heading:
+            text: Figure-context with Red BG
+            level: 2
+          copy: Quisus Quartely
+          image:
+            text: Top Ten
+            type: oval
+            src: /svgs/icon-topten--gold.svg
+            alt: Alt text
+        - heading:
+            text: Figure-context with Red BG
+            level: 2
+          copy: Sit Amet Monthly
+          image:
+            text: No. 1
+            type: circle
+            src: /svgs/icon-no-one--gold.svg
+            alt: Alt text
+    heading:
+      id: figure-context-red-title
+      text: Eos an graeci euismod, ad eam adhuc reprehend
+      level: 3
+    subheading:
+      id: figure-context-red-description
+      text: Facete pericula mediocrem an pri. Vim an labore mentitum ullamcorper, voluptua urbanitas eas at, ne sea choro nemore virtute
+    copy: Vide legimus accumsan no mea, quaeque vivendo ex mei. Ad per ipsum laudem reprehendunt vivendo ex mei. Ad per ipsum laudem reprehendunt, vel malis solet veniam, iisque molestiae quo ei.
+    cta:
+      href: /
+      text: Apply
+      mode: light
+      ariaDescribedby: figure-context-red-description
+  - name: form-section
+    backgroundcolor: white
+    warning: Indicates a required field
+    heading:
+      text: Form Title
+      level: 3
+    action:
+      url: /components
+      method: post
+      submit:
+        mode: dark
+        text: submit
+    elements:
+      - element:
+        layout: 2
+        elementname: input
+        id: input-first-name
+        name: firstName
+        type: text
+        placeholder: First Name
+        required: 0
+      - element:
+        layout: 2
+        elementname: input
+        id: input-last-name
+        name: lastName
+        type: text
+        placeholder: Last Name
+        required: 0
+      - element:
+        layout: 2
+        elementname: input
+        id: input-phone-number
+        name: phoneNumber
+        type: text
+        placeholder: Phone Number
+        required: 1
+      - element:
+        layout: 2
+        elementname: input
+        id: input-email-address
+        name: email
+        type: email
+        placeholder: Email Address
+        required: 1
+      - element:
+        layout: 2
+        elementname: input
+        id: input-address-1
+        name: address1
+        type: text
+        placeholder: Address 1
+        required: 0
+      - element:
+        layout: 2
+        elementname: input
+        id: input-address-2
+        name: address2
+        type: text
+        placeholder: Address 2
+        required: 0
+      - element:
+        layout: 2
+        elementname: input
+        id: input-city
+        name: city
+        type: text
+        placeholder: City
+        required: 0
+      - element:
+        layout: 4
+        elementname: select
+        id: select-state
+        name: state
+        placeholder: State
+        required: 0
+        options:
+          - option:
+            value: LA
+            text: Los Angeles
+          - option:
+            value: NY
+            text: New York
+          - option:
+            value: FL
+            text: Florida
+      - element:
+        layout: 4
+        elementname: input
+        id: input-zipcode
+        name: zipcode
+        type: text
+        placeholder: Zipcode
+        required: 0
+      - element:
+        layout: 1
+        elementname: textarea
+        id: textarea-message
+        name: message
+        placeholder: Message
+        rows: 5
+        required: 0
+  - name: hero-landing
+    video:
+      src: /videos/miami-hero.mp4
+      id: 1
+    image:
+      src: https://picsum.photos/id/347/600/600
+      alt: Alt text
+    heading:
+      id: hero-landing-title
+      text: Hero-landing with video
+    header_icon:
+      src: /svgs/icon-lantern--white.svg
+      alt: Alt text
+    content_icon:
+      src: /svgs/icon-target--red.svg
+      alt:
+    copy:
+      id: hero-landing-description
+      text: Maluisset euripidis nam ad, erant numquam pro eu. Quodsi commune mei ad. Meliore salutatus gubergren no usu, quo liber viris congue te, an mel meis postea indoctum. Simul laudem id eam. Sapientem comprehensam duo cu, inimicus repudiare definiebas vix ex. Alii inermis postulant cu per, nibh postea cetero vim ne. Et autem aperiri nam, vis feugiat neglegentur accommodare cu.
+    cta:
+      href: /
+      text: Learn More
+      ariaDescribedby: hero-landing-description
+    quicklinks_header:
+      text: Quick links
+    quicklinks:
+      - href: /
+        target: _self
+        text: No fugit
+      - href: /
+        target: _self
+        text: Antiopam occrreret
+      - href: /
+        target: _self
+        text: Sea mea et
+      - href: /
+        target: _self
+        text: veri accusam
+  - name: hero-landing
+    image:
+      src: https://picsum.photos/id/347/600/600
+      alt: Alt text
+    heading:
+      text: Hero-landing with image
+    header_icon:
+      src: /svgs/icon-lantern--white.svg
+      alt: Alt text
+    content_icon:
+      src: /svgs/icon-target--red.svg
+      alt:
+    copy:
+      id: hero-landing-image-description
+      text: Maluisset euripidis nam ad, erant numquam pro eu. Quodsi commune mei ad. Meliore salutatus gubergren no usu, quo liber viris congue te, an mel meis postea indoctum. Simul laudem id eam. Sapientem comprehensam duo cu, inimicus repudiare definiebas vix ex. Alii inermis postulant cu per, nibh postea cetero vim ne. Et autem aperiri nam, vis feugiat neglegentur accommodare cu.
+    cta:
+      href: /
+      text: Learn More
+      ariaDescribedby: hero-landing-image-description
+    quicklinks_header:
+      text: Quick links
+    quicklinks:
+      - href: /
+        target: _self
+        text: No fugit
+      - href: /
+        target: _self
+        text: Antiopam occrreret
+      - href: /
+        target: _self
+        text: Sea mea et
+      - href: /
+        target: _self
+        text: veri accusam
+  - name: hero-secondary
+    lockup:
+      mode: light
+      heading:
+        text: Hero-secondary
+        level: 1
+        size: 1
+    breadcrumbs:
+      - href: /
+        text: Landing page
+      - href: /
+        text: sublanding page
+  - name: hero-sublanding
+    heading:
+      text: Hero-sublanding
+    image:
+      src: https://picsum.photos/id/234/600/600
+      alt: Alt text
+    icon:
+      src: /svgs/icon-target--red.svg
+      alt:
+    copy:
+      id: hero-sublanding-description
+      text: Maluisset euripidis nam ad, erant numquam pro eu. Quodsi commune mei ad. Meliore salutatus gubergren no usu, quo liber viris congue te, an mel meis postea indoctum. Simul laudem id eam. Sapientem comprehensam duo cu, inimicus repudiare definiebas vix ex. Alii inermis postulant cu per, nibh postea cetero vim ne. Et autem aperiri nam, vis feugiat neglegentur accommodare cu.
+    cta:
+      href: /
+      text: Learn More
+      ariaDescribedby: hero-sublanding-description
+    breadcrumbs:
+      - href: /
+        text: Landing page
+      - href: /
+        text: sublanding page
+  - name: inline-video
+    video:
+      src: /videos/miami-hero.mp4
+      id: 1
+    image:
+      src: https://picsum.photos/id/347/600/600
+      alt: Alt text
+    heading:
+      text: Inline-Video ad solum elaboraret mel
+      level: 2
+    header_icon:
+      src: /svgs/icon-love-honor--red.svg
+      alt: Alt text
+    content_icon:
+      src: /svgs/icon-target--red.svg
+      alt:
+  - name: social
+    heading:
+      id: social-title
+      text: Social eos an graeci euismod, ad eam adhuc
+    copy:
+      id: social-description
+      text: Maluisset euripidis nam ad, erant numquam pro eu. Quodsi commune mei ad. Meliore salutatus gubergren no usu, quo liber viris congue te, an mel meis postea indoctum. Simul laudem id eam. Sapientem comprehensam duo cu, inimicus repudiare definiebas vix ex. Alii inermis postulant cu per, nibh postea cetero vim ne. Et autem aperiri nam, vis feugiat neglegentur accommodare cu.
+    cta:
+      href: /
+      text: Learn more
+      ariaDescribedby: social-description
+  # - name: search-results
+  #   heading:
+  #     text: Search-Results
+  #     level: 2
+  - name: tabs-info
+    heading: Tabs-Info
+    filterTitle: Show information for
+    activeItem: Undergraduate Students
+    campuses:
+      campusList:
+        - name: Undergraduate Students
+          heading:
+            id: tabs-info-title-first
+            text: Application Quick Links
+            level: 3
+          copy:
+            id: tabs-info-description-first
+            text: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem imperint epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendm.
+          image:
+            src: https://picsum.photos/id/937/600/400
+            alt: Alt Text
+          links:
+            - href: /
+              target: _self
+              text: Description of applicaton checklist
+            - href: /
+              target: _self
+              text: Description of undergraduate checklist
+            - href: /
+              target: _self
+              text: Description of admissions review
+          ctas:
+            - href: /
+              text: Learn More
+              mode: dark
+              ariaDescribedby: tabs-info-description-first
+            - href: /
+              text: Learn More
+              mode: dark
+              ariaDescribedby: tabs-info-description-first
+        - name: International Students
+          heading:
+            id: tabs-info-title-second
+            text: Application Quick Links
+            level: 5
+          copy:
+            id: tabs-info-description-second
+            text: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem imperint epicuri vel et. Aeterno imperdiet vel ea.
+          image:
+            src: https://picsum.photos/id/938/600/400
+            alt: Alt Text
+          links:
+            - href: /
+              target: _self
+              text: Description of applicaton
+            - href: /
+              target: _self
+              text: Description of undergraduate
+            - href: /
+              target: _self
+              text: Description of admissions
+          ctas:
+            - href: /
+              text: Learn More
+              mode: dark
+              ariaDescribedby: tabs-info-description-second
+            - href: /
+              text: Learn More
+              mode: dark
+              ariaDescribedby: tabs-info-description-second

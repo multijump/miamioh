@@ -1,0 +1,302 @@
+title: ''
+components:
+  - name: hero-primary
+    # image:
+    #   src: https://picsum.photos/id/237/800/800
+    #   alt: Alt text
+    video:
+      src: /videos/miami-hero.mp4
+      id: 1
+    icon: /svgs/icon-love-honor--white.svg
+    lockup:
+      mode: light
+      heading:
+        text: This. Is. College.
+        level: 1
+        size: 1
+  - name: content-grid
+    heading:
+      icon:
+        src: /svgs/icon-est-1809--white.svg
+        alt: Est 1809 Icon
+      headline:
+        id: content-grid-title
+        text: Miami made. Forever prepared.
+        level: 2
+      copy:
+        id: content-grid-description
+        text: Your success is our top priority. That means giving you experiences inside and outside the classroom that will prepare you to take on the world.
+      cta:
+        href: /#learn-more
+        text: Learn More
+        ariaDescribedby: content-grid-description
+    specials:
+      - content:
+        type: normal-image
+        image:
+          src: /images/content-grid-special.jpg
+          alt: Alt Text
+        headline:
+          id: content-grid-specials-title
+          text: The Magic of a Miami Grad
+          level: 3
+        copy:
+          id: content-grid-specials-description
+          text: Will Haygood Receives Chiloanna Award for "Tigerland."
+        link:
+          href: /
+          text: Read Full Story
+          ariaDescribedby: content-grid-specials-title
+    contents:
+      - content:
+        type: bordered-image
+        image:
+          src: /images/content-grid-normal-1.jpg
+          alt: Alt Text
+        headline:
+          id: bordered-image-first
+          text: The Adventure Starts Here
+        cta:
+          href: /
+          text: Apply Today
+          ariaDescribedby: bordered-image-first
+      - content:
+        type: normal-text
+        backgroundcolor: white-warm
+        headline:
+          id: normal-text-title
+          text: Top 50
+        copy:
+          id: normal-text-description
+          text: National Public University
+        cta:
+          href: /
+          text: U.S. News & World Report
+          ariaDescribedby: normal-text-description
+      - content:
+        type: normal-image
+        image:
+          src: /images/content-grid-normal-3.jpg
+          alt: Alt Text
+        headline:
+          id: normal-image-title
+          text: Miami Alum, Heart of Steele
+        cta:
+          href: /#learn-more
+          text: Learn More
+          ariaDescribedby: normal-image-title
+      - content:
+        type: bordered-image
+        image:
+          src: /images/content-grid-normal-2.jpg
+          alt: Alt Text
+        headline:
+          id: bordered-image-second
+          text: A Campus That Speaks For Itself
+        cta:
+          href: /
+          text: Schedule a Visit
+          ariaDescribedby: bordered-image-second
+  - name: content-hub
+    heading:
+      text: News & Events
+      level: 2
+    featuredHeading:
+      text: Featured News
+      level: 3
+    bigCard:
+      headline:
+        text: Academics
+      copy: Two Miami students named Goldwater Scholars
+      link:
+        href: /
+        target: _self
+        ariaLabel: Two Miami students named Goldwater Scholars
+      image:
+        src: /images/content-hub--featured-news.png
+        alt: Alt Text
+    cardList:
+      cards:
+        - headline:
+            id: content-hub-card-title-first
+            text: Research and Innovation
+          copy: Award-winning collaboration "HumanitiesWorks" uses data to disprove public perception
+          link:
+            href: /
+            target: _self
+            ariaLabel: Research and Innovation
+          image:
+            src: /images/content-hub--featured-mask.png
+            alt: Alt Text
+        - headline:
+            id: content-hub-card-title-second
+            text: Miami in the Media
+          copy: Bob De Schutter's gold medal "Brukel" game featured on Vice
+          link:
+            href: /
+            target: _self
+            ariaLabel: Miami in the Media
+          image:
+            src: /images/content-hub--featured-mask2.png
+            alt: Alt Text
+    catalog:
+      mode: dark
+      href: /
+      text: See More
+      ariaDescribedby: news-heading-title
+    newsheading:
+      id: news-heading-title
+      text: Latest News
+      level: 3
+    newsList:
+      news:
+        - heading:
+            category: Student Experience
+          link:
+            href: /
+            target: _self
+            text: Prasidh Arora perseveres to become "the engineer I've always wanted to be"
+        - heading:
+            category: Athletics
+          link:
+            href: /
+            target: _self
+            text: RedHawks Mid-American Conference first-place win
+        - heading:
+            category: University News
+          link:
+            href: /
+            target: _self
+            text: Cybersecurity pros convene at Miami University
+    eventCatalog:
+      mode: dark
+      href: /
+      text: See More
+      ariaDescribedby: upcoming-heading-title
+    eventheading:
+      id: upcoming-heading-title
+      text: Upcoming Events
+      level: 3
+    eventList:
+      events:
+        - heading:
+            date: August 25, 2019
+            location: Millett Hall
+          link:
+            href: /
+            target: _self
+            text: 2019 Convocation
+        - heading:
+            date: 9/2/2019
+            location: Oxford Uptown Parks
+          link:
+            href: /
+            target: _self
+            text: Latin American and Caribbean UniDiversity Festival
+  - name: achievements
+    heading:
+      id: achievements
+      text: Miami Students Go Places. Mostly Up.
+    achievements:
+      - copy: Miami Students Awarded NSF Graduate Research Fellowships
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: The 2019 Dean's List
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: Students From Project Dragonfly Study Conservation Globally
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: Solar Decathlon Design Challenge
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: Student Erin Belcher Named Golden Pen Award Winner
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+      - copy: 'Emilio Bloch Podcast Guest on Major Insight: Restoring Sight to the Blind'
+        icon:
+          src: /svgs/icon-chat-bubble--red.svg
+          alt: Alt Text
+    cta:
+      href: /
+      text: See All
+      ariaDescribedby: achievements
+  - name: carousel-primary
+    carousels:
+      - heading:
+          id: carousel-primary-first
+          text: Uncommon Grounds
+          level: 3
+        copy:
+          id: carousel-primary-description-first
+          text: Classic architecture and a breathtaking mile-square campus. Upon visiting, great American poet Robert Frost called our campus "the most beautiful campus that ever was."
+        image:
+          src: /images/context-image.png
+          alt: Alt Text
+        cta:
+          mode: light
+          text: Learn More
+          href: /#learn-more
+          target: _blank
+          ariaDescribedby: carousel-primary-description-first
+        school:
+          text: Oxford, Ohio
+          level: 4
+      - heading:
+          id: carousel-primary-second
+          text: Miami University, Oxford
+          level: 3
+        copy:
+          id: carousel-primary-description-second
+          text: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea.
+        image:
+          src: https://picsum.photos/id/238/800/600
+          alt: Alt Text
+        cta:
+          mode: light
+          text: Learn More
+          href: /#learn-more
+          target: _blank
+          ariaDescribedby: carousel-primary-description-second
+        school:
+          text: Oxford, Ohio
+          level: 4
+      - heading:
+          id: carousel-primary-third
+          text: Harvard University
+          level: 3
+        copy:
+          id: carousel-primary-description-third
+          text: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea.
+        image:
+          src: https://picsum.photos/id/239/800/600
+          alt: Alt Text
+        cta:
+          mode: light
+          text: Learn More
+          href: /#learn-more
+          target: _blank
+          ariaDescribedby: carousel-primary-description-third
+        school:
+          text: Oxford, Ohio
+          level: 4
+  - name: social
+    heading:
+      id: social-title
+      text: Follow the Leaders
+    copy:
+      id: social-description
+      text: Tirelessly active. Endlessly curious. Enthusiastically open to new ideas. Our student body never stops. Don't miss a single moment.
+    cta:
+      href: /
+      text: Stay Connected
+      ariaDescribedby: social-description
+  - name: pre-footer
+    # src: https://picsum.photos/id/237/1600/300
+    src: /images/illustration-pre-footer.png
+    alt: Alt text

@@ -1,0 +1,69 @@
+.collection-figures-2up {
+  padding-top: space(10);
+  padding-bottom: space(10);
+  background-color: color(white);
+
+  &.collection-figures--white-warm {
+    background-color: color(white-warm);
+  }
+
+  &.collection-figures--gold {
+    background-color: color(gold);
+  }
+
+  @include breakpoint(medium) {
+    padding-top: space(15);
+    padding-bottom: space(15);
+  }
+
+  @include breakpoint(large) {
+    padding-top: space(10);
+    padding-bottom: space(10);
+  }
+}
+
+.collection-figures-2up__header-container,
+.collection-figures__cards-container {
+  @include create-row;
+}
+
+.collection-figures-2up__header-inner {
+  @include flex-grid-column(12);
+  align-self: center;
+  justify-self: center;
+  padding-bottom: space(7.5);
+
+  @include breakpoint(large) {
+    padding-bottom: space(13);
+  }
+}
+
+.collection-figures__header-heading {
+  @include text-heading-3;
+  color: color(black);
+}
+
+.collection-figures__card {
+  @include flex-grid-column(12);
+
+  @include breakpoint(medium) {
+    @include flex-grid-size(6);
+  }
+}
+
+.collection-figures__card-inner {
+  border-left: solid 4px color(gold-accent);
+  padding-left: space(5);
+  margin-bottom: space(10);
+}
+
+.collection-figures__card-header-heading {
+  @include figures-numbers-h2;
+  color: color(red);
+  padding-bottom: space(4.25);
+}
+
+.collection-figures__card-copy {
+  @include text-body-small;
+  color: color(black);
+}

@@ -1,0 +1,235 @@
+title: Admission Page
+components:
+  - name: hero-landing
+    video:
+      src: /videos/MIAM Cutdown.mov
+      id: 1
+    image:
+      src: https://picsum.photos/id/347/600/600
+      alt: Alt text
+    heading:
+      id: hero-landing-title
+      text: Admission & Aid
+    header_icon:
+      src: /svgs/icon-lantern--white.svg
+      alt: Alt text
+    content_icon:
+      src: /svgs/icon-target--red.svg
+      alt:
+    copy:
+      id: hero-landing-description
+      text: A Miami education is a foundation upon which you can build your wildest dreams. You'll learn from professors who become mentos and find people who can help you get to where you want to be.
+    cta:
+      href: /
+      text: Get Started
+      ariaDescribedby: hero-landing-description
+    quicklinks_header:
+      text: Quick links
+    quicklinks:
+      - href: /#apply
+        target: _self
+        text: Apply
+      - href: /visit
+        target: _self
+        text: Visit
+      - href: /#request-information
+        target: _self
+        text: Request Information
+      - href: /#application-status
+        target: _self
+        text: Application Status
+      - href: /#financial-aid-scholarships
+        target: _self
+        text: Financial Aid/Scholarships
+      - href: /#costs
+        target: _self
+        text: Costs
+      - href: /#accepted-next-steps
+        target: _self
+        text: Accepted—Next Steps
+      - href: /#accept-your-offer
+        target: _self
+        text: Accept Your Offer
+  - name: tabs-info
+    heading: You Make the Path, We'll Make it Possible
+    filterTitle: Show information for
+    activeItem: Undergraduate Students
+    campuses:
+      campusList:
+        - name: Undergraduate Students
+          heading:
+            id: tabs-info-title-first
+            text: Application Quick Links
+            level: 3
+          copy:
+            id: tabs-info-description-first
+            text: Applying is the first step to changing the rest of your life. There are a lot of opportunities and deadlines that go into the application process—and you'll have our support every step of the way.
+          image:
+            src: /images/tabs-info-1.png
+            alt: Alt Text
+          links:
+            - href: /#application-checklist
+              target: _self
+              text: Application Checklist—Everything You Need to Do
+            - href: /#undergraduate-deadlines
+              target: _self
+              text: Mark Your Calendar for Undergraduate Deadlines
+            - href: /#admissions-review-process
+              target: _self
+              text: Learn More About Our Admissions Review Process
+          ctas:
+            - href: /#apply
+              text: Apply
+              mode: dark
+            - href: /#learn-more-about-admissions
+              text: Learn More
+              mode: dark
+        - name: International Students
+          heading:
+            id: tabs-info-title-second
+            text: Application Quick Links
+            level: 5
+          copy:
+            id: tabs-info-description-second
+            text: Id quas omnesque appareat mea, his an dolors inciderint. Cu harum interesset sadipscing per. Equidem imperint epicuri vel et. Aeterno imperdiet vel ea.
+          image:
+            src: https://picsum.photos/id/938/600/400
+            alt: Alt Text
+          links:
+            - href: /
+              target: _self
+              text: Description of applicaton
+            - href: /
+              target: _self
+              text: Description of undergraduate
+            - href: /
+              target: _self
+              text: Description of admissions
+          ctas:
+            - href: /
+              text: Learn More
+              mode: dark
+            - href: /
+              text: Learn More
+              mode: dark
+  - name: feature-stat
+    heading:
+      id: feature-stat-title
+      text: Tuition & Financial Aid
+      level: 3
+    copy:
+      id: feature-stat-description
+      text: Miami was listed in Kiplinger's Personal Finance Magazine as one of the "100 Best Values in Public Colleges" for a reason. We are committed to making your Miami education and experience affordable.
+    cta:
+      href: /#learn-more
+      text: Learn More
+      mode: light
+      ariaDescribedby: feature-stat-description
+    icon:
+      src: /svgs/icon-promise--red.svg
+      alt: Alt Text
+  - name: carousel-cards
+    heading: Do Well, And People Notice
+    items:
+      - content:
+          heading: Grace Chaney '21
+          text: Miami was listed in Kiplinger's Personal Finance Magazine as one of the "100 Best Values in Public Colleges" for a reason. We are committed to making your Miami education and experience affordable.
+        image:
+          alt: Alt Text Goes Here
+          src: /images/carousel-cards-1.png
+      - content:
+          heading: Eric Hodgson
+          text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+        image:
+          alt: Alt Text Goes Here
+          src: /images/carousel-cards-2.png
+      - content:
+          heading: Lei Kamala
+          text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+        image:
+          alt: Alt Text Goes Here
+          src: /images/carousel-cards-3.png
+      - content:
+          heading: Ei mei ipsum omnium iuvaret
+          text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+        image:
+          alt: Alt Text Goes Here
+          src: /images/carousel-cards-4.png
+      - content:
+          heading: Ei mei ipsum omnium iuvaret
+          text: Id quas omnesque appareat mea, his an dolores inciderint. Cu harum interesset sadipscing per. Equidem impedit epicuri vel et. Aeterno imperdiet vel ea. An veritus adipisci pri, eu usu delenit elaboraret quaerendum.
+        image:
+          alt: Alt Text Goes Here
+          src: https://source.unsplash.com/random/800x600
+  - name: context-image
+    icon: /svgs/icon-est-1809.svg
+    lockup:
+      # mode: (light, dark) default: dark
+      # label: Sample
+      heading: # optional
+        text: Lorem, ipsum dolor sit amet consectetur adipisicing elit
+        # level: (1 - 6) default: 2
+        # size: (1 – 4) default: 3
+      copy:
+        id: context-image-description-id
+        text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus molestiae nam ab nulla asperiores soluta, voluptates modi quae perferendis ipsum recusandae natus? Quos tempora, voluptates repellendus earum cupiditate alias?
+        # size: (small, regular, large) default: regular
+      ctas:
+        - href: https://google.com/
+          text: Learn More
+          ariaDescribedby: context-image-description-id
+          # mode: (light, dark) default: dark
+          # target: (_blank, _self) default: _self
+    image:
+      src: /images/context-image.png
+      alt: Alt text
+      caption:
+        heading: Lorem ipsum dolor sit amet
+        copy: Lorem, ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit.
+  - name: collection-figures-3up
+    background: gold
+    icon: /svgs/icon-flag--red.svg
+    alt: flag
+    heading:
+      text: We Love Numbers.<br />Especially these.
+      level: 2
+    subheading:
+      text: Your college experience here will be one of the most exciting times of your life. To make sure  of this, we'll provide you with a powerful support system.
+      cta:
+        href: /#learn-more
+        text: Learn More
+        ariaLabel: Learn more about our stats
+    cardlist:
+      cards:
+        - headline:
+            text: 96
+            level: 1
+          copy: First to second-year retention
+          # subcopy: First to second-year retention
+        - headline:
+            text: 17
+            level: 1
+          copy: Miami's four-year graduation rate ranking among public universities
+          # subcopy: Miami's four-year graduation rate ranking among public unviersities
+        - headline:
+            text: 1300
+            level: 1
+          copy: 2017-2018 graduates who were employed or furthering their education by fall 2018
+          # subcopy: 2017-2018 graduates who were employed or furthering their education by fall 2018
+  - name: contact-int
+    label: Contact Information
+    heading:
+      text: Office of Admission
+    image:
+      src: /images/contact-infomation.png
+      alt: Alt text
+    icon:
+      src: /svgs/icon-chat-bubble--red.svg
+      alt: Alt text
+    address: 301 S. Campus Ave<br />Oxford, OH 45056-3434
+    email: admission@MiamiOH.edu
+    phone: (513) 529-1809
+  - name: pre-footer
+    # src: https://picsum.photos/id/237/1600/300
+    src: /images/illustration-pre-footer.png
+    alt: Alt text

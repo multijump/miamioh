@@ -1,0 +1,37 @@
+.base-cta-social {
+  display: block;
+  width: space(10);
+  height: space(10);
+  margin-top: space(2);
+  padding: space(0.5);
+  border-radius: 50%;
+  border: 2px solid color(white);
+  background-color: color(transparent);
+  fill: color(white);
+  @include transition((background-color, fill));
+
+  &:hover,
+  &:focus {
+    background-color: color(white);
+    fill: color(red);
+  }
+
+  &:focus {
+    @include focus-white;
+  }
+
+  &.base-cta-social--dark {
+    border-color: color(red);
+    fill: color(red);
+
+    &:hover,
+    &:focus {
+      background-color: color(red);
+      fill: color(white);
+    }
+
+    &:focus {
+      @include focus-red;
+    }
+  }
+}

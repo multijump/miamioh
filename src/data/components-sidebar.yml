@@ -1,0 +1,122 @@
+template: sidebar
+title: Components Sidebar Page
+components:
+  - name: wysiwyg
+    heading:
+      text: WYSIWYG
+    lead: '<p>Maluisset euripidis nam ad, erant numquam pro eu. Quodsi commune mei ad. Meliore salutatus gubergren no usu, quo liber viris congue te, an mel meis postea indoctum. Simul laudem id eam. Sapientem comprehensam duo cu, inimicus repudiare definiebas vix ex. Alii inermis postulant cu per, nibh postea cetero vim ne. Et autem aperiri nam, vis feugiat neglegentur accommodare cu.</p>'
+    body: '<h3>Lorem ipsum dolor sit amet</h3><p>Donec sed tempus diam, vitae gravida dui. Etiam elementum risus turpis, id eleifend augue tincidunt eu. Curabitur ut risus dapibus, rhoncus purus ut, imperdiet risus. Aliquam ultrices vel ex in sodales. Etiam ac egestas leo. Maecenas eu fringilla leo. Donec nec ante vel tellus mollis ornare ac non turpis. Ut maximus nulla at turpis elementum, ac rhoncus nisl hendrerit. Mauris cursus tempus aliquam.</p><p>Cras commodo risus nibh, nec efficitur urna pulvinar at. Phasellus a libero tempor, vulputate dui ac, congue nulla. Mauris consequat iaculis consectetur. Maecenas lorem velit, varius at libero ac, fermentum dignissim odio. Nunc eget rutrum urna. Curabitur vitae commodo arcu, nec vestibulum purus. Quisque a nisi imperdiet orci luctus fringilla.</p><ul><li>Body Copy Lorem ipsum dolor sit amet, con sectetuer adipiscing elit</li><li>Body Copy Lorem ipsum dolor sit amet, con</li><li>Body Copy Lorem ipsum dolor sit amet, con sectetuer adipiscing</li><li>Body Copy Lorem ipsum dolor sit amet, con sectetuer</li></ul><a href="#dummy" class="base-cta-text base-cta-text--dark">Learn More<span class="base-cta-text__arrow"></span></a><h4>Lorem ipsum dolor sit amet</h4><p>Donec sed tempus diam, vitae gravida dui. Etiam elementum risus turpis, id eleifend augue tincidunt eu. Curabitur ut risus dapibus, rhoncus purus ut, imperdiet risus. Aliquam ultrices vel ex in sodales. Etiam ac egestas leo.</p><ol><li>Numbered item one lorem ipsum dolor sit amet consectetur</li><li>Numbered item one lorem ipsum dolor sit amet consectetur adipiscing</li><li>Numbered item one lorem ipsum dolor sit amet consectetur</li><li>Numbered item one lorem ipsum dolor sit amet consectetur adipiscing</li></ol>'
+  - name: accordion-primary
+    accordions:
+      - heading:
+          id: Fall_Spring_tuition
+          body: Fall_Spring_tuition_body
+          text: Fall/Spring Semester Tuition & Fees
+          level: 3
+          copy: For less than 12 credit hours, please refer credit hours section below
+        body: '<p>For less than 12 credit hours, please refer to the per credit hour section below.</p><table border="0" cellpadding="1" cellspacing="1" summary="Summary cras commodo risus nibh, nec efficitur urna pulvinar at. Phasellus a libero tempor, vulputate dui ac, congue nulla. Mauris consequat iaculis consectetur. Maecenas lorem velit, varius at libero ac, fermentum dignissim odio. Nunc eget rutrum urna. Curabitur vitae commodo arcu, nec vestibulum purus. Quisque a nisi imperdiet orci luctus fringilla."><thead><tr><th scope="col" colspan="2">Ohio Residents:</th></tr></thead><tbody><tr><td>Instructional Fee:</td><td><strong>$11,673</strong></td></tr><tr><td>Non-Resident Surcharge</td><td><strong>N/A</strong></td></tr><tr><td class="delimiter" style="border-top: 1px solid #000;">General Fees</td><td class="delimiter" style="border-top: 1px solid #000;">&nbsp;</td></tr><tr><td>Basic General Fee:</td><td><strong>$1,860</strong></td></tr><tr><td>Technology Fee*:</td><td><strong>$228</strong></td></tr><tr><td>Transit Fee:</td><td><strong>$132</strong></td></tr><tr><td>Facilities Fee:</td><td><strong>$120</strong></td></tr><tr><td>Armstrong Student Center Fee:</td><td><strong>$250</strong></td></tr><tr class="alt"><td>Tuition Subtotal**:</td><td><strong>$14,263</strong></td></tr><tr><td>Housing and Meals (Room &amp; Board):</td><td><strong>$12,632</strong></td></tr></tbody><tfoot><tr><td><strong>TOTAL for 2018-2019:</strong></td><td><strong>$26,895</strong></td></tr></tfoot></table><p>* Please note the $228 Technology Fee amount is for students living on campus. There is an additional charge of $108 for students living off campus.</p><p>** For 12 or more credits hours; for less than 12 credit hours see the Fall/Spring Semester Per Credit Hour information below.</p><p>† Amount based on weighted average and depends upon student options.</p><p>‡ You must provide proof of health insurance. If you are not covered by another policy, you must purchase the university-sponsored coverage.</p><p>Here is a <a href="/">Test Link</a> and <a href="/">Another Test Link</a></p>'
+      - heading:
+          id: Winter_Summer_term
+          body: Winter_Summer_term_body
+          text: Winter/Summer Term Per Credit Hour
+          level: 3
+          copy: For less than 12 credit hours, please refer credit hours section below
+        body: HTML text
+      - heading:
+          id: Fall_Spring_semester
+          body: Fall_Spring_semester_body
+          text: Fall/Spring Semester Per Credit Hour
+          level: 3
+          copy: For less than 12 credit hours, please refer credit hours section below
+        body: HTML text
+  - name: context-image-int
+    lockup:
+      mode: black
+      heading:
+        id: context-image-int-title-first
+        text: Context-image-int
+      copy:
+        id: context-image-int-description-first
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed ut unde omnis iste natus erro sit voluptatem accusantium lorem.
+    image:
+      src: https://picsum.photos/id/237/800/800
+      alt: Alt text
+    cta:
+      href: /
+      text: Learn More
+      ariaDescribedby: context-image-int-description-first
+  - name: feature-image-int
+    image:
+      src: https://picsum.photos/id/237/1000/1000
+      alt: Alt text
+    heading:
+      id: context-image-int-title-second
+      text: Feature-image-int
+    copy:
+      id: context-image-int-description-second
+      text: Justo offendit principes ex usu, at corpora intellegam eum. Sit ea corpora inimicus. Sit ludus veniam necessitatibus ei, vix intellegam complectitur ex, eu est probo.
+  - name: cards-news-int
+    lockup:
+      mode: black
+      heading:
+        id: cards-news-int-title
+        text: Lorem Ipsum Doler Sit Amet Consectetur
+    cards:
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+          id: first-card-int
+        category: Category
+        image:
+          src: https://picsum.photos/id/234/800/800
+          alt: Alt text
+        link:
+          href: https://www.google.com
+          target: _blank
+          ariaDescribedby: first-card-int
+      - headline:
+          text: At apeirian senserit intellegebat est, aeque rationi
+          id: 'second-card-int'
+        category: Category
+        image:
+          src: https://picsum.photos/id/233/800/800
+          alt: Alt text
+        link:
+          href: https://www.google.com
+          target: _self
+          ariaDescribedby: second-card-int
+    cta:
+      href: /
+      text: See all
+      ariaDescribedby: cards-news-int-title
+  - name: collection-links-int
+    cta:
+      type: small
+    lockup:
+      heading:
+        text: Lorem Ipsum Doler Sit Amet Consectetur
+    links:
+      - href: https://google.com/
+        text: Lorem ipsum dolor sit amet
+      - href: https://google.com/
+        text: Lorem ipsum dolor sit amet
+      - href: https://google.com/
+        text: Lorem ipsum dolor sit amet
+      - href: https://google.com/
+        text: Lorem ipsum dolor sit amet
+      - href: https://google.com/
+        text: Lorem ipsum dolor sit amet
+      - href: https://google.com/
+        text: Lorem ipsum dolor sit amet
+  - name: contact-int
+    label: Contact Information
+    heading:
+      text: Contact-int
+    image:
+      src: https://picsum.photos/id/237/800/800
+      alt: Alt text
+    icon:
+      src: /svgs/icon-chat-bubble--red.svg
+      alt: Alt text
+    address: 501 E. High St.<br>Oxford, OH 45056
+    email: hello@miamioh.edu
+    phone: +1 (513) 529-1809

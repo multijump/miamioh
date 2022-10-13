@@ -1,0 +1,27 @@
+<toggle-campus class="footer-campus">
+	{% for campus in campusList %}
+		<toggle-campus-panel panel-title="{{ campus.name }}" class="footer-campus__panel">
+			<p class="footer-campus__address">{{ campus.address|raw }}</p>
+			<ul class="footer-campus__list footer-campus__list--primary">
+				{% for link in campus.linksPrimary %}
+					<li class="footer-campus__item">
+						{% if link.preText %}
+							{{ link.preText }}
+						{% endif %}
+						<a class="footer-campus__link" href="{{ link.href }}">{{ link.text }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+			<ul class="footer-campus__list footer-campus__list--secondary">
+				{% for link in campus.linksSecondary %}
+					<li class="footer-campus__item">
+						{% if link.preText %}
+							{{ link.preText }}
+						{% endif %}
+						<a class="footer-campus__link" href="{{ link.href }}">{{ link.text }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</toggle-campus-panel>
+	{% endfor %}
+</toggle-campus>

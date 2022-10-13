@@ -1,0 +1,50 @@
+{% set mode = 'light' %}
+
+<section class="cards-events">
+    <div class="cards-events__cards-container">
+        <div class="cards-events__heading-container">
+            {% set lockup = lockup|merge({'mode': mode}) %}
+            {% include "components/base-lockup.twig" with lockup %}
+        </div>
+        <div class="cards-events__cta-container">
+            {% set cta = cta|merge({'mode': mode}) %}
+            {% include 'components/base-cta-primary.twig' with cta %}
+        </div>
+        {% for card in cards %}
+            <article class="cards-events__card">
+                <a
+                    class="cards-events__inner"
+                    href="{{ card.link.href }}"
+                    {% if card.link.ariaLabel %}
+                        aria-label="{{ card.link.ariaLabel }}"
+                    {% endif %}
+                    {% if card.link.target %}
+                        target="{{ card.link.target }}"
+                    {% endif %}
+                >
+                    <div class="cards-events__image-container">
+                        <div class="cards-events__date-container">
+                            <event-date event-date="{{ card.date }}" class="cards-events__date"></event-date>
+                        </div>
+                        <img class="cards-events__image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
+                    </div>
+                    <div class="cards-events__card-inner">
+                        <div class="cards-events__time">
+                            {{ card.starttime }}
+                            -
+                            {{ card.endtime }}
+                            |
+                            {{ card.location }}
+                        </div>
+                        <p class="cards-events__headline">{{ card.headline.text }}</p>
+                    </div>
+                </a>
+                {# {% include 'components/base-link-cover.twig' with card %} #}
+            </article>
+        {% endfor %}
+        <div class="cards-events__cta-container-footer">
+            {% set cta = cta|merge({'mode': mode}) %}
+            {% include 'components/base-cta-primary.twig' with cta %}
+        </div>
+    </div>
+</section>

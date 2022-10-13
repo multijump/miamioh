@@ -1,0 +1,18 @@
+<section class="collection-figures-2up collection-figures--{{ backgroundcolor|default('white') }} collection-figures--{{ layout }}">
+    <div class="collection-figures-2up__header-container">
+        <div class="collection-figures-2up__header-inner">
+            <h{{heading.level|default('2')}} class="collection-figures__header-heading">{{ heading.text }}</h{{heading.level|default('2')}}>
+        </div>
+    </div>
+
+    <div class="collection-figures__cards-container">
+        {% for card in cardlist.cards %}
+            <article class="collection-figures__card">
+                <div class="collection-figures__card-inner">
+                    <h{{card.headline.level|default('2')}} class="collection-figures__card-header-heading">{{ card.headline.text }}</h{{card.headline.level|default('2')}}>
+                    <p class="collection-figures__card-copy">{{ card.copy }}</p>
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+</section>

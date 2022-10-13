@@ -1,0 +1,60 @@
+.base-cta-link {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  min-width: 300px;
+
+  padding: 0 11px 11px 0;
+  margin-top: space(3);
+
+  &:focus {
+    @include focus-red;
+  }
+
+  &.base-cta-link--light:focus {
+    @include focus-white;
+  }
+
+  @include breakpoint(large) {
+    min-width: 300px;
+  }
+
+  @include breakpoint(xlarge) {
+    min-width: 330px;
+  }
+}
+
+.base-cta-link__outline {
+  position: absolute;
+  top: 6px;
+  right: 5px;
+  bottom: 5px;
+  left: 6px;
+  border: 2px solid color(red);
+
+  .base-cta-link--light & {
+    border-color: color(white);
+  }
+}
+
+.base-cta-link__content {
+  @include text-cta-default;
+  position: relative;
+  z-index: 1;
+  display: block;
+  padding: space(5) space(10) space(5) space(5);
+  color: color(white);
+  background-color: color(red);
+  text-align: center;
+  @include transition(transform);
+
+  .base-cta-link--light & {
+    color: color(red);
+    background-color: color(white);
+  }
+
+  .base-cta-link:hover &,
+  .base-cta-link:focus & {
+    transform: translate(6px, 6px);
+  }
+}

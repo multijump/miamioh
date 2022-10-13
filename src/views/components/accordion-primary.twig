@@ -1,0 +1,22 @@
+<section class="accordion-primary">
+	<div class="accordion-primary__container">
+		<div class="accordion-primary__inner">
+			{% for accordion in accordions %}
+				<accordion-container class="accordion-primary__column accordion-primary__column--resources">
+					<div class="accordion-primary__accordion">
+						<h4 class="accordion-primary__heading">
+							<accordion-container-header-button :controls="'{{ accordion.heading.body }}'" :id="'{{ accordion.heading.id }}'" :value="'{{ accordion.heading.text }}'" class="accordion-primary__button">
+								<span class="accordion-primary__button-label">{{ accordion.heading.text }}</span>
+							</accordion-container-header-button>
+						</h4>
+                        <accordion-container-panel :id="'{{ accordion.heading.body }}'">
+							<div class="accordion-primary--body">
+								{{ accordion.body | raw }}
+							</div>
+						</accordion-container-panel>
+					</div>
+				</accordion-container>
+			{% endfor %}
+		</div>
+	</div>
+</section>

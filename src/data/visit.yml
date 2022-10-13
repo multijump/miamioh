@@ -1,0 +1,238 @@
+title: Visit Page
+components:
+  - name: hero-landing
+    video:
+      src: /videos/MIAM Cutdown.mov
+      id: 1
+    image:
+      src: https://picsum.photos/id/347/600/600
+      alt: Alt text
+    heading:
+      id: hero-landing-title
+      text: Some Things You Have To See For Yourself
+    header_icon:
+      src: /svgs/icon-lantern--white.svg
+      alt: Alt text
+    content_icon:
+      src: /svgs/icon-target--red.svg
+      alt:
+    copy:
+      id: hero-landing-description
+      text: Miami is one of those places other places will never be. And that's exactly why we encourage you to visit. To see the 200 years of rich history firsthand and fall in love.
+    quicklinks_header:
+      text: Quick Links
+    quicklinks:
+      - href: /#tools-events
+        target: _self
+        text: Tools & Events
+      - href: /#directions
+        target: _self
+        text: Directions
+      - href: /#parking-transportation
+        target: _self
+        text: Parking & Transportation
+      - href: /#accommodations
+        target: _self
+        text: Accommodations
+      - href: /#campus-map
+        target: _self
+        text: Campus Map
+      - href: /#apply
+        target: _self
+        text: Apply
+  - name: carousel-image-bleed
+    items:
+      - icon: /svgs/icon-sundial.svg
+        lockup:
+          # mode: light
+          # label: Sample
+          heading:
+            id: carousel-image-bleed-title
+            text: Explore Our Campus
+          # headingSize: 3
+          copy:
+            id: carousel-image-bleed-description
+            text: Lots of exposed brick and natural light—what's not to love? Find out first-hand why Robert Frost found this to be "the most beautiful campus that ever there was."
+          # copySize: large
+          ctas:
+            - href: /#learn-more
+              text: Learn More
+              ariaDescribedby: carousel-image-bleed-description
+        image:
+          src: /images/carousel-image-bleed-1.png
+          alt: Alt text
+      - icon: /svgs/icon-sundial.svg
+        lockup:
+          # mode: light
+          # label: Sample
+          heading:
+            id: carousel-image-bleed-title-second
+            text: Lorem, ipsum dolor sit amet consectetur
+          # headingSize: 3
+          copy:
+            id: carousel-image-bleed-description-second
+            text: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur necessitatibus molestiae nam ab nulla asperiores soluta, voluptates modi quae perferendis ipsum recusandae natus? Quos tempora, voluptates repellendus earum cupiditate alias?
+          # copySize: large
+          ctas:
+            - href: https://google.com/
+              text: Learn More
+              ariaDescribedby: carousel-image-bleed-description-second
+        image:
+          src: https://picsum.photos/id/235/800/800
+          alt: Alt text
+          caption:
+            heading: Lorem ipsum dolor sit amet
+            copy: Lorem, ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit.
+  - name: cards-events
+    lockup:
+      heading:
+        id: cards-events-title
+        text: Students That Never Stop
+    cards:
+      - headline:
+          text: Music at Miami Day
+        date: 9/2/2019
+        starttime: 9:30 A.M.
+        endtime: 4:30 P.M.
+        location: Location
+        image:
+          src: /images/cards-events-1.png
+          alt: Alt text
+        link:
+          href: /#music-at-miami-day
+          target: _self
+      - headline:
+          text: Arts Day
+        date: 9/12/2019
+        starttime: 10 A.M.
+        endtime: 2:30 P.M.
+        location: Location
+        image:
+          src: /images/cards-events-2.png
+          alt: Alt text
+        link:
+          href: /#arts-day
+          target: _self
+      - headline:
+          text: Discover the Sciences
+        date: 9/21/2019
+        starttime: 9 A.M.
+        endtime: 12 P.M.
+        location: Location
+        image:
+          src: /images/cards-events-3.png
+          alt: Alt text
+        link:
+          href: /#discover-the-sciences
+          target: _self
+    cta:
+      href: /
+      text: Tours & Events
+  - name: context-image
+    icon: /svgs/icon-est-1809.svg
+    lockup:
+      # mode: (light, dark) default: dark
+      # label: Sample
+      heading: # optional
+        text: Only In Oxford
+        # level: (1 - 6) default: 2
+        # size: (1 – 4) default: 3
+      copy:
+        id: context-image-description-id
+        text: Oxford is about 35 miles north of Cincinnati—meaning it's near enough for last-minute adventures in the city, but far enough away to feel like a world apart.
+        # size: (small, regular, large) default: regular
+      ctas:
+        - href: /#explore-oxford
+          text: Explore Oxford
+          # mode: (light, dark) default: dark
+          # target: (_blank, _self) default: _self
+        - href: /#campus-map
+          text: See Campus Map
+    image:
+      src: /images/context-image.png
+      alt: Alt text
+      caption:
+        heading: Lorem ipsum dolor sit amet
+        copy: Lorem, ipsum dolor sit amet consectetur adipisicing elit amet consectetur adipisicing elit.
+  - name: context-list-image
+    type: image
+    layout: horizontal
+    lockup:
+      heading:
+        text: High Schoolers Hit the Ground Working
+      copy:
+        # text: <p>Miami offers several programs to connect you to our nationally recognized faculty.</p><p>You'll learn first-hand what it's like to be a Miami student before classes even begin.</p>
+        text: Miami offers several programs to connect you to our nationally recognized faculty.<br />You'll learn first-hand what it's like to be a Miami student before classes even begin.
+        size: large
+    articles:
+      - headline:
+          id: context-list-image-title-first
+          text: Bridges Program
+        copy:
+          id: context-list-image-description-first
+          text: High school seniors experience student life and explore academic offerings through our annual program that focuses on diversity and inclusion.
+        image:
+          src: /images/context-list-image-1.png
+          alt: Alt text
+        cta:
+          href: /#learn-more
+          text: Learn More
+          ariaDescribedby: context-list-image-title-first
+      - headline:
+          id: context-list-image-title-second
+          text: College Credit Plus
+        copy:
+          id: context-list-image-description-second
+          text: Ohio high school students can earn college and high school credit simultaneously through courses taught by Miami faculty.
+        image:
+          src: /images/context-list-image-2.png
+          alt: Alt text
+        cta:
+          href: /#learn-more
+          text: Learn More
+          ariaDescribedby: context-list-image-title-second
+      - headline:
+          id: context-list-image-title-third
+          text: Summer Scholars
+        copy:
+          id: context-list-image-description-third
+          text: Rising high school juniors and seniors join an engaged community of learners for an intense, two-week program on Miami's campus.
+        image:
+          src: /images/context-list-image-3.png
+          alt: Alt text
+        cta:
+          href: /#learn-more
+          text: Learn More
+          ariaDescribedby: context-list-image-title-third
+  - name: feature-image-2up
+    cards:
+      - heading:
+          id: feature-image-2up-title-first
+          text: It Begins Here
+        copy:
+          id: feature-image-2up-description-first
+          text: The big question is, "where will you go after college?" With a degree from Miami University, the answer is wherever you want. (Though you may not want to leave.)
+        image:
+          src: /images/feature-image-2up-1.png
+          alt: Alt text
+        cta:
+          href: /#apply-now
+          text: Apply Now
+          ariaDescribedby: feature-image-2up-title-first
+      - heading:
+          id: feature-image-2up-title-second
+          text: Admissions & Aid
+        copy:
+          id: feature-image-2up-description-second
+          text: An investment in an education at Miami is an investment in your future. We are committed to helping our students make their education as affordable as possible.
+        image:
+          src: /images/feature-image-2up-2.png
+          alt: Alt text
+        cta:
+          href: /#learn-more
+          text: Learn More
+          ariaDescribedby: feature-image-2up-title-second
+  - name: pre-footer
+    # src: https://picsum.photos/id/237/1600/300
+    src: /images/illustration-pre-footer.png
+    alt: Alt text

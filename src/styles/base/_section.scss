@@ -1,0 +1,45 @@
+// Padding values (`top` and `bottom`) for default sections
+$_section-padding: (
+  xsmall: 32,
+  small: 32,
+  medium: 48,
+  large: 72,
+  xlarge: 88,
+  xxlarge: 88,
+);
+
+// Lookup section-padding values per breakpoint
+@function get-section-padding($breakpoint) {
+  @return rem(map-get($_section-padding, $breakpoint));
+}
+
+// Apply default section padding
+@mixin section-padding {
+  padding-top: get-section-padding(xsmall);
+  padding-bottom: get-section-padding(xsmall);
+
+  @include breakpoint(small) {
+    padding-top: get-section-padding(small);
+    padding-bottom: get-section-padding(small);
+  }
+
+  @include breakpoint(medium) {
+    padding-top: get-section-padding(medium);
+    padding-bottom: get-section-padding(medium);
+  }
+
+  @include breakpoint(large) {
+    padding-top: get-section-padding(large);
+    padding-bottom: get-section-padding(large);
+  }
+
+  @include breakpoint(xlarge) {
+    padding-top: get-section-padding(xlarge);
+    padding-bottom: get-section-padding(xlarge);
+  }
+
+  @include breakpoint(xxlarge) {
+    padding-top: get-section-padding(xxlarge);
+    padding-bottom: get-section-padding(xxlarge);
+  }
+}
