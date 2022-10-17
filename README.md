@@ -1,10 +1,8 @@
-# MIAM-161-69w
+# Miami University Official Website Frontend
 
 Miami University is nationally ranked as a top public university and located in Oxford, Ohio.
 
 ## Website : https://www.miamioh.edu
-
-> A 160over90 project
 
 Note: All components are being loaded by `yaml` files. The value of the `name:` attrubute in the `yaml` object is the name of the `twig` component. The name of the `yaml` file is `url`.
 
