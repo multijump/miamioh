@@ -1,10 +1,10 @@
 <nav aria-label="breadcrumb" class="breadcrumbs">
-    {% for item in breadcrumbs %}
+  {% for item in breadcrumbs %}
     {% if loop.last %}
-    <div class="breadcrumbs__selected-link" aria-current="Page">{{ item.text }}</div>
+      <div class="breadcrumbs__selected-link" aria-current="Page">{{ item.text }}</div>
     {% else %}
-    <a class="breadcrumbs__link" href="{{ item.href }}">{{ item.text }}</a>
-    <hr class="breadcrumbs__divider">
+      <a class="breadcrumbs__link" href="{{ item.href }}">{{ item.text }}</a>
+      <hr class="breadcrumbs__divider">
     {% endif %}
-    {% endfor %}
+  {% endfor %}
 </nav>

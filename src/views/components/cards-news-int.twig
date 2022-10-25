@@ -1,23 +1,23 @@
 <section class="cards-news-int">
-    <div class="cards-news-int__cards-container">
-        <div class="cards-news-int__heading-container">
-            {% include "components/base-lockup.twig" with lockup %}
-        </div>
-        <div class="cards-news-int__cta-container">
-            <div class="cards-news-int__cta-inner">
-                {% include 'components/base-cta-primary.twig' with cta %}
-            </div>
-        </div>
-        {% for card in cards %}
-            <article class="cards-news-int__card">
-                <div class="cards-news-int__card-inner">
-                    <img class="cards-news-int__image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
-                    <div class="cards-news-int__category">{{ card.category }}</div>
-                    <h{{card.headline.level|default('3')}} class="cards-news-int__headline" id="{{ card.headline.id }}">{{ card.headline.text }}</h{{card.headline.level|default('3')}}>
-                    <hr class="cards-news-int__divider"/>
-                    {% include 'components/base-link-cover.twig' with card only %}
-                </div>
-            </article>
-        {% endfor %}
+  <div class="cards-news-int__cards-container">
+    <div class="cards-news-int__heading-container">
+      {% include "components/base-lockup.twig" with lockup %}
     </div>
+    <div class="cards-news-int__cta-container">
+      <div class="cards-news-int__cta-inner">
+        {% include 'components/base-cta-primary.twig' with cta %}
+      </div>
+    </div>
+    {% for card in cards %}
+      <article class="cards-news-int__card">
+        <div class="cards-news-int__card-inner">
+          <img class="cards-news-int__image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
+          <div class="cards-news-int__category">{{ card.category }}</div>
+          <h{{card.headline.level|default('3')}} class="cards-news-int__headline" id="{{ card.headline.id }}">{{ card.headline.text }}</h{{card.headline.level|default('3')}}>
+          <hr class="cards-news-int__divider"/>
+          {% include 'components/base-link-cover.twig' with card only %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
 </section>

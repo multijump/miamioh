@@ -1,30 +1,30 @@
 <section class="cards-text-alt cards-text-alt--{{ layout|default('2') }}">
-    <div class="cards-text-alt__header-container">
-        <div class="cards-text-alt__header-inner">
-            <h{{heading.level|default('2')}} class="cards-text-alt__header-heading">{{ heading.text }}</h{{heading.level|default('2')}}>
-            <p class="cards-text-alt__header-subheading">{{ subheading }}</p>
-        </div>
+  <div class="cards-text-alt__header-container">
+    <div class="cards-text-alt__header-inner">
+      <h{{heading.level|default('2')}} class="cards-text-alt__header-heading">{{ heading.text }}</h{{heading.level|default('2')}}>
+      <p class="cards-text-alt__header-subheading">{{ subheading }}</p>
     </div>
+  </div>
 
-    <div class="cards-text-alt__cards-container">
-        {% for card in cardlist.cards %}
-            <article class="cards-text-alt__card">
-                <div class="cards-text-alt__card-outlone">
-                    <div class="cards-text-alt__card-inner">
-                        <p class="cards-text-alt__card-headline"
-                        {% if card.headline.id %}
-                            id="{{ card.headline.id }}"
-                        {% endif %}>{{ card.headline.text }}</p>
-                        <p class="cards-text-alt__card-copy"
-                        {% if card.copy.id %}
-                            id="{{ card.copy.id }}"
-                        {% endif %}>{{ card.copy.text }}</p>
-                        <div class="cards-text-alt__card-cta">
-                            {% include 'components/base-cta-text.twig' with card.cta %}
-                        </div>
-                    </div>
-                </div>
-            </article>
-        {% endfor %}
-    </div>
+  <div class="cards-text-alt__cards-container">
+    {% for card in cardlist.cards %}
+      <article class="cards-text-alt__card">
+        <div class="cards-text-alt__card-outlone">
+          <div class="cards-text-alt__card-inner">
+            <p class="cards-text-alt__card-headline"
+            {% if card.headline.id %}
+              id="{{ card.headline.id }}"
+            {% endif %}>{{ card.headline.text }}</p>
+            <p class="cards-text-alt__card-copy"
+            {% if card.copy.id %}
+              id="{{ card.copy.id }}"
+            {% endif %}>{{ card.copy.text }}</p>
+            <div class="cards-text-alt__card-cta">
+              {% include 'components/base-cta-text.twig' with card.cta %}
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
 </section>

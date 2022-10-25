@@ -1,21 +1,21 @@
 <section class="collection-links-callout">
-    <div class="collection-links-callout__container">
-        <div class="collection-links-callout__red-background"></div>
-        <div class="collection-links-callout__heading">
-            <div class="collection-links-callout__heading-inner">
-                <h{{heading.level|default('2')}} class="collection-links-callout__heading-text">{{ heading.text }}</h{{heading.level|default('2')}}>
-                <p class="collection-links-callout__heading-copy">{{ copy }}</p>
-            </div>
-        </div>
-        <div class="collection-links-callout__inner">
-            <h{{subheading.level|default('2')}} class="collection-links-callout__subheading">{{ subheading.text }}</h{{subheading.level|default('2')}}>
-            <nav aria-label="{{ subheading.text }}">
-            {% for link in links %}
-                <div class="collection-links-callout__link-container">
-                    {% include 'components/base-cta-mega.twig' with link %}
-                </div>
-            {% endfor %}
-            </nav>
-        </div>
+  <div class="collection-links-callout__container">
+    <div class="collection-links-callout__red-background"></div>
+    <div class="collection-links-callout__heading">
+      <div class="collection-links-callout__heading-inner">
+        <h{{heading.level|default('2')}} class="collection-links-callout__heading-text">{{ heading.text }}</h{{heading.level|default('2')}}>
+        <p class="collection-links-callout__heading-copy">{{ copy }}</p>
+      </div>
     </div>
+    <div class="collection-links-callout__inner">
+      <h{{subheading.level|default('2')}} class="collection-links-callout__subheading">{{ subheading.text }}</h{{subheading.level|default('2')}}>
+      <nav aria-label="{{ subheading.text }}">
+      {% for link in links %}
+        <div class="collection-links-callout__link-container">
+          {% include 'components/base-cta-mega.twig' with link %}
+        </div>
+      {% endfor %}
+      </nav>
+    </div>
+  </div>
 </section>

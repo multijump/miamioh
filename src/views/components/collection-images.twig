@@ -1,35 +1,36 @@
 <section class="collection-images">
-    <div class="collection-images__main-container">
-        <div class="collection-images__content-container">
-            <div class="collection-images__content-container-inner">
-                <div class="collection-images__icon-container">
-                    <div class="collection-images__icon-line"></div>
-                    <img class="collection-images__icon" alt="{{ icon.alt }}" src="{{ icon.src }}">
-                </div>
-                <div class="collection-images__heading-container">
-                    <h{{lockup.heading.level|default('2')}} class="collection-images__heading"
-                    {% if lockup.heading.id %}
-                        id="{{ lockup.heading.id }}"
-                    {% endif %}>{{ lockup.heading.text }}</h{{lockup.heading.level|default('2')}}>
-                    {# {% include "components/base-lockup.twig" with lockup %} #}
-                </div>
-                <p class="collection-images__copy"
-                {% if copy.id %}
-                    id="{{ copy.id }}"
-                {% endif %}>{{ copy.text }}</p>
-                <div class="collection-images__cta-container">
-                    {% include 'components/base-cta-primary.twig' with cta %}
-                </div>
-            </div>
+  <div class="collection-images__main-container">
+    <div class="collection-images__content-container">
+      <div class="collection-images__content-container-inner">
+        <div class="collection-images__icon-container">
+          <div class="collection-images__icon-line"></div>
+          <img class="collection-images__icon" alt="{{ icon.alt }}" src="{{ icon.src }}">
         </div>
-        <div class="collection-images__small-container">
-            {% for image in images %}
-                <img class="collection-images__image" alt="{{ image.image.alt }}" src="{{ image.image.src }}">
-            {% endfor %}
+        <div class="collection-images__heading-container">
+          <h{{lockup.heading.level|default('2')}} class="collection-images__heading"
+          {% if lockup.heading.id %}
+            id="{{ lockup.heading.id }}"
+          {% endif %}>{{ lockup.heading.text }}</h{{lockup.heading.level|default('2')}}>
+          {# {% include "components/base-lockup.twig" with lockup %} #}
         </div>
-        <div class="collection-images__hero-container">
-            <div class="collection-images__hero-inner">
-                <img class="collection-images__hero-image" alt="{{ hero_image.alt }}" src="{{ hero_image.src }}">
-            </div>
+        <p class="collection-images__copy"
+        {% if copy.id %}
+          id="{{ copy.id }}"
+        {% endif %}>{{ copy.text }}</p>
+        <div class="collection-images__cta-container">
+          {% include 'components/base-cta-primary.twig' with cta %}
         </div>
-    </section>
+      </div>
+    </div>
+    <div class="collection-images__small-container">
+      {% for image in images %}
+        <img class="collection-images__image" alt="{{ image.image.alt }}" src="{{ image.image.src }}">
+      {% endfor %}
+    </div>
+    <div class="collection-images__hero-container">
+      <div class="collection-images__hero-inner">
+        <img class="collection-images__hero-image" alt="{{ hero_image.alt }}" src="{{ hero_image.src }}">
+      </div>
+    </div>
+  </div>
+</section>
