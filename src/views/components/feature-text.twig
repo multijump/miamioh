@@ -1,32 +1,32 @@
 <section class="feature-text feature-text--{{ layout }}">
-    <div class="feature-text__container">
-        <div class="feature-text__inner">
-            {% if image %}
-                <div class="feature-text__image-container">
-                    <img class="feature-text__image" alt="{{ image.alt }}" src="{{ image.src }}">
-                </div>
-            {% endif %}
-            <div class="feature-text__inner-container">
-                <div class="feature-text__header-container">
-                    <h{{heading.level|default('2')}} class="feature-text__heading"
-                    {% if heading.id %}
-                        id="{{ heading.id }}"
-                    {% endif %}>{{ heading.text }}</h{{heading.level|default('2')}}>
-                </div>
-
-                <div class="feature-text__copy-container">
-                    <p class="feature-text__copy"
-                    {% if subheading.id %}
-                        id="{{ subheading.id }}"
-                    {% endif %}>{{ subheading.text }}</p>
-                    {% if subheading.copy %}
-                        <p class="feature-text__copy">{{ subheading.copy }}</p>
-                    {% endif %}
-                    <div class="feature-text__cta">
-                        {% include 'components/base-cta-primary.twig' with cta %}
-                    </div>
-                </div>
-            </div>
+  <div class="feature-text__container">
+    <div class="feature-text__inner">
+      {% if image %}
+        <div class="feature-text__image-container">
+          <img class="feature-text__image" alt="{{ image.alt }}" src="{{ image.src }}">
         </div>
+      {% endif %}
+      <div class="feature-text__inner-container">
+        <div class="feature-text__header-container">
+          <h{{heading.level|default('2')}} class="feature-text__heading"
+          {% if heading.id %}
+            id="{{ heading.id }}"
+          {% endif %}>{{ heading.text }}</h{{heading.level|default('2')}}>
+        </div>
+
+        <div class="feature-text__copy-container">
+          <p class="feature-text__copy"
+          {% if subheading.id %}
+            id="{{ subheading.id }}"
+          {% endif %}>{{ subheading.text }}</p>
+          {% if subheading.copy %}
+            <p class="feature-text__copy">{{ subheading.copy }}</p>
+          {% endif %}
+          <div class="feature-text__cta">
+            {% include 'components/base-cta-primary.twig' with cta %}
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

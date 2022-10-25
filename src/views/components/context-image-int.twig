@@ -1,15 +1,15 @@
 <section class="context-image-int">
-    <div class="context-image-int__container">
-        <img class="context-image-int__image" alt="{{ image.src }}" src="{{ image.src }}">
-        <div class="context-image-int__text">
-            <div class="context-image-int__text-inner">
-                <div class="context-image-int__lockup-container">
-                    {% include "components/base-lockup.twig" with lockup %}
-                </div>
-                <div class="context-image-int__cta-container">
-                    {% include 'components/base-cta-primary.twig' with cta %}
-                </div>
-            </div>
+  <div class="context-image-int__container">
+    <img class="context-image-int__image" alt="{{ image.src }}" src="{{ image.src }}">
+    <div class="context-image-int__text">
+      <div class="context-image-int__text-inner">
+        <div class="context-image-int__lockup-container">
+          {% include "components/base-lockup.twig" with lockup %}
         </div>
+        <div class="context-image-int__cta-container">
+          {% include 'components/base-cta-primary.twig' with cta %}
+        </div>
+      </div>
     </div>
+  </div>
 </section>
