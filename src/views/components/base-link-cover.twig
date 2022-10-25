@@ -1,19 +1,19 @@
 <link-cover
-    class="base-link-cover"
-    href="{{ link.href }}"
-    target="{{ link.target }}"
-    start-time="{{ starttime }}"
-    end-time="{{ endtime }}"
-    location="{{ location }}"
-    event-date="{{ date }}"
-    event-name="{{ headline.text }}"
-    {% if link.ariaLabel %}
-        aria-label="{{ link.ariaLabel }}"
-    {% endif %}
-    {% if link.ariaLabelledby %}
-        aria-labelledby="{{ link.ariaLabelledby }}"
-    {% endif %}
-    {% if link.ariaDescribedby %}
-        aria-describedby="{{ link.ariaDescribedby }}"
-    {% endif %}
+  class="base-link-cover"
+  href="{{ link.href }}"
+  target="{{ link.target }}"
+  start-time="{{ starttime }}"
+  end-time="{{ endtime }}"
+  location="{{ location }}"
+  event-date="{{ date }}"
+  event-name="{{ headline.text }}"
+  {% if link.ariaLabel %}
+    aria-label="{{ link.ariaLabel }}"
+  {% endif %}
+  {% if link.ariaLabelledby %}
+    aria-labelledby="{{ link.ariaLabelledby }}"
+  {% endif %}
+  {% if link.ariaDescribedby %}
+    aria-describedby="{{ link.ariaDescribedby }}"
+  {% endif %}
 ></link-cover>

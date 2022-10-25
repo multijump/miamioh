@@ -1,25 +1,25 @@
 <div class="base-lockup base-lockup--{{ mode|default('dark') }}">
-    {% if label %}
-        <span class="base-lockup__label">{{ label }}</span>
-    {% endif %}
-    {% if heading %}
-        {% set h = ['h', heading.level|default('2')]|join %}
-        <{{h}} class="base-lockup__heading base-lockup__heading--{{ heading.size|default('3') }}"
-        {% if heading.id %}
-            id="{{ heading.id }}"
-        {% endif %}>{{ heading.text }}</{{h}}>
-    {% endif %}
-    {% if copy %}
-        <p class="base-lockup__copy base-lockup__copy--{{ copy.size|default('regular') }}"
-        {% if copy.id %}
-            id="{{ copy.id }}"
-        {% endif %}>{{ copy.text|raw }}</p>
-    {% endif %}
-    {% if ctas %}
-        <div class="base-lockup__ctas">
-            {% for cta in ctas %}
-                {% include 'components/base-cta-primary.twig' with cta %}
-            {% endfor %}
-        </div>
-    {% endif %}
+  {% if label %}
+    <span class="base-lockup__label">{{ label }}</span>
+  {% endif %}
+  {% if heading %}
+    {% set h = ['h', heading.level|default('2')]|join %}
+    <{{h}} class="base-lockup__heading base-lockup__heading--{{ heading.size|default('3') }}"
+    {% if heading.id %}
+      id="{{ heading.id }}"
+    {% endif %}>{{ heading.text }}</{{h}}>
+  {% endif %}
+  {% if copy %}
+    <p class="base-lockup__copy base-lockup__copy--{{ copy.size|default('regular') }}"
+    {% if copy.id %}
+      id="{{ copy.id }}"
+    {% endif %}>{{ copy.text|raw }}</p>
+  {% endif %}
+  {% if ctas %}
+    <div class="base-lockup__ctas">
+      {% for cta in ctas %}
+        {% include 'components/base-cta-primary.twig' with cta %}
+      {% endfor %}
+    </div>
+  {% endif %}
 </div>

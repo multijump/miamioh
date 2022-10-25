@@ -1,50 +1,50 @@
 <section class="achievements">
-    <div class="achievements__container">
-        <div class="achievements__container--inner">
-            <div class="achievements__outline">
-                <div class="achievements__inner">
-                    <div class="achievements__inner-inner">
-                        <div class="achievements__content">
-                            <div class="achievements__content-inner">
-                                <div class="achievements__content-mobile-outline">
-                                    <div class="achievements__heading-container">
-                                        <h{{heading.level|default('3')}} class="achievements__heading"
-                                        {% if heading.id %}
-                                            id="{{ heading.id }}"
-                                        {% endif %}>{{ heading.text }}</h{{heading.level|default('3')}}>
-                                    </div>
-                                    <rss-parser>
-                                        <template v-slot="feed">
-                                            <ul class="achievements__callouts-container">
-                                                <li
-                                                    v-for="(article, index) in feed.articles"
-                                                    :key="'article-' + index"
-                                                    class="achievements__callout"
-                                                >
-                                                    <a :href="article.link" class="achievements__callout-link">
-                                                        <img
-                                                            class="achievements__callout-icon"
-                                                            :src="article.imgSrc"
-                                                            :alt="article.imgAlt"
-                                                        >
-                                                        <p
-                                                            v-text="article.title"
-                                                            class="achievements__callout-text"
-                                                        ></p>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </template>
-                                    </rss-parser>
-                                </div>
-                            </div>
-                            <div class="achievements__cta">
-                                {% include 'components/base-cta-primary.twig' with cta %}
-                            </div>
-                        </div>
-                    </div>
+  <div class="achievements__container">
+    <div class="achievements__container--inner">
+      <div class="achievements__outline">
+        <div class="achievements__inner">
+          <div class="achievements__inner-inner">
+            <div class="achievements__content">
+              <div class="achievements__content-inner">
+                <div class="achievements__content-mobile-outline">
+                  <div class="achievements__heading-container">
+                    <h{{heading.level|default('3')}} class="achievements__heading"
+                    {% if heading.id %}
+                      id="{{ heading.id }}"
+                    {% endif %}>{{ heading.text }}</h{{heading.level|default('3')}}>
+                  </div>
+                  <rss-parser>
+                    <template v-slot="feed">
+                      <ul class="achievements__callouts-container">
+                        <li
+                          v-for="(article, index) in feed.articles"
+                          :key="'article-' + index"
+                          class="achievements__callout"
+                        >
+                          <a :href="article.link" class="achievements__callout-link">
+                              <img
+                                class="achievements__callout-icon"
+                                :src="article.imgSrc"
+                                :alt="article.imgAlt"
+                              >
+                              <p
+                                v-text="article.title"
+                                class="achievements__callout-text"
+                              ></p>
+                          </a>
+                        </li>
+                      </ul>
+                    </template>
+                  </rss-parser>
                 </div>
+              </div>
+              <div class="achievements__cta">
+                {% include 'components/base-cta-primary.twig' with cta %}
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
