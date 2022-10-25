@@ -13,17 +13,18 @@
 				{% for item in carousels %}
 					<carousel-container-item class="carousel-quote__list-item" key="carousel-container-item--{{ loop.index }}">
 						<div class="carousel-quote__item">
-                            <p class="carousel-quote__content-heading">{{ item.quote.text }}</p>
-                            <p class="carousel-quote__content-text">{{ item.student.text }}</p>
-                            <p class="carousel-quote__content-subject">{{ item.subject.text }}</p>
+							<p class="carousel-quote__content-heading">{{ item.quote.text }}</p>
+							<p class="carousel-quote__content-text">{{ item.student.text }}</p>
+							<p class="carousel-quote__content-subject">{{ item.subject.text }}</p>
+						</div>
 					</carousel-container-item>
 				{% endfor %}
 			</ul>
 			<div class="carousel-quote__inner-wrap">
 				<carousel-container-slider-secondary
-                    class="carousel-quote__slider"
-                    aria-controls="carousel-quote"
-                ></carousel-container-slider-secondary>
+					class="carousel-quote__slider"
+					aria-controls="carousel-quote"
+				></carousel-container-slider-secondary>
 			</div>
 		</div>
 	</div>

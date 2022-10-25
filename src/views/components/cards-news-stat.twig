@@ -1,44 +1,44 @@
 <section class="cards-news-stat">
-    <div class="cards-news-stat__cards-container">
-        <div class="cards-news-stat__heading-container">
-            {% include "components/base-lockup.twig" with lockup %}
+  <div class="cards-news-stat__cards-container">
+    <div class="cards-news-stat__heading-container">
+      {% include "components/base-lockup.twig" with lockup %}
+    </div>
+    <div class="cards-news-stat__cta-container">
+      {% include 'components/base-cta-primary.twig' with cta %}
+    </div>
+    {% for card in cards %}
+    <article class="cards-news-stat__card">
+      <a
+        class="cards-news-stat__card-inner"
+        href="{{ card.link.href }}"
+        {% if card.link.ariaLabel %}
+          aria-label="{{ card.link.ariaLabel }}"
+        {% endif %}
+        {% if card.link.target %}
+          target="{{ card.link.target }}"
+        {% endif %}
+      >
+        <div class="cards-news-stat__image-container">
+          <img class="cards-news-stat__image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
         </div>
-        <div class="cards-news-stat__cta-container">
-            {% include 'components/base-cta-primary.twig' with cta %}
-        </div>
-        {% for card in cards %}
-        <article class="cards-news-stat__card">
-            <a
-                class="cards-news-stat__card-inner"
-                href="{{ card.link.href }}"
-                {% if card.link.ariaLabel %}
-                    aria-label="{{ card.link.ariaLabel }}"
-                {% endif %}
-                {% if card.link.target %}
-                    target="{{ card.link.target }}"
-                {% endif %}
-            >
-                <div class="cards-news-stat__image-container">
-                    <img class="cards-news-stat__image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
-                </div>
-                <div class="cards-news-stat__category">{{ card.category }}</div>
-                <p class="cards-news-stat__headline">{{ card.headline.text }}</p>
-                {# {% include 'components/base-link-cover.twig' with card.link %} #}
-            </a>
+        <div class="cards-news-stat__category">{{ card.category }}</div>
+        <p class="cards-news-stat__headline">{{ card.headline.text }}</p>
+        {# {% include 'components/base-link-cover.twig' with card.link %} #}
+      </a>
+    </article>
+    {% endfor %}
+    <div class="cards-news-stat__stats-container">
+      <div class="cards-news-stat__stats-container-inner">
+        {% for stat in stats %}
+        <article class="cards-news-stat__stat">
+          <p class="cards-news-stat__number">{{ stat.number }}</p>
+          <p class="cards-news-stat__copy">{{ stat.copy }}</p>
         </article>
         {% endfor %}
-        <div class="cards-news-stat__stats-container">
-            <div class="cards-news-stat__stats-container-inner">
-                {% for stat in stats %}
-                <article class="cards-news-stat__stat">
-                    <p class="cards-news-stat__number">{{ stat.number }}</p>
-                    <p class="cards-news-stat__copy">{{ stat.copy }}</p>
-                </article>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="cards-news-stat__cta-container-footer">
-            {% include 'components/base-cta-primary.twig' with cta %}
-        </div>
+      </div>
     </div>
+    <div class="cards-news-stat__cta-container-footer">
+      {% include 'components/base-cta-primary.twig' with cta %}
+    </div>
+  </div>
 </section>
