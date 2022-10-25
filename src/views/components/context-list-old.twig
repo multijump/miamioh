@@ -1,40 +1,39 @@
 <section class="context-list context-list--{{ backgroundcolor|default('white') }} context-list--{{ layout|default('horizontal') }}">
-    <div class="context-list__main-wrapper">
-        <div class="context-list__header-wrapper">
-            <div class="context-list__header-container">
-                <div class="context-list__header-inner">
-                    <h{{heading.level|default('2')}} class="context-list__header-heading">{{ heading.text }}</h{{heading.level|default('2')}}>
-                    <p class="context-list__header-subheading">{{ subheading }}</p>
-                </div>
-            </div>
+  <div class="context-list__main-wrapper">
+    <div class="context-list__header-wrapper">
+      <div class="context-list__header-container">
+        <div class="context-list__header-inner">
+          <h{{heading.level|default('2')}} class="context-list__header-heading">{{ heading.text }}</h{{heading.level|default('2')}}>
+          <p class="context-list__header-subheading">{{ subheading }}</p>
         </div>
-
-        {% if layout == 'vertical' %}
-            <div class="context-list__articles-wrapper context-list__articles-wrapper--{{ articles|length }}">
-            {% endif %}
-
-            {# <div class="context-list__articles-container context-list__articles-container--{{ articles|length }}"> #}
-            {% for article in articles %}
-                <article class="context-list__article">
-                    <div
-                        class="context-list__article-icon-container">
-                        {# {% if backgroundcolor == 'red' %}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            {% set article = article|merge({ iconcolor: 'white' }) %}
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        {% endif %} #}
-                        <img class="context-list__article-icon" alt="{{ article.icon.alt }}" src="/svgs/icon---{{ icon_color }}.svg">
-                    </div>
-                    <div class="context-list__article-inner">
-                        <p class="context-list__article-headline">{{ article.headline.text }}</p>
-                        <p class="context-list__article-copy">{{ article.copy }}</p>
-                        <div class="context-list__article-cta">
-                            {% include 'components/base-cta-text.twig' with article.cta %}
-                        </div>
-                    </div>
-                </article>
-            {% endfor %}
-            {# </div> #}
-            {% if layout == 'vertical' %}
-            </div>
-        {% endif %}
+      </div>
     </div>
+
+    {% if layout == 'vertical' %}
+      <div class="context-list__articles-wrapper context-list__articles-wrapper--{{ articles|length }}">
+    {% endif %}
+    {# <div class="context-list__articles-container context-list__articles-container--{{ articles|length }}"> #}
+    {% for article in articles %}
+      <article class="context-list__article">
+        <div
+          class="context-list__article-icon-container">
+          {# {% if backgroundcolor == 'red' %}
+            {% set article = article|merge({ iconcolor: 'white' }) %}
+          {% endif %} #}
+          <img class="context-list__article-icon" alt="{{ article.icon.alt }}" src="/svgs/icon---{{ icon_color }}.svg">
+        </div>
+        <div class="context-list__article-inner">
+          <p class="context-list__article-headline">{{ article.headline.text }}</p>
+          <p class="context-list__article-copy">{{ article.copy }}</p>
+          <div class="context-list__article-cta">
+            {% include 'components/base-cta-text.twig' with article.cta %}
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+    {# </div> #}
+    {% if layout == 'vertical' %}
+      </div>
+    {% endif %}
+  </div>
 </section>

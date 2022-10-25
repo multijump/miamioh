@@ -1,80 +1,80 @@
 <section class="content-hub">
-    <div class="content-hub__heading-container">
-        <div class="content-hub__heading-inner">
-            <h{{heading.level|default('2')}} class="content-hub__heading">{{ heading.text }}
-            </h{{heading.level|default('2')}}>
-        </div>
+  <div class="content-hub__heading-container">
+    <div class="content-hub__heading-inner">
+      <h{{heading.level|default('2')}} class="content-hub__heading">{{ heading.text }}
+      </h{{heading.level|default('2')}}>
     </div>
-    <div class="content-hub__content--container">
-        <div class="content-hub__featured-container">
-            <div class="content-hub__featured-headline-inner">
-                <h{{featuredHeading.level|default('3')}} class="content-hub__headline">{{ featuredHeading.text }}
-                </h{{featuredHeading.level|default('3')}}>
+  </div>
+  <div class="content-hub__content--container">
+    <div class="content-hub__featured-container">
+      <div class="content-hub__featured-headline-inner">
+        <h{{featuredHeading.level|default('3')}} class="content-hub__headline">{{ featuredHeading.text }}
+        </h{{featuredHeading.level|default('3')}}>
+      </div>
+      <div class="content-hub__featured-big">
+        <article class="content-hub__featured">
+          {% include 'components/base-link-cover.twig' with bigCard only %}
+          <img class="content-hub__featured-image" alt="{{ bigCard.image.alt }}"
+            src="{{ bigCard.image.src }}">
+          <div class="content-hub__featured-inner">
+            <div class="content-hub__featured-headline">{{ bigCard.headline.text }}
             </div>
-            <div class="content-hub__featured-big">
-                <article class="content-hub__featured">
-                    {% include 'components/base-link-cover.twig' with bigCard only %}
-                    <img class="content-hub__featured-image" alt="{{ bigCard.image.alt }}"
-                        src="{{ bigCard.image.src }}">
-                    <div class="content-hub__featured-inner">
-                        <div class="content-hub__featured-headline">{{ bigCard.headline.text }}
-                        </div>
-                        <p class="content-hub__featured-copy">{{ bigCard.copy }}</p>
-                    </div>
-                </article>
-            </div>
-            <div class="content-hub__featured-small">
-                {% for card in cardList.cards %}
-                <article class="content-hub__featured">
-                    {% include 'components/base-link-cover.twig' with card %}
-                    <img class="content-hub__featured-image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
-                    <div class="content-hub__featured-inner">
-                        <div class="content-hub__featured-headline">
-                            {{ card.headline.text }}</div>
-                        <p class="content-hub__featured-copy">{{ card.copy }}</p>
-                    </div>
-                </article>
-                {% endfor %}
-            </div>
-        </div>
-        <div class="content-hub__link--container">
-            <div class="content-hub__link--heading-inner">
-                <h{{newsheading.level|default('3')}} class="content-hub__headline" {% if newsheading.id %}
-                    id="{{ newsheading.id }}" {% endif %}>{{ newsheading.text }}</h{{newsheading.level|default('3')}}>
-            </div>
-            {% for news in newsList.news %}
-            <div class="content-hub__link">
-                <div class="content-hub__link-category">
-                    {{ news.heading.category }}
-                </div>
-                <div class="content-hub__link-text">
-                    {% include 'components/base-link-text.twig' with news.link %}
-                </div>
-            </div>
-            {% endfor %}
-            <div class="content-hub__link-cta">
-                {% include 'components/base-cta-text.twig' with catalog %}
-            </div>
-            <div class="content-hub--divider-wrapper">
-                <hr class="content-hub--divider" />
-            </div>
-            <div class="content-hub__link--heading-inner">
-                <h{{eventheading.level|default('3')}} class="content-hub__headline" {% if eventheading.id %}
-                    id="{{ eventheading.id }}" {% endif %}>{{ eventheading.text }}
-                </h{{eventheading.level|default('3')}}>
-            </div>
-            {% for event in eventList.events %}
-            <div class="content-hub__link">
-                <event-date event-date="{{ event.heading.date }}" event-name="{{ event.heading.location }}"
-                    class="content-hub__link-date"></event-date>
-                <div class="content-hub__link-text">
-                    {% include 'components/base-link-text.twig' with event.link %}
-                </div>
-            </div>
-            {% endfor %}
-            <div class="content-hub__link-cta">
-                {% include 'components/base-cta-text.twig' with eventCatalog %}
-            </div>
-        </div>
+            <p class="content-hub__featured-copy">{{ bigCard.copy }}</p>
+          </div>
+        </article>
+      </div>
+      <div class="content-hub__featured-small">
+        {% for card in cardList.cards %}
+        <article class="content-hub__featured">
+          {% include 'components/base-link-cover.twig' with card %}
+          <img class="content-hub__featured-image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
+          <div class="content-hub__featured-inner">
+            <div class="content-hub__featured-headline">
+              {{ card.headline.text }}</div>
+            <p class="content-hub__featured-copy">{{ card.copy }}</p>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
     </div>
+    <div class="content-hub__link--container">
+      <div class="content-hub__link--heading-inner">
+        <h{{newsheading.level|default('3')}} class="content-hub__headline" {% if newsheading.id %}
+          id="{{ newsheading.id }}" {% endif %}>{{ newsheading.text }}</h{{newsheading.level|default('3')}}>
+      </div>
+      {% for news in newsList.news %}
+      <div class="content-hub__link">
+        <div class="content-hub__link-category">
+          {{ news.heading.category }}
+        </div>
+        <div class="content-hub__link-text">
+          {% include 'components/base-link-text.twig' with news.link %}
+        </div>
+      </div>
+      {% endfor %}
+      <div class="content-hub__link-cta">
+        {% include 'components/base-cta-text.twig' with catalog %}
+      </div>
+      <div class="content-hub--divider-wrapper">
+        <hr class="content-hub--divider" />
+      </div>
+      <div class="content-hub__link--heading-inner">
+        <h{{eventheading.level|default('3')}} class="content-hub__headline" {% if eventheading.id %}
+          id="{{ eventheading.id }}" {% endif %}>{{ eventheading.text }}
+        </h{{eventheading.level|default('3')}}>
+      </div>
+      {% for event in eventList.events %}
+      <div class="content-hub__link">
+        <event-date event-date="{{ event.heading.date }}" event-name="{{ event.heading.location }}"
+          class="content-hub__link-date"></event-date>
+        <div class="content-hub__link-text">
+          {% include 'components/base-link-text.twig' with event.link %}
+        </div>
+      </div>
+      {% endfor %}
+      <div class="content-hub__link-cta">
+        {% include 'components/base-cta-text.twig' with eventCatalog %}
+      </div>
+    </div>
+  </div>
 </section>

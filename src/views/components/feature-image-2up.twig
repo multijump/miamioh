@@ -1,22 +1,22 @@
 <section class="feature-image-2up">
-    {% for card in cards %}
-        <article class="feature-image-2up__card">
-            <img class="feature-image-2up__image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
-            <div class="feature-image-2up__overlay"></div>
-            <div class="feature-image-2up__content">
-                <h{{card.heading.level|default('3')}} class="feature-image-2up__heading"
-                {% if card.heading.id %}
-                    id="{{ card.heading.id }}"
-                {% endif %}>{{ card.heading.text }}</h{{card.heading.level|default('3')}}>
-                <p class="feature-image-2up__copy"
-                {% if card.copy.id %}
-                    id="{{ card.copy.id }}"
-                {% endif %}>{{ card.copy.text }}</p>
-                <div class="feature-image-2up__cta-container">
-                    {% set cta = card.cta|merge({'mode': 'light'}) %}
-                    {% include 'components/base-cta-primary.twig' with cta %}
-                </div>
-            </div>
-        </article>
-    {% endfor %}
+  {% for card in cards %}
+    <article class="feature-image-2up__card">
+      <img class="feature-image-2up__image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
+      <div class="feature-image-2up__overlay"></div>
+      <div class="feature-image-2up__content">
+        <h{{card.heading.level|default('3')}} class="feature-image-2up__heading"
+        {% if card.heading.id %}
+          id="{{ card.heading.id }}"
+        {% endif %}>{{ card.heading.text }}</h{{card.heading.level|default('3')}}>
+        <p class="feature-image-2up__copy"
+        {% if card.copy.id %}
+          id="{{ card.copy.id }}"
+        {% endif %}>{{ card.copy.text }}</p>
+        <div class="feature-image-2up__cta-container">
+          {% set cta = card.cta|merge({'mode': 'light'}) %}
+          {% include 'components/base-cta-primary.twig' with cta %}
+        </div>
+      </div>
+    </article>
+  {% endfor %}
 </section>
