@@ -1,34 +1,34 @@
 <section class="figure-context figure-context--{{ background|default('white') }}">
-    <div class="figure-context__container">
-        <div class="figure-context__inner">
-            <div class="figure-context__cards-container">
-            {% for card in cardlist.cards %}
-                <article class="figure-context__card">
-                    <div class="figure-context__card-image-container">
-                        <span class="figure-context__image-text figure-context__image-type-{{ card.image.type }}">{{ card.image.text }}</span>
-                        <img class="figure-context__card-image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
-                    </div>
-                    <div class="figure-context_card-inner">
-                        <h{{card.heading.level|default('2')}} class="figure-context__card-headline">{{ card.heading.text }}</h{{card.heading.level|default('2')}}>
-                        <p class="figure-context__card-copy">{{ card.copy }}</p>
-                    </div>
-                </article>
-            {% endfor %}
-            </div>
-            <div class="figure-context__text-container">
-                <div class="figure-context__text-inner">
-                    <h{{heading.level|default('2')}} class="figure-context__text-heading"
-                    {% if heading.id %}
-                        id="{{ heading.id }}"
-                    {% endif %}>{{ heading.text }}</h{{heading.level|default('2')}}>
-                    <p class="figure-context__text-subheading"
-                    {% if subheading.id %}
-                        id="{{ subheading.id }}"
-                    {% endif %}>{{ subheading.text }}</p>
-                    <p class="figure-context__text-copy">{{ copy }}</p>
-                    {% include 'components/base-cta-primary.twig' with cta %}
-                </div>
-            </div>
+  <div class="figure-context__container">
+    <div class="figure-context__inner">
+      <div class="figure-context__cards-container">
+      {% for card in cardlist.cards %}
+        <article class="figure-context__card">
+          <div class="figure-context__card-image-container">
+            <span class="figure-context__image-text figure-context__image-type-{{ card.image.type }}">{{ card.image.text }}</span>
+            <img class="figure-context__card-image" alt="{{ card.image.alt }}" src="{{ card.image.src }}">
+          </div>
+          <div class="figure-context_card-inner">
+            <h{{card.heading.level|default('2')}} class="figure-context__card-headline">{{ card.heading.text }}</h{{card.heading.level|default('2')}}>
+            <p class="figure-context__card-copy">{{ card.copy }}</p>
+          </div>
+        </article>
+      {% endfor %}
+      </div>
+      <div class="figure-context__text-container">
+        <div class="figure-context__text-inner">
+          <h{{heading.level|default('2')}} class="figure-context__text-heading"
+          {% if heading.id %}
+            id="{{ heading.id }}"
+          {% endif %}>{{ heading.text }}</h{{heading.level|default('2')}}>
+          <p class="figure-context__text-subheading"
+          {% if subheading.id %}
+            id="{{ subheading.id }}"
+          {% endif %}>{{ subheading.text }}</p>
+          <p class="figure-context__text-copy">{{ copy }}</p>
+          {% include 'components/base-cta-primary.twig' with cta %}
         </div>
+      </div>
     </div>
+  </div>
 </section>

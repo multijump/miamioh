@@ -1,12 +1,12 @@
 <section class="form-section from-section--{{ backgroundcolor|default('red') }}">
-    <div class="form-container">
-        <div class="form__heading-container">
-            <h{{heading.level|default('2')}} class="form__heading" id="form-title">{{ heading.text }}</h{{heading.level|default('2')}}>
-        </div>
-        <form-container class="form-elements-container" action="{{ action.url }}" child-data="{{ elements|json_encode }}" method="{{ action.method }}">
-            <article class="form-warning-indicator">
-                <p class="form-warning-indication">* {{ warning }}</p>
-            </article>
-        </form-container>
+  <div class="form-container">
+    <div class="form__heading-container">
+      <h{{heading.level|default('2')}} class="form__heading" id="form-title">{{ heading.text }}</h{{heading.level|default('2')}}>
     </div>
+    <form-container class="form-elements-container" action="{{ action.url }}" child-data="{{ elements|json_encode }}" method="{{ action.method }}">
+      <article class="form-warning-indicator">
+        <p class="form-warning-indication">* {{ warning }}</p>
+      </article>
+    </form-container>
+  </div>
 </section>
