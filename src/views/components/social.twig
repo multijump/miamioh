@@ -1,33 +1,33 @@
 <section class="social">
-    <div class="social__container">
-        <div class="social__header-container">
-            <div class="social__heading-container">
-                <div class="social__heading-container-inner">
-                    <h{{heading.level|default('2')}} class="social__header-heading"
-                    {% if heading.id %}
-						id="{{ heading.id }}"
-					{% endif %}>{{ heading.text }}</h{{heading.level|default('2')}}>
-                </div>
-            </div>
-            <div class="social__copy-container">
-                <div class="social__copy-container-inner">
-                    <p class="social__copy"
-                    {% if copy.id %}
-						id="{{ copy.id }}"
-					{% endif %}>{{ copy.text }}</p>
-                    {% include 'components/base-cta-text.twig' with cta %}
-                </div>
-            </div>
+  <div class="social__container">
+    <div class="social__header-container">
+      <div class="social__heading-container">
+        <div class="social__heading-container-inner">
+          <h{{heading.level|default('2')}} class="social__header-heading"
+          {% if heading.id %}
+            id="{{ heading.id }}"
+          {% endif %}>{{ heading.text }}</h{{heading.level|default('2')}}>
         </div>
-
-        <a href="#skip-social-posts" class="button-skip-content">
-            Skip Social Posts
-        </a>
-
-        <div class="social__content">
-            <ul class="juicer-feed" data-feed-id="homepage-updated" data-per="6" data-pages="1"></ul>
+      </div>
+      <div class="social__copy-container">
+        <div class="social__copy-container-inner">
+          <p class="social__copy"
+          {% if copy.id %}
+            id="{{ copy.id }}"
+          {% endif %}>{{ copy.text }}</p>
+          {% include 'components/base-cta-text.twig' with cta %}
         </div>
-
-        <div id="skip-social-posts" class="button-skip-content" aria-hidden="true"></div>
+      </div>
     </div>
+
+    <a href="#skip-social-posts" class="button-skip-content">
+      Skip Social Posts
+    </a>
+
+    <div class="social__content">
+      <ul class="juicer-feed" data-feed-id="homepage-updated" data-per="6" data-pages="1"></ul>
+    </div>
+
+    <div id="skip-social-posts" class="button-skip-content" aria-hidden="true"></div>
+  </div>
 </section>
