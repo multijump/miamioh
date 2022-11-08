@@ -1,9 +1,9 @@
 {
-  "name": "miam-161-69w",
+  "name": "miamioh",
   "version": "1.0.0",
   "private": true,
-  "description": "A 160over90 project",
-  "author": "160over90",
+  "description": "A vue.js project",
+  "author": "multijump",
   "scripts": {
     "serve": "webpack-dev-server --disableHostCheck=true --inline --progress --config build/webpack.dev.conf.js",
     "build": "node build/build.js",
