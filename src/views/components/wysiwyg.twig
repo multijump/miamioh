@@ -1,28 +1,28 @@
 <section class="wysiwyg">
-    <div class="wysiwyg__container">
-        <div class="wysiwyg__inner">
-            <div class="wysiwyg__header-container">
-                <div class="wysiwyg__heading-container">
-                    <div class="wysiwyg__heading-container-inner">
-                        <h{{heading.level|default('2')}} class="wysiwyg__header-heading">{{ heading.text }}
-                        </h{{heading.level|default('2')}}>
-                    </div>
-                </div>
-                {% if lead %}
-                <div class="wysiwyg__lead-container">
-                    <div class="wysiwyg__lead-container-inner">
-                        <div class="wysiwyg__lead">{{ lead | raw }}</div>
-                    </div>
-                </div>
-                {% endif %}
-                {% if body %}
-                <div class="wysiwyg__body-container">
-                    <div class="wysiwyg__body-container-inner">
-                        <div class="wysiwyg__body">{{ body | raw }}</div>
-                    </div>
-                </div>
-                {% endif %}
-            </div>
+  <div class="wysiwyg__container">
+    <div class="wysiwyg__inner">
+      <div class="wysiwyg__header-container">
+        <div class="wysiwyg__heading-container">
+          <div class="wysiwyg__heading-container-inner">
+            <h{{heading.level|default('2')}} class="wysiwyg__header-heading">{{ heading.text }}
+            </h{{heading.level|default('2')}}>
+          </div>
         </div>
+        {% if lead %}
+        <div class="wysiwyg__lead-container">
+          <div class="wysiwyg__lead-container-inner">
+            <div class="wysiwyg__lead">{{ lead | raw }}</div>
+          </div>
+        </div>
+        {% endif %}
+        {% if body %}
+        <div class="wysiwyg__body-container">
+          <div class="wysiwyg__body-container-inner">
+            <div class="wysiwyg__body">{{ body | raw }}</div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
     </div>
+  </div>
 </section>

@@ -1,13 +1,13 @@
 <a class="base-cta-primary base-cta-primary--{{ mode|default('dark') }}" href="{{ href }}" target="{{ target|default('_self')}}"
-    {% if ariaLabel %}
-        aria-label="{{ ariaLabel }}"
-    {% endif %}
+  {% if ariaLabel %}
+    aria-label="{{ ariaLabel }}"
+  {% endif %}
 	{% if ariaDescribedby %}
-        aria-describedby="{{ ariaDescribedby }}"
-    {% endif %}
+    aria-describedby="{{ ariaDescribedby }}"
+  {% endif %}
 	{% if ariaLabelledby %}
-        aria-labelledby="{{ ariaLabelledby }}"
-    {% endif %}>
+    aria-labelledby="{{ ariaLabelledby }}"
+  {% endif %}>
 
 	<span class="base-cta-primary__outline"></span>
 	<span class="base-cta-primary__content">

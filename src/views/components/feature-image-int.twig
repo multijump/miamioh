@@ -1,17 +1,17 @@
 <section class="feature-image-int">
-    <div class="feature-image-int__container">
-        <img class="feature-image-int__image" alt="{{ image.src }}" src="{{ image.src }}">
-        <div class="feature-image-int__text-container">
-            <div class="feature-image-int__text-inner">
-                <h{{heading.level|default('2')}} class="feature-image-int__heading"
-                {% if heading.id %}
-                    aria-labelledby="{{ heading.id }}"
-                {% endif %}>{{ heading.text }}</h{{heading.level|default('2')}}>
-                <p class="feature-image-int__copy"
-                {% if copy.id %}
-                    aria-labelledby="{{ copy.id }}"
-                {% endif %}>{{ copy.text }}</p>
-            </div>
-        </div>
+  <div class="feature-image-int__container">
+    <img class="feature-image-int__image" alt="{{ image.src }}" src="{{ image.src }}">
+    <div class="feature-image-int__text-container">
+      <div class="feature-image-int__text-inner">
+        <h{{heading.level|default('2')}} class="feature-image-int__heading"
+        {% if heading.id %}
+          aria-labelledby="{{ heading.id }}"
+        {% endif %}>{{ heading.text }}</h{{heading.level|default('2')}}>
+        <p class="feature-image-int__copy"
+        {% if copy.id %}
+          aria-labelledby="{{ copy.id }}"
+        {% endif %}>{{ copy.text }}</p>
+      </div>
     </div>
+  </div>
 </section>

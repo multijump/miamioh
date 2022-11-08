@@ -1,60 +1,60 @@
 <section class="hero-landing">
-    <div class="hero-landing__container">
-        <div class="hero-landing__background">
-            {% if image %}
-                <img class="hero-landing__background-image" alt="{{ image.alt }}" src="{{ image.src }}">
-            {% endif %}
-            {% if video %}
-                <background-video class="hero-landing__video" :video-id="{{ video.id }}" video-src="{{ video.src }}"></background-video>
-                <background-video-button class="hero-landing__video-button" :video-id="{{ video.id }}">
-                    <svg aria-hidden="true" class="hero-landing__video-button-icon hero-landing__video-button-icon--play" viewbox="0 0 20 20" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="/svgs/icon-play.svg#icon"/>
-                    </svg>
-                    <svg aria-hidden="true" class="hero-landing__video-button-icon hero-landing__video-button-icon--pause" viewbox="0 0 20 20" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="/svgs/icon-pause.svg#icon"/>
-                    </svg>
-                </background-video-button>
-            {% endif %}
-        </div>
-        <div class="hero-landing__header-container">
-            <div class="hero-landing__heading-inner">
-                <div class="hero-landing__header-icon-container">
-                    <div class="hero-landing__header-icon-inner">
-                        <div class="hero-landing__header-icon-align">
-                            <img class="hero-landing__header-icon" alt="{{ header_icon.alt }}" src="{{ header_icon.src }}">
-                            <div class="hero-landing__header-icon-line"></div>
-                            <h{{heading.level|default('1')}} class="hero-landing__heading">{{ heading.text }}</h{{heading.level|default('1')}}>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="hero-landing__content-container">
-            <div class="hero-landing__content-inner">
-                <div class="hero-landing__content-wrapper">
-                    <div class="hero-landing__content-icon-container">
-                        <div class="hero-landing__content-icon-inner">
-                            <div class="hero-landing__content-icon-line"></div>
-                            <img class="hero-landing__content-icon" alt="{{ content_icon.alt }}" src="{{ content_icon.src }}">
-                        </div>
-                    </div>
-                    <p class="hero-landing__copy">{{ copy }}</p>
-                    <div class="hero-landing__cta">
-                        {% include 'components/base-cta-primary.twig' with cta %}
-                    </div>
-                </div>
-            </div>
-            <div class="hero-landing__quicklinks">
-                <div class="hero-landing__quicklinks-inner">
-                    <h{{heading.level|default('1')}} class="hero-landing__quicklinks-header">{{ quicklinks_header.text }}</h{{quicklinks_header.level|default('1')}}>
-                    {% for item in quicklinks %}
-                        <div class="hero-landing__quicklink-text">
-                            {% include 'components/base-link-text.twig' with item %}
-                        </div>
-                        {# <a class="hero-sublanding__breadcrumbs-item" href="{{ item.href }}">{{ item.text }}</a> #}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+  <div class="hero-landing__container">
+    <div class="hero-landing__background">
+      {% if image %}
+        <img class="hero-landing__background-image" alt="{{ image.alt }}" src="{{ image.src }}">
+      {% endif %}
+      {% if video %}
+        <background-video class="hero-landing__video" :video-id="{{ video.id }}" video-src="{{ video.src }}"></background-video>
+        <background-video-button class="hero-landing__video-button" :video-id="{{ video.id }}">
+          <svg aria-hidden="true" class="hero-landing__video-button-icon hero-landing__video-button-icon--play" viewbox="0 0 20 20" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="/svgs/icon-play.svg#icon"/>
+          </svg>
+          <svg aria-hidden="true" class="hero-landing__video-button-icon hero-landing__video-button-icon--pause" viewbox="0 0 20 20" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="/svgs/icon-pause.svg#icon"/>
+          </svg>
+        </background-video-button>
+      {% endif %}
     </div>
+    <div class="hero-landing__header-container">
+      <div class="hero-landing__heading-inner">
+        <div class="hero-landing__header-icon-container">
+          <div class="hero-landing__header-icon-inner">
+            <div class="hero-landing__header-icon-align">
+              <img class="hero-landing__header-icon" alt="{{ header_icon.alt }}" src="{{ header_icon.src }}">
+              <div class="hero-landing__header-icon-line"></div>
+              <h{{heading.level|default('1')}} class="hero-landing__heading">{{ heading.text }}</h{{heading.level|default('1')}}>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-landing__content-container">
+      <div class="hero-landing__content-inner">
+        <div class="hero-landing__content-wrapper">
+          <div class="hero-landing__content-icon-container">
+            <div class="hero-landing__content-icon-inner">
+              <div class="hero-landing__content-icon-line"></div>
+                <img class="hero-landing__content-icon" alt="{{ content_icon.alt }}" src="{{ content_icon.src }}">
+            </div>
+          </div>
+          <p class="hero-landing__copy">{{ copy }}</p>
+          <div class="hero-landing__cta">
+            {% include 'components/base-cta-primary.twig' with cta %}
+          </div>
+        </div>
+      </div>
+      <div class="hero-landing__quicklinks">
+        <div class="hero-landing__quicklinks-inner">
+          <h{{heading.level|default('1')}} class="hero-landing__quicklinks-header">{{ quicklinks_header.text }}</h{{quicklinks_header.level|default('1')}}>
+          {% for item in quicklinks %}
+            <div class="hero-landing__quicklink-text">
+              {% include 'components/base-link-text.twig' with item %}
+            </div>
+            {# <a class="hero-sublanding__breadcrumbs-item" href="{{ item.href }}">{{ item.text }}</a> #}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
